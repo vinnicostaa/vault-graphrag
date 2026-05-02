@@ -1,0 +1,1892 @@
+---
+title: Fernando — conteúdo extraído de 0dd57-5l6osnf
+type: source
+tags: [source, fernando, next-js, js-extracted]
+source: fernandofrancovalle.com/fernandofrancovalle.com/_next/static/chunks/0dd57-5l6osnf.js
+extracted: 2026-04-22
+---
+
+# Conteúdo pt-BR extraído de `0dd57-5l6osnf.js`
+
+Strings com 50+ chars filtradas do bundle (remove código Next.js, imports, URLs, identificadores). Uma linha = uma string única.
+
+- ,0,function(e,a){let o=e.filter(e=>a.includes(e.slug)).length;return{done:o,total:e.length,pct:Math.round(o/e.length*100)}}])},164851,729851,e=>{
+- ,0,function(e,a){let o=n(e);return o?.prerequisites?.length?o.prerequisites.map(e=>{r();let o=i.get(e);return o?{module:o.module,trail:o.trail,completed:a.includes(e)}:null}).filter(e=>null!==e):[]},
+- ,0,function(e,a=[]){let o=t(e),s=o.flatMap(e=>e.modules),i=s.reduce((e,a)=>e+a.xp,0),r=s.filter(e=>a.includes(e.slug)).length,n=s.reduce((e,a)=>e+a.readTime,0);return{trailCount:o.length,moduleCount:s.length,totalXp:i,minutes:n,done:r,pct:0===s.length?0:Math.round(r/s.length*100)}},
+- ,0,function(e,a){let o=x(),s=(o=w(o)).reviewCards.findIndex(a=>a.id===e);if(s<0)return{newBadges:[],xpGained:0,nextDueDate:n(),remainingDue:0};let t=i(o.reviewCards[s],a),c=[...o.reviewCards];c[s]=t;let d={again:0,hard:1,good:2,easy:4}[a];o=C(o=P(o={...o,reviewCards:c}),{cardsReviewed:1,xpEarned:d,minutes:1});let l=[];d>0&&(o=A(o,d).state);let{state:u,newBadges:p}=m(b,{state:o={...o,lastReviewDate:n()},outcome:a,today:n()});return o=u,l.push(...p),T(o),{newBadges:l,xpGained:d,nextDueDate:t.dueDate,remainingDue:r(o.reviewCards).length}},
+- ,0,function(e,a,o){let s=x(),t=a===o,{state:i}=m(k,{state:s={...s,quizScores:{...s.quizScores,[e]:{score:a,total:o,perfect:t}},perfectQuizStreak:t?s.perfectQuizStreak+1:0},perfect:t});T(i)},
+- ,0,function(e){let a=n(e);return a?.nextSuggested?.length?a.nextSuggested.map(e=>{r();let a=i.get(e);return a?{module:a.module,trail:a.trail}:null}).filter(e=>null!==e):[]},
+- ,0,function(e){let a=x();if(a.badges.includes(e))return{unlocked:!1,xpGained:0,leveledUp:!1,newLevel:a.level};let s=o.BADGES_DEF.find(a=>a.id===e);if(!s)return{unlocked:!1,xpGained:0,leveledUp:!1,newLevel:a.level};let t=a.level,i=A(a={...a,badges:[...a.badges,e]},s.xpBonus);return T(a=i.state),{unlocked:!0,xpGained:s.xpBonus,leveledUp:i.newLevel>t,newLevel:i.newLevel}},
+- ,0,function(e){let a=x(),o=Math.max(a.articleProgress[e.slug]??0,e.progress??.02),s={...e,progress:o,at:new Date().toISOString()};T({...a,lastArticle:s,articleProgress:{...a.articleProgress,[e.slug]:o}})},
+- ,0,function(e){let a=x(),o=Math.round(.5*e.score),s=a.level,t=A(a,o);a=t.state;let i=[];if(!a.badges.includes(
+- ,0,function(e){let o=(0,p.safeParseJSON)(p.GameStateSchema,e,l.GAME_CONFIG.IMPORT_STATE_MAX_BYTES);if(!o.ok)return o;let s={...S,...o.data,schemaVersion:2};return(0,u.setRaw)(l.STORAGE_KEYS.GAME_STATE,a.default.compress(JSON.stringify(s)))?{ok:!0}:{ok:!1,error:
+- ,0,function(e){return o.find(a=>e>=a.xpMin&&e<a.xpMax)??o[o.length-1]},
+- ,0,function(e){return s.find(a=>a.trailIds.includes(e))},
+- ,0,function(e){var a,s,i;let r,c,d,u,p,g=x();g=w(g);let{slug:v,title:f,trailColor:h,readTime:b,quiz:k}=e,S=g.completedModules.includes(v),D=[],q=30;for(let e of o.CURRICULUM){let a=e.modules.find(e=>e.slug===v);if(a){q=a.xp;break}}g=P(g);let R=!1,B=g.level;p=S?5:Math.round(.7*q)+Math.round(.3*q*(e.quizScore??1)),e.bonusXp&&e.bonusXp>0&&(p+=e.bonusXp),({state:g,leveledUp:R,newLevel:B}=A(g,p)),S||(g={...g,completedModules:[...g.completedModules,v],totalStudyTime:g.totalStudyTime+b});let{state:M,added:L}=(c=0,d=new Set((a=g).reviewCards.map(e=>e.id)),u=[],(k.forEach((e,a)=>{let o=`${v}_q${a}`;d.has(o)||(u.push(t(v,f,h,a,e.question,e.options,e.correct,e.explanation)),c+=1)}),0===c)?{state:a,added:c}:{state:{...a,reviewCards:[...a.reviewCards,...u]},added:c});g=function(e){if(new Date().getHours()>=l.GAME_CONFIG.AURORA_HOUR_MAX)return e;let a=n();return e.earlyMorningDays.includes(a)?e:{...e,earlyMorningDays:[...e.earlyMorningDays,a].slice(-30)}}((s=g=C(g=M,{minutes:S?0:b,xpEarned:p,modulesCompleted:+!S}),i=v,g=(r=o.CURRICULUM.find(e=>e.modules.some(e=>e.slug===i)))&&!s.trailStartedAt[r.id]?{...s,trailStartedAt:{...s.trailStartedAt,[r.id]:new Date().toISOString()}}:s));let I=new Date,{state:E,newBadges:O}=m(y,{state:g,isRevisit:S,hour:I.getHours(),dayOfWeek:I.getDay(),today:n(),now:I.toISOString()});return g=E,D.push(...O),T(g),{xpGained:p,newBadges:D,leveledUp:R,newLevel:B,cardsAdded:L}},
+- ,0,function(){let e=x();if(0===e.reviewCards.length)return null;let a=n(),o=0;for(let e=0;e<a.length;e++)o=(o<<5)-o+a.charCodeAt(e)|0;let s=Math.abs(o)%e.reviewCards.length,t=e.reviewCards[s],i=t.dueDate>a;return{card:t,xpMultiplier:3,completed:i}},
+- ,0,n],729851);var l=e.i(685149),u=e.i(103053),p=e.i(401106);function m(e,a){let s=a.state,t=[];for(let i of e){let e={...a,state:s};if(!i.predicate(e))continue;let{state:r,unlocked:n}=function(e,a){if(e.badges.includes(a))return{state:e,unlocked:!1};let s=o.BADGES_DEF.find(e=>e.id===a);return s?{state:{...e,badges:[...e.badges,a],xp:e.xp+s.xpBonus},unlocked:!0}:{state:e,unlocked:!1}}(s,i.id);n&&(s=r,t.push(i.id))}return{state:s,newBadges:t}}function g(e){let a=new Set;for(let s of e.completedModules)for(let e of o.CURRICULUM)if(e.modules.some(e=>e.slug===s)){let s=(0,o.getHubForTrail)(e.id);s&&a.add(s.id);break}return a}function v(e){let a=0;for(let s of o.CURRICULUM)s.modules.every(a=>e.completedModules.includes(a.slug))&&(a+=1);return a}function f(e,a){let s=o.CURRICULUM.find(a=>a.id===e);return!!s&&s.modules.every(e=>a.includes(e.slug))}function h(e,a){return e.studyDays.find(e=>e.date===a)?.modulesCompleted??0}let y=[{id:
+- 200B parâmetros que não cabem na GPU — veja como o MoE ativa só o que é necessário.
+- 20 questões no estilo oficial do exame, cada uma com explicação detalhada de por que a resposta certa é certa e as erradas são erradas.
+- 25 questões no estilo oficial SAA-C03 com explicações detalhadas. Arquitetura, decisões de design, trade-offs de custo e resiliência.
+- 4 domínios: Design Solutions (26%), New Solutions (29%), Migration Planning (20%), Continuous Improvement (25%). 75 questões, 180min, passing 750. Estudo 3-6 meses pós-SAA.
+- 4 domínios: Development (32%), Security (26%), Deployment (24%), Troubleshooting (18%). 65 questões, 130 min, passing 720/1000. Services priority list baseada em análise de exam. Calendário de 4 semanas.
+- A01 Broken Access Control, A02 Cryptographic Failures, A03 Injection, A04 Insecure Design, A05 Security Misconfig, A06 Vulnerable Components, A07 Identification & Authn Failures, A08 Software & Data Integrity Failures, A09 Logging Failures, A10 SSRF. Cada um com código ruim → código seguro em TS.
+- A11y como disciplina, não afterthought: WCAG 2.2/3 e a realidade legal (EU Accessibility Act 2025, ADA lawsuits), semantic HTML como alicerce, ARIA certo (ou a ausência dele), keyboard + focus management, screen readers na prática (NVDA/VoiceOver), automated testing com axe, capstone remediando app real.
+- A abordagem IDE-first — como Cursor e Copilot integram IA no editor e por que isso é uma filosofia diferente dos agentes de terminal.
+- A API Messages da Anthropic: como enviar conversas, streaming de respostas, processar imagens, batch de milhares de requests e prompt caching para reduzir custo.
+- A arquitetura que mudou tudo em 2017 — Attention Is All You Need e por que o transformer é onipresente.
+- A base que ninguém ensina: Linux, Git, HTTP, SQL, como o computador funciona.
+- A/B testing prompt LLM produção: feature flag, thumbs feedback, statistical — PT-BR.
+- A/B testing rigor estatístico p-value CUPED — PT-BR.
+- ab testing, statistical significance, power analysis, cuped variance, peeking
+- ab test prompt llm, feature flag llm, thumbs feedback, statistical significance ab, prompt rollback
+- Accessibility por que agora: WCAG, POUR e legal landscape
+- Accessibility pra dev moderno: WCAG 2.2, POUR, EU Accessibility Act 2025, ADA — PT-BR.
+- accessibility wcag, pour principios, eu accessibility act 2025, ada lawsuit, a11y legal compliance
+- ACID não é decoreba — é o que evita dirty reads, non-repeatable reads e phantom reads. Read Committed, Repeatable Read, Serializable: quando usar cada um.
+- acid sql, isolation levels, transações postgresql, dirty read phantom read, begin commit rollback
+- adr, architecture decision record, madr template, arquitetura decisao
+- adr architecture decision record, reversible decisions, nygard adr, type 1 type 2 decisions
+- ADRs tech leadership: reversible vs irreversible decisions — PT-BR.
+- Advanced networking: RAM, Cloud WAN, Transit Gateway
+- Agent com tool access pode ser manipulado a vazar dados (prompt injection no conteúdo ingested). Defesa: tool scoping estrito, no-network sandboxing, PII scan em I/O, least privilege.
+- agent data exfiltration, tool injection, pii scan llm, least privilege agents
+- Agente Python end-to-end: Pydantic pra schemas, FastAPI pra endpoint, Claude Agent SDK pra loop agentic, tool use, memory em Redis, logging estruturado, tests com pytest async. Deploy em Fly.io ou AWS Lambda com container.
+- Agent não é mágica — é processo com contexto, memória, ferramentas, orçamento e política. Como orquestrar múltiplos agents, controlar token, definir limites e auditar resultado.
+- Agent patterns em produção: ReAct, Reflexion, Tree of Thoughts, Plan-and-Execute, Router — análise profunda dos padrões de agent modernos.
+- agent patterns, react agent, reflexion, tree of thoughts, plan and execute, agent router, llm agent design
+- Agent Patterns: ReAct, Reflexion e Tree of Thoughts
+- agent regression test, agent evaluation, multi turn test llm, tool selection eval
+- Agents e Workflows: parallelization, chaining e routing
+- A IA não lê palavras — ela lê tokens. Entenda o que isso muda em custo, velocidade e limites de contexto.
+- airflow dag, dagster assets, prefect flows, orquestrador pipeline, data orchestration
+- Airflow DAGs para ML, Kubeflow Pipelines (K8s-native), Prefect 2.0, Argo Workflows. Orquestração, retries, caching, artifact passing.
+- Airflow: dominante, maduro, verbose (DAGs em Python, ops pesada). Dagster: software-defined assets, DX moderna, melhor pra analytics engineering. Prefect: simples, dynamic flows, ótimo pra Python-first. Como escolher baseado em legacy + time size.
+- airflow ml, kubeflow pipelines, prefect, argo workflows
+- Airflow vs Dagster vs Prefect: qual orquestrador pra que cenário — PT-BR.
+- ai safety, eu ai act 2025, misuse misalignment, ai risk
+- AI Safety intro: misuse, misalignment, EU AI Act 2025 — PT-BR.
+- A janela de contexto é o limite do agente — como ela funciona, o que Claude Code vê, como compactar contexto, quando reiniciar e como usar subagents para preservar contexto limpo.
+- Alembic, Flyway e Liquibase. Migrations reversíveis com up/down. Zero-downtime em produção: adicionar coluna nullable, backfill, NOT NULL depois.
+- Além do Postgres: MongoDB (documents), Redis avançado (structures + streams), DynamoDB (single-table design), ClickHouse (analytics OLAP), SQLite moderno (embedded 2026), Vector DBs (pgvector/Pinecone/Weaviate/Qdrant). Quando usar cada, anti-patterns, casos reais.
+- Algoritmos de string: regex internals, fuzzy matching, edit distance, suffix array — PT-BR.
+- Algoritmos de string: substring, regex internals e fuzzy
+- Algoritmos: fixed window (problemático), sliding window, token bucket (mais usado), leaky bucket. Headers padrão (RateLimit-Limit, Remaining, Reset), 429 com Retry-After. Quota diária vs burst limit, por-tenant, distribuído com Redis atomicamente.
+- algoritmos string, regex nfa dfa, fuzzy matching, jaro winkler, suffix array javascript
+- amazon q developer, kiro aws, spec driven development, amazon coding agent
+- . Ambas valiosas, diferentes day-to-day. Como identificar preferência.',seoDesc:
+- Analytics em escala: Redshift, EMR, Athena, Lake Formation
+- Anatomia do harness: o que é e o que dá pra customizar
+- android architecture, mvvm, udf unidirectional data flow, hilt di, repository
+- android capstone, play store, aab bundle, android ci github actions
+- Android em 2026: Kotlin idiomático (2.0, K2 compiler), Jetpack Compose para UI declarativa, coroutines + Flow para async, arquitetura MVVM+UDF, Room para persistência, Retrofit para networking, testes unitários e instrumentados, publicação Play Store.
+- Android retrofit moshi kotlinx.serialization — PT-BR.
+- android room, sqlite room, dao entity, room migrations
+- anthropic api, claude api, messages api, claude streaming, claude vision, prompt cache anthropic
+- anthropic, claude modelos, claude api, claude code, anthropic produtos, claude haiku sonnet opus
+- Anthropic prompt caching, janela de contexto, compaction, subagent delegation, skills (Agent Skills), CLAUDE.md/AGENTS.md, context window budget.
+- apache iceberg, delta lake, apache hudi, table format, data lake acid, schema evolution
+- API Anthropic guia completo: messages, streaming, vision, batch, prompt cache — PT-BR.
+- API da Anthropic: messages, streaming, vision, batch e cache
+- api gateway aws, http api rest api, websocket api, lambda authorizer, usage plans
+- API real em Cloudflare Workers: D1 pra dados, KV pra cache, R2 pra assets, auth JWT edge-validated, rate limit com Durable Objects. Meta: p99 &lt; 50ms globalmente. Load test geo-distributed.
+- API real: Minimal APIs + EF Core + Serilog + OpenAPI + Auth JWT + rate limiting + health checks + Dockerfile + tests (xUnit + TestContainers). Deploy em Azure App Service ou container.
+- apollo server 4, apollo client, apq automatic persisted queries, apollo cache
+- Apollo Server 4, plugins, error handling, caching (APQ, response cache). Apollo Client normalized cache, optimistic UI, fragment matching. Alternatives: urql, Relay.
+- App: fechado, define deps. Lib: aberta, consumida por apps diversos. Peer deps (não bundle React), side-effects, bundle size conscious, no console.log, API stability commitment, versionamento rigoroso.
+- App real (dashboard, blog, ou e-commerce): Next.js App Router + RSC + Server Actions, CSS moderno (layers + container queries), a11y AA, Lighthouse > 95, bundle < 200kb.
+- App real (todo list, notas, tracking): SQLite local (expo-sqlite), React Query offline cache + resumable mutations, sync quando online, conflict resolution, deploy em TestFlight + Play internal.
+- Architecture Decision Records: context, decision, consequences. MADR template. Quando ADR vs design doc. Repositório /docs/adrs como linha do tempo viva.
+- Architecture Decision Records format (Nygard). Type 1 (irreversível) vs Type 2 (reversível) decisions — diferente rigor. ADR no repo, numerado, versionado, imutável (superseded, not edited).
+- argon2id hash senha, bcrypt owasp, pepper senha, timing safe compare, hash password moderno
+- aria accessibility, rule of aria, aria-label, aria-live, role button div, widget custom aria
+- ARIA profissional: rule of ARIA, roles, aria-label, live regions, armadilhas — PT-BR.
+- Arquitetura de sistemas com múltiplos agentes: orchestrator-worker, prompt chaining, parallelization, routing condicional e swarms. Como escolher a arquitetura certa e os trade-offs de cada padrão.
+- Arquitetura de software moderna em 2026: monolito modular vs microserviços, DDD, ADR, modelo C4, fitness functions, evolução — tudo em PT-BR.
+- Arquitetura do control plane, Pods, Deployments, Services, Ingress, ConfigMaps/Secrets, Storage, RBAC, autoscaling, Helm e troubleshooting — o guia definitivo do K8s.
+- Arquitetura edge moderna: Cloudflare Workers profundo (Durable Objects, KV, D1, R2), Vercel Edge Functions, Deno Deploy, Bun runtime, Lambda@Edge, patterns edge-first, capstone API global < 50ms p99.
+- Arquitetura Moderna: trade-offs, ADRs, C4 e evolução
+- Arquitetura profissional de soluções AWS alinhada ao exame SAA-C03
+- Arquiteturas de inferência (real-time endpoint, serverless, async, batch), SageMaker + MLOps, integração com Bedrock e data lake alimentando pipelines de ML.
+- arquitetura software moderna, monolito modular, microservicos, ddd, adr architecture decision record, modelo c4, fitness functions
+- Arrays contíguos (cache locality), hashmaps amortized O(1), collision strategies (open addressing vs chaining), load factor, quando Map beat Object em JS, Set, WeakMap. Por que hash ruim degrada pra O(n).
+- Arrays e hashmaps em JS/TS: cache locality, collision, load factor, Map vs Object — PT-BR.
+- Árvores decisão RF XGBoost LightGBM hyperparam — PT-BR.
+- Árvores na prática: BST, heap priority queue, trie autocomplete — devs pragmáticos — PT-BR.
+- As features que transformam Claude de chatbot em ferramenta profissional: extended thinking para raciocínio profundo, citations para respostas verificáveis, PDF/imagem nativo, code execution e Files API.
+- asp.net core minimal apis, dependency injection core, openapi swagger csharp
+- Async/await sem pegadinha: promises, AbortController e cancelamento
+- async/await (Swift 5.5+), Task groups, structured concurrency, actors (thread-safety por isolation), Sendable, MainActor. Replace GCD/callbacks.
+- async await typescript, abortcontroller fetch, promise all allsettled, cancelamento promise, async sem pegadinha
+- Async/await TypeScript profissional: AbortController, Promise.all/allSettled, cancelamento — PT-BR.
+- Async em Python: asyncio, trio e trade-offs vs Node
+- asyncio: event loop, Task, gather, as_completed. Por que Python async é mais verboso que Node (cor/coloring problem). trio como alternativa estruturada. anyio pra code lib-agnóstico. Gotchas: sync no event loop trava tudo; usar asyncio.to_thread pra I/O legado.
+- Athena (serverless SQL on S3), EMR (Hadoop/Spark), Kinesis Data Streams vs Firehose, Glue ETL, Redshift Spectrum, QuickSight.
+- At-most, at-least, exactly-once (EOS). Producer idempotence + transactions. Consumer read-process-write patterns. Limitations (external side effects).
+- Augmentation (albumentations), normalization, preprocessing para inference. Batch processing. GPU acceleration com CuPy. DALI para data loading.
+- autenticacao autorizacao diferenca, rbac abac, zanzibar spicedb, session vs jwt, authn authz
+- Autenticação (quem é você) vs Autorização (o que pode fazer). Por que misturar no mesmo middleware é bug comum. RBAC vs ABAC vs ReBAC (Zanzibar/SpiceDB). Session vs stateless (JWT). Como TIPAR o Request<User> no TS pra nunca acessar endpoint sem authn.
+- Authn vs Authz profissional: RBAC, ABAC, ReBAC, Zanzibar — guia PT-BR.
+- Authorization Code + PKCE (único fluxo aceitável em 2026), Client Credentials (machine-to-machine), Device Code (CLI/TV). OIDC sobre OAuth2: id_token, scopes, claims. Erros fatais: implicit flow, ROPC. Como debugar token inválido sem expor secret.
+- Automated a11y testing: axe-core, Lighthouse, jest-axe, Pa11y em CI — guia PT-BR.
+- Avaliação de fine-tuning: golden set, LLM-as-judge, regression — PT-BR.
+- avaliar modelos IA, benchmarks LLM, MMLU HumanEval, lm evaluation harness
+- avaliar rag, recall at k, ndcg, mrr, ragas, faithfulness, llm as judge, rag evaluation
+- AWS analytics: Athena serverless SQL, EMR Spark Hadoop, Kinesis streams firehose, Glue ETL, Redshift Spectrum, QuickSight.
+- aws athena emr, kinesis streams firehose, aws glue etl, redshift spectrum quicksight
+- aws bedrock, sagemaker mlops, comprehend nlp, textract, rekognition
+- AWS CI/CD enterprise: CDK Pipelines cross-account, manual approvals — SAP PT-BR.
+- AWS Cloud Adoption Framework, 7 Rs migration strategies, rehost replatform refactor repurchase, CAF perspectives.
+- aws cloudwatch cloudtrail config, cloudwatch vs cloudtrail, aws config compliance, monitoramento aws
+- aws codepipeline cicd, aws cloudformation cdk, aws sam serverless, aws codebuild codedeploy, aws x-ray amplify
+- aws cognito user pool, identity pool, cognito srp, lambda triggers cognito, api gateway authorizer
+- AWS Cognito: user pool vs identity pool, SRP, custom auth Lambda — PT-BR DVA.
+- aws compute optimizer, savings plans, reserved instances, spot fleet, intelligent tiering
+- AWS compute services: EC2 instance types, on-demand reserved spot, Lambda serverless, Fargate ECS EKS containers.
+- aws config, audit manager, aws artifact, license manager, service catalog
+- AWS Config (config compliance), Audit Manager (frameworks PCI/HIPAA/SOC2), Artifact (compliance reports baixar), License Manager, Service Catalog.
+- AWS containers e serverless enterprise: ECS/EKS/Fargate/App Runner — SAP PT-BR.
+- AWS cost allocation tags, Cost Categories, anomaly detection — enterprise SAP PT-BR.
+- aws cost allocation tags, cost categories, cost anomaly detection, reserved instances portfolio
+- AWS Cost Anomaly Detection ML, Datadog Cloud Cost, Vantage, CloudZero. Alert fatigue vs signal. Thresholds, baselines, seasonal adjustment.
+- AWS cost optimization enterprise: Compute Optimizer, Savings Plans, Spot — SAP PT-BR.
+- AWS cost optimization: Reserved Instances, Savings Plans compute EC2, Spot Instances, Trusted Advisor, cost allocation tags.
+- AWS databases: RDS Aurora DynamoDB ElastiCache Redshift, relacional vs NoSQL, quando usar cada banco AWS.
+- aws databases, rds aurora dynamodb, redshift elasticache, quando usar rds ou dynamodb
+- AWS developer tools: CodeCommit CodeBuild CodeDeploy CodePipeline, CloudFormation CDK SAM, Amplify, X-Ray distributed tracing.
+- aws direct connect dx, site to site vpn, client vpn aws, privatelink vpc endpoint, route 53 resolver hibrido
+- aws direct connect, site to site vpn, storage gateway, datasync, hibrido on-prem
+- aws disaster recovery, rto rpo, pilot light, warm standby, multi site, drs elastic
+- AWS disaster recovery strategies: backup restore pilot light warm standby multi-site, RPO RTO, AWS Backup cross-region.
+- aws dms sct migration, aws mgn lift and shift, aws drs disaster recovery, datasync transfer family, snow family
+- AWS DR: backup restore, pilot light, warm standby, multi-site — SAP PT-BR.
+- aws dva c02, aws developer associate, certificacao aws dva, dva dominios, estudar dva
+- AWS DVA-C02 intro: domínios, pesos, estratégia de 4 semanas — PT-BR.
+- aws ec2 lambda container, ec2 instance types, on demand reserved spot, fargate ecs eks
+- aws ecs eks, fargate, app runner, app mesh service discovery, serverless containers
+- AWS ECS Fargate pra dev: task, service, quando usar vs Lambda — PT-BR DVA.
+- AWS ECS vs EKS, Fargate vs EC2 launch type, Kubernetes managed, service discovery, container orchestration AWS.
+- AWS edge compute: CloudFront Functions (lightweight JS, viewer events), Lambda@Edge (full Lambda, cada request mais caro). Quando AWS-native edge faz sentido vs Cloudflare.
+- aws eventbridge, sqs fifo dlq, sns fanout, visibility timeout, long polling sqs
+- aws guardduty, detective, security hub, macie, network firewall, waf inspector
+- AWS hybrid networking: Direct Connect DX, Site-to-Site VPN, Client VPN, PrivateLink, Gateway Interface Endpoints, Route 53 Resolver hybrid DNS.
+- AWS IAM avançado: policy JSON elements, STS AssumeRole, cross-account access, Organizations SCPs, Identity Center SSO.
+- AWS IAM explicado: usuários, grupos, roles, policies JSON, MFA, diferença entre user e role, root account boas práticas.
+- aws iam fundamentos, iam user group role policy, mfa aws, root account aws
+- AWS KMS (CMK, envelope encryption, key policies). HashiCorp Vault (transit, PKI secrets engine). HSM (CloudHSM, YubiHSM). Quando cada. Rotation strategies.
+- aws kms envelope encryption, cmk customer managed key, kms rotation, kms grant, cloudhsm
+- AWS KMS envelope encryption, CMK rotation, grants — guia DVA PT-BR.
+- aws kms guardduty shield waf, secrets manager, inspector macie, seguranca aws servicos
+- aws kms, hashicorp vault, hsm hardware security module, envelope encryption, key rotation
+- AWS Lambda cold start concurrency layers, API Gateway REST vs HTTP, Step Functions workflows, serverless architecture.
+- AWS Lambda profundo: cold start, layers, SnapStart, provisioned concurrency — PT-BR.
+- AWS messaging services: SQS Standard FIFO DLQ, SNS topic fanout, EventBridge rules, Kinesis Streams Firehose.
+- aws migration 7rs, dms database migration, aws application migration service, migration hub
+- aws migration hub, aws mgn application migration service, aws dms, application discovery service, aws datasync
+- AWS migration services: Migration Hub, AWS MGN Application Migration Service, DMS Database Migration, Application Discovery, DataSync.
+- AWS monitoring: CloudWatch metrics logs, CloudTrail api audit, AWS Config compliance, diferença entre CloudWatch e CloudTrail.
+- AWS observability enterprise: CloudWatch, X-Ray, OpenSearch — SAP PT-BR.
+- aws organizations, control tower, landing zone, scp service control policy, iam identity center
+- aws outposts, wavelength 5g, local zones, snow family, edge hibrido
+- AWS Outposts, Wavelength, Local Zones, Snow Family — edge híbrido SAP PT-BR.
+- aws pricing free tier, pricing calculator cost explorer, aws budgets, support plans aws
+- AWS pricing: free tier, pricing calculator, cost explorer, AWS Budgets, support plans basic developer business enterprise.
+- aws redshift, emr spark, athena, lake formation, kinesis analytics
+- aws regions availability zones, AZ edge location, infraestrutura global aws, local zones wavelength
+- AWS regions, availability zones explicadas, edge locations CloudFront, infraestrutura global AWS.
+- aws s3 ebs efs glacier, s3 storage classes, ebs volume types, quando usar s3 ebs efs
+- AWS SAA-C03 Solutions Architect Associate, domínios do exame, diferença Practitioner vs Associate, preparação SAA.
+- aws saa-c03, solutions architect associate, dominios exame saa, preparacao saa-c03
+- AWS SAA migration patterns: DMS Schema Conversion Tool, AWS MGN Application Migration, Elastic Disaster Recovery DRS, DataSync, Transfer Family, Snowball.
+- AWS SAA ML architecture: SageMaker real-time serverless async batch inference, Bedrock integration, MLOps pipelines, data lake feeds ML.
+- aws sagemaker, amazon bedrock, amazon q, aws rekognition comprehend, polly transcribe translate, amazon lex kendra
+- AWS SAP-C03 intro: domínios, pesos, estratégia estudo — PT-BR.
+- aws sap c03, solutions architect professional, aws certification
+- AWS Secrets Manager vs Parameter Store: custo, rotation, extension — PT-BR DVA.
+- AWS security services: KMS encryption, Secrets Manager, GuardDuty threat detection, Shield DDoS, WAF, Inspector Macie.
+- AWS storage: S3 classes standard IA glacier, EBS SSD HDD, EFS file system, storage gateway, quando usar cada um.
+- aws transit gateway, aws ram, cloud wan, vpc lattice, multi-region networking
+- AWS Transit Gateway, RAM, Cloud WAN, VPC Lattice — networking enterprise SAP PT-BR.
+- AWS VPC avançado: NAT Gateway vs NAT Instance, VPC Peering Transit Gateway, PrivateLink, VPN Direct Connect, subnet design.
+- aws vpc networking, route 53 dns, cloudfront cdn, direct connect vpn aws
+- AWS Well-Architected Framework 6 pilares aplicado + WA Tool — SAP PT-BR.
+- AWS Well-Architected Framework explicado, 6 pilares operational security reliability performance cost sustainability.
+- AWS X-Ray tracing distribuído: segments, ADOT OpenTelemetry — PT-BR DVA.
+- aws x-ray tracing, x-ray segments, adot opentelemetry aws, sampling rules, service map
+- axe-core (Deque) é standard de fato — usado pelo Lighthouse, Pa11y, jest-axe, Cypress-axe. Pega 30-50% dos problemas automaticamente. Integrar em CI (PR falha se novo issue). Nunca substitui teste manual; é o piso, não o teto.
+- axe core testing, lighthouse a11y, pa11y, jest-axe cypress, automated accessibility testing
+- azure devops pipelines, azure-pipelines yml, azure pipelines stages, service connection azure, variable groups, deploy aks azure devops
+- Azure DevOps Pipelines tutorial PT-BR: azure-pipelines.yml, stages, environments, approvals, service connections, templates, deploy em AKS.
+- azure doc intelligence, aws textract, landingai ocr, mistral ocr, tesseract vs moderno
+- Azure Pipelines em YAML, stages, approvals, environments, service connections, templates, variable groups e deploy em AKS + App Service com gate de aprovação.
+- back of envelope, sd calculos, latency numbers, qps estimate
+- backstage, software catalog, techdocs, scaffolder backstage, port cortex
+- Backup & Restore, Pilot Light, Warm Standby, Multi-Site Active-Active — custo vs RTO/RPO, AWS Backup, cross-region DR.
+- Backup/restore (RTO/RPO horas), Pilot Light (mins), Warm Standby (min), Multi-Site Active/Active (zero). Route 53 failover, RDS read replicas cross-region, S3 CRR, AWS Elastic Disaster Recovery.
+- Batch: rodadas periódicas, throughput alto, latency em minutos/horas (ETL noturno). Stream: eventos contínuos, latency ms-segundos (Kafka + Flink). Lambda e Kappa architectures. Quando batch é bom suficiente (a maioria dos casos), quando stream é mandatório (real-time fraud, personalization).
+- batch vs stream, lambda architecture, kappa architecture, kafka flink, etl vs streaming
+- Batch vs stream: lambda/kappa arch, trade-offs de latency vs throughput — guia PT-BR.
+- Bedrock (foundation models managed), SageMaker (MLOps completo), Comprehend (NLP), Textract (OCR), Rekognition (vision). Quando managed vs self-host.
+- behavioral interview, star method, brag doc, amazon leadership principles
+- Benchmarks (techempower, benchmarksgame) vs realidade. C/C++/Rust ~same (systems level). Go/Java ~2-3x Rust em hot path, &lt;1.5x em I/O. JS/Python 10-50x slower CPU-bound. Concurrency overhead difere por linguagem.
+- bfs dfs javascript, dijkstra, adjacency list, detectar ciclo grafo, shortest path
+- Big-O como linguagem pra falar de custo; O(1)/O(log n)/O(n)/O(n log n)/O(n²) com exemplos reais; quando constantes importam; amortized vs worst-case; por que bubble sort teórico é ruim mas timsort real venceu.
+- Big-O na prática: custos reais, amortized, quando constantes importam — PT-BR.
+- big o notation, complexidade algoritmos, amortized analysis, o(n log n), algoritmos na pratica
+-  + bindgen. Miri pra detectar UB. Embedding em Python (pyo3), Node (napi-rs).',seoDesc:
+- blocking nonblocking io, epoll linux, select poll, async io, event loop base
+- bloom filter, hyperloglog, count min sketch, estruturas probabilisticas, aproximacao algoritmo
+- Bloom filter (membership com falso positivo, zero falso negativo — cache, dedup); HyperLogLog (cardinalidade com 1-2% erro em MB); Count-Min sketch (frequência aproximada); quando aceitar imprecisão em troca de memória constante.
+- Bloom, HyperLogLog, Count-Min: estruturas probabilísticas
+- bm25 scoring, tf idf, term frequency inverse document frequency, lucene scoring
+- BM25 + vector, reciprocal rank fusion, cross-encoder reranking (Cohere, Jina, Voyage), HyDE, query expansion — o pipeline de retrieval de produção.
+- Brag doc contínuo (Julia Evans). Promo packet (scope + impact + leadership). Calibração com staff engineers do time. Timing. Anti-pattern: esperar manager lembrar.
+- braintrust eval, langfuse evals, inspect ai safety, promptfoo, llm eval framework
+- Brokers, controller (KRaft 2024+), topics, partitions, replication factor, ISR, leader election. Producer idempotence. Consumer group rebalance. Tiered storage.
+- BST balanceada (como Map de várias libs), heap (priority queue pra scheduling), trie (autocomplete, filesystem path). Pular AVL e red-black como estudo acadêmico — entender o que a lib padrão usa por baixo.
+- bst javascript, heap priority queue, trie autocomplete, arvore binaria pratica, arvore ordenada
+- B-tree (default) é 90% dos casos. BRIN pra tabelas muito grandes ordenadas (log data). GIN pra arrays/jsonb/FTS. GiST pra geométrico/proximity. Partial (WHERE condition) reduz tamanho. Covering (INCLUDE) elimina heap fetch. Expression index pra computed values.
+- Build: CLI (cobra) + REST API (net/http + chi router) integradas. Unit + integration tests. Goroutine pool. Context-aware. Graceful shutdown. Config via env + viper. Dockerfile minimal (scratch ~10MB).
+- Build deploy RN: EAS, TestFlight, Play Console, OTA — PT-BR.
+- Build: parser JSON otimizado, ou thread pool, ou embedded DB. RAII strict, zero new/delete, concepts-based templates, modules, ranges-based code. Benchmarks vs alternatives. Zero sanitizer warning.
+- Build real: HTTP server minimalista (epoll Linux), ou allocator custom (como jemalloc simplificado), ou shell ultra-minimal. Zero memory leaks (Valgrind clean), UBSan clean, &lt; 2000 LOC. Man page.
+- Build: REST API Spring Boot 3 + records + virtual threads + JPA + Testcontainers + OpenAPI + Actuator + Prometheus + GraalVM native image opcional. Deploy em Kubernetes. Load test com k6.
+- Build search: produtos e-commerce. BM25 (title/desc) + vector (semantic) + filters (price/category) + facet aggregation. Reranker pra top-20. Dataset 100k+ items. Meta: NDCG@10 &gt; 0.8, latency &lt; 200ms p95.
+- Build voice assistant: Whisper STT + Claude/GPT-4o reasoning + ElevenLabs/Cartesia TTS, WebRTC streaming, VAD, tool use (set alarm, search web). Deploy em mobile + desktop.
+- , bullet spam). Formato LaTeX ou Markdown → PDF. ATS-friendly.',seoDesc:
+- C11 (2011): _Generic, _Atomic, anonymous structs, VLA optional. C17 bug fixes. C23 (2024): bool nativo, constexpr, nullptr, attributes [[...]], embed, decimal floats. Compilers: GCC, Clang, MSVC suporte varia.
+- c11 c17 c23, c generic, c constexpr, c nullptr, c embed
+- c# 12 features, records csharp, pattern matching, primary constructors
+- C# 12+ features: records, pattern matching, primary ctors
+- C# 12 records pattern matching primary constructors — PT-BR.
+- c++20 concepts, requires clause, template metaprogramming, sfinae
+- c++20 modules, c++ coroutines, co_await co_yield, cpp generators
+- C++20 modules coroutines: co_await generators — PT-BR.
+- c++20 ranges, views filter transform, std format, stl moderno
+- Cache locality (struct of arrays vs array of structs), branch prediction, inline assembly quando needed, SIMD intrinsics (SSE/AVX), constexpr compile-time eval, profile com perf + flamegraphs.
+- CA, intermediate, leaf. Chain of trust. X.509 fields (subject, issuer, SAN, key usage). Revocation (CRL, OCSP, OCSP stapling). Let's Encrypt ACME protocol.
+- CAP e PACELC: o teorema que define toda arquitetura distribuída
+- Capstone a11y: audit axe, NVDA testing, WCAG 2.2 AA compliance remediation — PT-BR.
+- capstone accessibility, audit axe, wcag aa compliance, a11y remediation, accessibility audit real
+- Capstone agent Claude API: tool use, MCP, prompt caching, Langfuse, eval, deploy — PT-BR.
+- Capstone agent Python: Pydantic, FastAPI, Claude SDK, tool use, deploy — PT-BR.
+- Capstone AI-Native: RAG produção, pgvector, reranker, eval harness, Langfuse, canary — PT-BR.
+- Capstone AI red team: jailbreaks, injection, exfil em agent real — PT-BR.
+- capstone algoritmos pratica, bloom filter dedup, min heap top n, cycle detection, sliding window
+- Capstone API REST completa: OpenAPI, JWT, cursor, idempotency, webhooks, rate limit, Pact — PT-BR.
+- capstone api rest, openapi spec driven, jwt api, webhook idempotency, pact contract testing capstone
+- Capstone: ASP.NET Core API completa production-ready
+- Capstone ASP.NET Core API: EF OpenAPI Auth Docker xUnit — PT-BR.
+- capstone aspnet core, ef core api, openapi csharp, xunit testcontainers
+- Capstone chaos engineering experiment runbook — PT-BR.
+- capstone c, http server c, custom allocator, epoll linux c
+- Capstone C: HTTP server epoll ou allocator custom — PT-BR.
+- capstone c++, json parser cpp, thread pool cpp, cpp benchmark
+- capstone claude agent, claude api tool use, mcp producao, prompt caching claude, langfuse claude, agent deploy
+- Capstone Claude Code: CLAUDE.md, skills, hooks, settings hierarchy, team playbook — PT-BR.
+- capstone claude code time, claude.md template, claude code skills time, hooks ci claude, onboarding claude code
+- Capstone C++ moderno: parser thread pool high-perf — PT-BR.
+- Capstone: construir um CLI tool TypeScript end-to-end
+- Capstone criptografia producao mTLS KMS Vault — PT-BR.
+- Capstone CV pipeline produção ONNX Triton — PT-BR.
+- capstone data pipeline, kafka iceberg dbt, dagster orchestration, great expectations, metabase superset
+- capstone devops, gitops argocd, eks prometheus grafana, cert-manager, external secrets, plataforma devops completa
+- Capstone DevOps PT-BR: Docker, EKS, ArgoCD, Prometheus, cert-manager — plataforma GitOps completa.
+- capstone dev setup, new machine setup, reproducible onboarding script
+- Capstone DS&A: 5 problemas reais de produção — Bloom, min-heap, ciclo, cursor, rate limit — PT-BR.
+- Capstone DX: dev setup do zero reproduzível — PT-BR.
+- capstone edge api, cloudflare workers global api, durable objects rate limit
+- Capstone edge API global: Workers D1 KV R2 Durable Objects — PT-BR.
+- Capstone engenharia software: refactor legado com ADR, testes, C4, fitness functions — PT-BR.
+- Capstone eval harness: golden set, pairwise, A/B, regression, Langfuse dashboard — PT-BR.
+- Capstone: fine-tune de modelo especialista de domínio
+- capstone fine tune, llm especialista dominio, lora llama mistral, vllm fastapi, hugging face hub
+- Capstone fine-tune: modelo especialista domínio, LoRA Llama/Mistral, vLLM deploy — PT-BR.
+- Capstone FinOps: redução 30% custo cloud — metodologia real PT-BR.
+- capstone finops, reducao custo cloud, cloud cost optimization case
+- capstone frontend, next.js app router, rsc server actions, lighthouse 95
+- Capstone frontend: Next.js RSC + CSS moderno + a11y + perf — PT-BR.
+- Capstone Go: CLI cobra API net/http chi idiomática — PT-BR.
+- capstone go, cobra cli, chi router go, net http api, go docker scratch
+- Capstone: harness de testes completo pra um produto
+- Capstone iOS app App Store publicado fastlane — PT-BR.
+- Capstone Kafka pipeline Postgres ClickHouse — PT-BR.
+- capstone llm eval, pairwise evaluation, ab test prompt, langfuse dashboard, eval harness producao
+- Capstone ML pipeline completo deploy FastAPI — PT-BR.
+- Capstone multi database arquitetura Postgres Redis MongoDB pgvector — PT-BR.
+- capstone npm library, publish lib professional, 1.0 release, typedoc docs
+- Capstone pentest ético: Burp, ffuf, nuclei, sqlmap, CVSS, PRs de fix — guia PT-BR.
+- Capstone performance engineering investigation — PT-BR.
+- capstone performance, perf investigation, flamegraph comparison, perf writeup
+- Capstone Postgres tuning: EXPLAIN ANALYZE, índices, rewrite, pg_stat_statements — PT-BR.
+- capstone postgres tuning, query optimization, pg_stat_statements, slow query 30s 50ms
+- Capstone: publicar lib com 1.0 release, docs, exemplos
+- Capstone publicar lib npm: tsup vitest changesets publint docs — PT-BR.
+- capstone python agent, claude agent sdk python, pydantic fastapi agent, deploy python agent, ia python capstone
+- capstone rag producao, pgvector, hybrid search reranker, rag eval, langfuse, canary llm, ai native capstone
+- capstone react native offline, sqlite sync, conflict resolution mobile
+- Capstone real time app WebSocket Yjs LiveKit — PT-BR.
+- capstone red team ai, llm adversarial, agent security test
+- capstone refactor legado, adr refactor, fitness function, testes antes refactor, strangler fig pattern
+- Capstone: remediar um site inacessível até nível AA
+- Capstone: resolver 5 problemas reais (não-LeetCode)
+- Capstone Rust CLI clap Axum sqlx produção — PT-BR.
+- capstone saga distribuida, outbox pattern, compensations, temporal saga, step functions saga
+- capstone search, hybrid search capstone, ndcg benchmark, search ecommerce
+- Capstone search multimodal: BM25 + vector + filters + rerank — PT-BR.
+- Capstone: search multimodal (texto + filtros + vetor)
+- Capstone sistemas distribuídos: saga, outbox, compensations, idempotency — produção PT-BR.
+- Capstone Spring Boot 3: virtual threads JPA GraalVM k8s — PT-BR.
+- capstone spring boot, java production api, graalvm spring, k8s java
+- Capstone SRE: SLIs, SLOs, error budget, multi-burn-rate alerts, runbook, gameday — PT-BR.
+- capstone sre, slo error budget, multi burn rate alerts, runbook producao, gameday chaos
+- Capstone tech leadership: ADR completo decisão real — PT-BR.
+- capstone tech leadership, adr real, architecture decision record template
+- capstone testing harness, vitest integration, pact contract, playwright e2e, stryker ci, k6 pre-prod
+- Capstone testing harness: vitest, test-containers, Pact, Playwright, Stryker, k6 — PT-BR.
+- Capstone: tuning de workload — query de 30s pra 50ms
+- Capstone TypeScript: CLI tool end-to-end com Zod, Result, vitest, changesets — PT-BR.
+- Capstone voice assistant: Whisper + Claude + ElevenLabs + WebRTC — PT-BR.
+- Career mental model junior senior staff engineer — PT-BR.
+- career path engineer, staff engineer archetypes, ic vs manager track, seniority
+- Cargo workspaces, features, build scripts, cross-compile. Crates.io (150k+). Perf real: cachegrind, flamegraph, criterion bench. Editions 2015/2018/2021/2024 — mudanças reais. Toolchains 1.75+ (atual 2026) e rolling stable.
+- Carreira tech como sistema, não sorte: resume que converte, LinkedIn sem hype, behavioral interview com frameworks, negotiation (sem deixar dinheiro na mesa), promo docs que avançam, portfolio técnico público. Baseado em playbooks reais (Levels.fyi, Gergely Orosz, haseeb).
+- carreira tecnica ic vs manager, dual ladder, staff engineer, principal engineer career
+- Cascade Layers (@layer) resolvendo specificity wars, :has() (parent selector finalmente), View Transitions API (animation page→page), nesting nativo, color-mix(), light-dark().
+- c# async await, configureawait false, valuetask, iasyncenumerable, cancellationtoken
+- C# async await ConfigureAwait ValueTask IAsyncEnumerable — PT-BR.
+- Categorical encoding (one-hot, target, ordinal, leave-one-out), numerical transforms (log, box-cox), temporal features, interactions. Data leakage pitfalls.
+- C build systems: make, CMake, Ninja, Meson, compiler flags — PT-BR.
+- C como o OS: pointers sem medo, memory management manual, undefined behavior reais, build systems (make, CMake), debugging com gdb, threads (pthreads, C11 threads), C moderno (C11/C23), capstone de systems programming.
+- C++ Core Guidelines clang-tidy sanitizers vcpkg — PT-BR.
+- c++ core guidelines, clang-tidy, vcpkg conan, cpp sanitizers
+- C++ Core Guidelines (Stroustrup + Sutter) — style guide oficial. clang-tidy (auto-check), include-what-you-use, clang-format. Sanitizers (ASan, TSan, UBSan, MSan). vcpkg/conan pra dependency management.
+- CDC com Debezium: logical replication, Kafka Connect, outbox pattern — guia PT-BR.
+- C debugging: gdb Valgrind sanitizers ASan TSan UBSan — PT-BR.
+- cdk pipelines multi account, codepipeline enterprise, manual approval, blue green cicd
+- CDK Pipelines pra deploy cross-account, CodePipeline com manual approval gates, artifact signing, rollback strategies, blue/green em escala.
+- C# e .NET em 2026: C# 12+ features (records, pattern matching, primary constructors), async/await rigoroso, LINQ produtivo, ASP.NET Core Minimal APIs, EF Core, dependency injection first-class, performance (Span, Memory), capstone ASP.NET Core API completa.
+- C# e .NET: história, CLR e por que bate produtividade em 2026
+- Certificação expert da AWS: multi-account (Organizations, Control Tower, Landing Zone), networking avançado (RAM, Cloud WAN, Transit Gateway), migração complexa (7 Rs, DMS, SMS), cost allocation em escala, well-architected framework aplicado, edge, híbrido e disaster recovery. Capstone: simulado SAP-C03 comentado.
+- Certificação profissional da AWS em três níveis: o Practitioner nivela os 4 domínios do CLF-C02, o Developer Associate (DVA-C02) aprofunda em Lambda + DynamoDB + API Gateway + CI/CD AWS, e o Solutions Architect Associate leva à arquitetura resiliente, segura, performática e com custo otimizado.
+- Change Data Capture: capturar INSERT/UPDATE/DELETE do DB e publicar como event stream. Debezium usa logical replication (Postgres) ou binlog (MySQL). Kafka Connect integra. Uso: replicar OLTP → OLAP sem batch ETL, outbox pattern, invalidação de cache.
+- Change Data Capture via binlog (MySQL, Postgres WAL, Mongo oplog). Debezium connectors. Snapshot vs streaming. Handling schema changes. Dual writes são bugs.
+- chaos capstone, chaos experiment runbook, resilience engineering
+- Chaos engineering como disciplina (não gambiarra): princípios (steady-state hypothesis, minimize blast radius), Chaos Monkey, Gremlin, LitmusChaos, game days estruturados, fault injection controlada. Para sistemas que realmente resistem.
+- chaos engineering principles, principles of chaos, steady state hypothesis, blast radius
+- chaos monkey, simian army, gremlin chaos, chaos toolkit, netflix chaos
+- chat system design, websocket chat, delivery semantics, e2e encryption
+- Chat system design WhatsApp WebSocket E2E — PT-BR.
+- Cheatsheet prático: 50+ comandos, 30 atalhos, 20 flags — a referência executiva
+- chezmoi dotfiles, gnu stow, dotfiles repo git, reproducible dev setup
+- chezmoi (template-aware, 1st class), GNU Stow (symlink-based classic), dotfiles repo em Git. Template secrets per-machine, public repo safe. Onboarding new machine em 10min.
+- c# historia, anders hejlsberg, c# 12, .net 8 lts, clr roslyn, c# async linq pioneiro
+- c historia, c compilador gcc clang, c99 c11 c23 2026, c no kernel linux, c diferencial
+- C# história CLR Roslyn versões LINQ async versões 2026 — PT-BR.
+- C: história, compilador e por que ainda domina em 2026
+- C história compilador GCC Clang versões C99 C11 C23 2026 — PT-BR.
+- c++ historia, stroustrup, c++11 c++20 c++23, c++ compilador gcc clang msvc, c++ diferencial zero overhead
+- Chunking e Embeddings: as decisões que fazem ou quebram seu RAG
+- Chunking e embeddings em RAG profissional: estratégias, contextual retrieval, overlap, escolha de modelo de embedding, métricas de similaridade.
+- chunking rag, contextual retrieval anthropic, embeddings escolha, voyage openai bge, dimensao embedding, cosine similarity
+- CI/CD AWS CodeBuild CodeDeploy CodePipeline: blue/green canary — PT-BR DVA.
+- CI/CD AWS-nativo: CodeBuild, CodeDeploy e CodePipeline
+- CI/CD modelos ML drift detection Evidently — PT-BR.
+- Cinco problemas de produção: (1) dedup de 10M eventos usando Bloom; (2) top-N queries lentas do banco com min-heap; (3) detecção de ciclo em deps de pacote; (4) cursor pagination com tiebreaker estável; (5) rate limit com sliding window counter. Cada um com análise de custo real.
+- Claude 3, 3.5, 4 — o que diferencia Haiku, Sonnet e Opus. API, Claude.ai, Claude Code, MCP: o mapa completo do que a Anthropic oferece e quando usar cada produto.
+- claude agent sdk, claude code sdk, claude code programático, claude code python, claude code typescript, anthropic sdk
+- Claude Agent SDK em producao: CI/CD, custom tools, hooks programaticos, sessions — guia PT-BR.
+- Claude Agent SDK em produção: CI/CD, servidores e app embarcado
+- claude agent sdk producao, sdk python typescript claude, github action claude, cron claude, agent sdk custom tools
+- Claude Agent SDK tutorial: usar Claude Code como biblioteca Python/TypeScript — query, hooks, subagents, CI/CD PT-BR.
+- Claude Agent SDK: usar Claude Code como biblioteca
+- claude agents, multi agent claude, orchestrator worker, prompt chaining, parallelization llm, routing agent
+- Claude agents workflows: orchestrator-worker, chaining, parallelization, routing — arquitetura de multi-agents PT-BR.
+- Claude Code cheatsheet 2026: 70+ slash commands, 30 atalhos de teclado, 20 flags CLI, padrões práticos PT-BR.
+- claude code cheatsheet, claude code comandos, slash commands claude, atalhos claude code, flags cli claude code
+- Claude Code, Codex, Cursor, Kiro — as diferenças reais entre os coding agents
+- claude code como funciona, arquitetura claude code, loop agentico claude, CLI agente IA
+- claude code contexto, context window claude, compactacao contexto, claude code subagents contexto
+- Claude Code gerenciamento de contexto: janela de contexto, compactação, subagents — como Claude Code decide PT-BR.
+- claude code github, claude code pull request, claude code code review, mcp github, claude actions
+- Claude Code GitHub integração: revisão de PR automatizada, triagem de issues, MCP GitHub — tutorial PT-BR.
+- Claude Code + GitHub: PRs, issues e code review automatizados
+- Claude Code hooks: automatizar ações, lint, testes e notificações — guia completo de hooks PT-BR.
+- claude code hooks, claude code automação, claude hooks eventos, anthropic hooks
+- Claude Code hooks cookbook: 10 receitas executáveis PT-BR — PreToolUse, PostToolUse, Stop, etc.
+- claude code hooks cookbook, hook pretooluse, hook posttooluse, hook stop, hook notification, receitas claude code
+- Claude Code: instalação, autenticação e primeiro uso real
+- claude code instalação, claude code terminal, claude code primeiros passos, anthropic cli
+- Claude Code instalação e configuração: primeiros passos no terminal, autenticação, comandos básicos — tutorial PT-BR.
+- claude code modos, claude code interativo, claude code pipe, claude code headless, claude code automação
+- Claude Code modos de uso: interativo, não-interativo, pipe, headless — como usar Claude Code em diferentes contextos.
+- claude code multi projeto, claude code sessions, claude code add-dir, claude code settings hierarchy, team onboarding claude
+- Claude Code multi-projeto: sessions, add-dir, settings hierarchy, team-onboarding, fork-session — guia PT-BR.
+- claude code paralelismo, claude code worktrees, claude code fan-out, claude code background, batch claude, loop claude, schedule claude
+- Claude Code paralelismo: git worktrees, fan-out, background tasks, /batch, /loop, /schedule — guia prático PT-BR.
+- Claude Code permissions em produção: allowlist, deny rules, sandbox, auto mode — guia PT-BR.
+- claude code permissions producao, allowlist claude, sandbox claude code, auto mode claude, enterprise policy claude
+- claude code permissões, claude code segurança, claude code trust, anthropic segurança
+- Claude Code permissões e segurança: trust levels, sandbox, configurar limites — uso seguro de IA no terminal.
+- claude code plugins, criar plugin claude, plugin times, marketplace plugins claude, claude plugin install
+- Claude Code plugins para times: estrutura, distribuição, marketplace — guia PT-BR.
+- Claude Code skills avançadas: scripts, dynamic context, hooks scoped — guia profissional PT-BR.
+- claude code skills avancado, skill scripts, dynamic context claude, hooks scoped skill, skill frontmatter
+- claude code skills, claude code commands, claude slash commands, claude code workflow, anthropic skills
+- Claude Code skills e slash commands: criar workflows customizados — guia completo PT-BR.
+- Claude Code subagents: delegar tarefas a agentes isolados — criação, configuração e uso real PT-BR.
+- claude code subagents, subagents claude, agentes isolados claude, claude code paralelismo, anthropic subagents
+- Claude Code system prompt engineering, output styles, statusline customizado — PT-BR.
+- Claude Code tem 4 modos principais. Interativo (chat), não-interativo (scripts), pipe (stdin/stdout) e headless (automação CI/CD). Quando e como usar cada um.
+- claude code workflow, claude code dia a dia, claude code explore plan code, produtividade com ia, claude code tutorial
+- claude code workflow, claude code profissional, workflow ia, spec driven claude, anthropic workflow
+- Claude Code workflow diário: explore, plan, code, commit — como usar Claude Code na prática como dev PT-BR.
+- claude cowork, anthropic cowork, claude plugins, tarefas agendadas claude, pesquisa com ia
+- Claude Cowork: plugins, tarefas agendadas e pesquisa em escala
+- Claude Cowork tutorial: plugins, tarefas agendadas, pesquisa em escala — como usar o Cowork da Anthropic PT-BR.
+- Claude Cowork vai além do chat: plugins especializados, tarefas agendadas, pesquisa profunda em arquivos e na web, tudo integrado ao seu fluxo de trabalho diário.
+- Claude em produção: custo, rate limits, prompt caching, segurança — como operar a API Anthropic com qualidade.
+- Claude em produção: custo real, rate limits, caching e segurança
+- claude extended thinking, claude citations, claude code execution, files api claude, anthropic features avancadas
+- Claude features avançadas: extended thinking, citations, code execution, Files API — guia completo PT-BR.
+- claude.md, claude code configuração, claude code contexto, claude code memória, claude code instrucoes
+- CLAUDE.md: como configurar memória e contexto do Claude Code — boas práticas e exemplos reais.
+- CLAUDE.md: como dar memória, contexto e personalidade ao agente
+- claude producao, anthropic rate limits, claude custo tokens, prompt caching anthropic, claude segurança producao
+- Claude tem características únicas de prompt engineering. Chain-of-thought, XML tags para estrutura, prefill, few-shot, como evitar alucinações e extrair JSON confiável.
+- claude tool use, anthropic tool use, function calling claude, claude agente, json schema claude tools
+- Claude tool use tutorial: definir ferramentas, JSON schema, multi-turn, agente funcional — Anthropic API PT-BR.
+- claude vision, gpt-4v, gemini vision, ocr ai, ui understanding ai
+- clickhouse analytics, columnar storage, merge tree, olap vs oltp
+- CLI, Git, HTTP, SSH, JSON/YAML — a base inegociável que todo dev precisa antes de qualquer outra coisa.
+- C# LINQ: method query deferred execution IQueryable — PT-BR.
+- c# linq, method query syntax, deferred execution, iqueryable, linq performance
+- cli tool typescript, capstone ts, commander citty, publicar npm cli, changesets release, cli vitest
+- Cloud Adoption Framework (6 perspectivas) e as 7 estratégias de migração — Rehost, Replatform, Refactor, Relocate, Retire, Retain, Repurchase.
+- cloud adoption framework aws, 7 rs migracao, rehost replatform refactor, caf perspectives
+- Cloud commitments: Savings Plans, Reserved Instances, Spot strategy — PT-BR.
+- cloudflare workers, kv d1 r2, durable objects, cf queues, v8 isolates
+- Cloudflare Workers profundo: KV, D1, R2, Durable Objects
+- cloudformation aws, aws sam, aws cdk typescript, terraform aws, drift detection, stacksets
+- CloudFormation (YAML/JSON declarativo, foundation). SAM (transform pra serverless, encurta boilerplate). CDK (TS/Python imperativo, synth pra CloudFormation). Terraform como alternativa cross-cloud. Drift detection, change sets, StackSets multi-account.
+- cloudwatch insights, x-ray service map, opensearch logs, container insights
+- CloudWatch Logs Insights, Metrics, Alarms, Dashboards, Application Insights, Container Insights. X-Ray service map. OpenSearch pra logs pesquisáveis em escala.
+- CloudWatch (métricas e logs), CloudTrail (auditoria de API) e Config (compliance) — o tripé de observabilidade.
+- CLR (Common Language Runtime), GC generational (gen 0/1/2 + LOH), Native AOT (.NET 7+), Ready2Run. Self-contained vs framework-dependent deploy. Docker images. Blazor overview. MAUI overview.
+- c make cmake ninja meson, compiler flags wall werror
+- c malloc free, stack heap, valgrind, address sanitizer, memory bugs c
+- C memory management: malloc free stack heap, Valgrind ASan — PT-BR.
+- C moderno C11 C23: _Generic constexpr nullptr embed — PT-BR.
+- C++ moderno pragmático: RAII e smart pointers, move semantics e rvalue references, templates genuínos (SFINAE → Concepts), STL moderno, C++20 features (modules, concepts, ranges, coroutines), performance real, capstone de high-perf utility.
+- c++ move semantics, rvalue reference, std move, perfect forwarding
+- C++ move semantics rvalue std::move std::forward — PT-BR.
+- C nasceu em 1972 nos Bell Labs (Dennis Ritchie) para escrever Unix. Padronizado em ANSI C (1989), C99, C11, C17, C23 (2024). Pipeline: source → pré-processamento (cpp) → compilação (gcc/clang gera asm) → assembly → linking. Diferencial: mapeia 1:1 para o hardware, zero runtime, portabilidade do Linux kernel ao microcontrolador. Em 2026 ainda é padrão em kernel (Linux, BSD), embedded, drivers, runtimes de linguagens (Python CPython, Postgres, Redis, SQLite). Compiladores: GCC 14, Clang 18, MSVC. C99 é padrão de facto; C23 ainda em adoção.
+- C# nasceu em 2000 (Anders Hejlsberg, Microsoft) com .NET Framework. Versões marcantes: C# 2 (generics), 3 (LINQ), 5 (async/await pioneiro), 8 (nullable reference types), 10 (record struct), 12 (primary constructors). Compilador Roslyn gera IL que roda na CLR; AOT em .NET 8+ gera binário nativo. Diferencial: ecossistema Microsoft completo (Azure, Visual Studio), async/await como cidadão primeiro nível, LINQ, span<T>, produtividade insana. Mercado 2026: enterprise backend (bancos, seguradoras), Unity game dev, AI integrações (Semantic Kernel), desktop (WinUI 3, MAUI). .NET 8 LTS é o padrão em produção; .NET 9 STS para novos greenfield.
+- cnn convolutional neural network, resnet skip connection, efficientnet, convnext, vit
+- CNN ResNet EfficientNet ConvNeXt transfer learning — PT-BR.
+- codebuild buildspec, codedeploy blue green canary, codepipeline stages, cicd aws nativo, codecommit
+- CodeCommit, CodeBuild, CodeDeploy, CodePipeline, CloudFormation, CDK, SAM, Amplify e X-Ray — os serviços de CI/CD e IaC da AWS.
+- CodeCommit (deprecated em favor de GitHub Actions), CodeBuild pra builds (buildspec.yml, cache S3), CodeDeploy com deployment strategies (in-place, blue/green, canary, linear). CodePipeline compondo stages. Integration com GitHub + CodeStar.
+- code review pedagogico, conventional comments, code review best practices
+- coding agents IA, assistentes codigo IA, claude code vs copilot, ferramentas IA programacao
+- Collaborative filtering (user/item), matrix factorization (SVD, ALS), content-based. Two-tower neural. Cold-start, popularity bias, diversity.
+- Columnar storage, MergeTree engine, materialized views, dedup, compression. Queries ad-hoc em bilhões de linhas. vs Snowflake/BigQuery/Druid.
+- Comandos Linux essenciais explicados em PT-BR: ls, cd, grep, find, pipe, redireção, man — do zero à fluência real.
+- comandos linux terminal, bash basico, grep find pipe, linux iniciantes, terminal linux
+- Como a IA aprendeu a usar ferramentas externas — e por que isso transformou LLMs em agentes.
+- Como avaliar modelos de IA, o que são benchmarks MMLU HumanEval, como LM Eval Harness funciona.
+- Como avaliar prompts sistematicamente: geração de datasets de teste, grading baseado em modelos (LLM-as-judge), grading baseado em código e como montar um eval harness que detecta regressões.
+- Como avaliar RAG em produção: recall@k, MRR, nDCG, RAGAS, faithfulness, LLM-as-judge, golden dataset — métricas que importam.
+- Como Claude Code funciona internamente, loop agêntico, ferramentas bash/read/write, arquitetura do agente de terminal.
+- como computador funciona, cpu memoria, sistema operacional processo, como codigo executa, fundamentos computacao
+- Como CPU funciona PT-BR: pipeline, cache L1 L2 L3, branch prediction — para programadores.
+- Como criar agents de verdade: subagents com system prompt curto, integração com tools via MCP (Model Context Protocol), sandbox, permissões, ciclos de vida.
+- Como criar um plugin completo para distribuir: estrutura de diretório, skills/, agents/, mcp/, hooks/. Instalação via claude plugin install, versionamento, marketplace. Caso real: plugin ffv-academy-tools com /zip, /novo-modulo, hook de validação.
+- Como Cursor e GitHub Copilot funcionam, diferenças entre IDEs com IA e agentes de terminal, comparação técnica.
+- Como estruturar workflows reais com Claude Code: spec → implementação → revisão → deploy. Casos práticos de uso no dia a dia — com e sem experiência em código.
+- como funciona dns, resolver dns, registros dns, cname vs a, dnssec, ttl dns
+- Como funciona o OpenAI Codex 2025, sandbox cloud, execução assíncrona, diferença do Claude Code.
+- Como funciona o Transformer e mecanismo de atenção. A arquitetura por trás de GPT, Claude e BERT explicada.
+- Como gerenciar agents de IA em times profissionais: orquestração, contexto, custo, limites, políticas e auditoria. Guia real em PT-BR.
+- Como instalar o Claude Code, autenticar com sua conta Anthropic, os primeiros comandos no terminal e como Claude Code difere de outros assistentes de IA.
+- Como integrar Claude Code com GitHub para automatizar revisão de PRs, triagem de issues, geração de changelogs e análise de diff. OAuth, MCP do GitHub e workflows com Actions.
+- como machine learning funciona, gradiente descendente explicado, treinamento modelo IA
+- Como machine learning funciona na prática: treinamento, gradiente descendente e otimização explicados de forma simples.
+- Como MVCC funciona por dentro, read committed vs repeatable read vs serializable, SELECT FOR UPDATE, advisory locks, VACUUM e bloat.
+- Como o Claude Code funciona por dentro — o loop agêntico, as ferramentas, o modelo de confiança e por que é diferente dos IDEs.
+- Como o computador realmente executa código: CPU, memória RAM, SO, processos e chamadas de sistema explicados em PT-BR.
+- Como o computador roda seu código (do teclado ao pixel)
+- Como o Linux organiza arquivos, o que significa rwxr-xr-x, chown, chmod, ln -s vs ln — e por que isso quebra deploys.
+- Como operar Claude em produção: calcular e controlar custo por token, lidar com rate limits, implementar prompt caching, moderação de conteúdo e boas práticas de segurança.
+- Como saber que FT melhorou vs base? Golden set curado (100-500 exemplos) com respostas ideais. Métricas: LLM-as-judge (GPT-4 compara), regex/exact match em structured output, human eval pra qualidade subjetiva. Regression testing a cada nova versão do modelo.
+- Comparação técnica entre coding agents de IA: Claude Code vs Codex vs Cursor vs Copilot vs Kiro. Quando usar cada um.
+- comparar coding agents IA, claude code vs cursor vs copilot, qual IA usar para codigo, melhor ferramenta IA programacao
+- Completou a trilha AI Safety, Red Teaming & Alinhamento
+- Completou a trilha Android Native (Kotlin + Compose)
+- Completou a trilha AWS Cloud Practitioner (CLF-C02)
+- Completou a trilha AWS Developer Associate (DVA-C02)
+- Completou a trilha AWS Solutions Architect Associate (SAA-C03)
+- Completou a trilha AWS Solutions Architect Professional
+- Completou a trilha Database Deep — Postgres Internals
+- Completou a trilha de Engenharia de Software Moderna
+- Completou a trilha Estruturas de Dados & Algoritmos
+- Completou a trilha Fine-tuning & Customização de LLMs
+- Completou a trilha Frontend Moderno (HTML/CSS/JS/React)
+- Completou a trilha Mobile para Devs Web (RN + Expo)
+- Completou a trilha Product Engineering & Experimentation
+- Completou a trilha Tech Leadership & Staff Engineering
+- Completou Claude Code E API & Agents — domínio total da Anthropic
+- Completou Engenharia AI-Native com ≥80% nos quizzes
+- @Composable, remember, state hoisting, recomposition. Layout (Column/Row/Box/LazyColumn). Navigation. Material 3. Migration de XML.
+- ))},compressToEncodedURIComponent:function(e){return null==e?
+- Compute Optimizer recommendations, VPA (Vertical Pod Autoscaler), memory vs CPU bottleneck identification, safety buffer, rollback strategy, chaos testing.
+- Compute Optimizer, Trusted Advisor, Savings Plans (Compute vs EC2 vs SageMaker), Reserved Instances portfolio, Spot Fleet, S3 Intelligent-Tiering, resource cleanup automation.
+- Computer vision OpenCV básico filters contours — PT-BR.
+- Computer vision sem depender de LLM: OpenCV para image processing, CNNs (ResNet/EfficientNet), object detection (YOLO), segmentation (U-Net/SAM), OCR prático, tracking. Pipeline de inference em produção com ONNX/TensorRT.
+- Concurrency models: threads async CSP actor comparison — PT-BR.
+- concurrency models, threads async csp actor, go channels, erlang actor
+- Confidencialidade vs integridade vs autenticidade. Symmetric vs asymmetric vs hash. AES-GCM, ChaCha20-Poly1305, Ed25519, SHA-2/3. NEVER roll your own crypto.
+- Conflict-free Replicated Data Types. Op-based vs state-based CRDT. Yjs (realtime colab), Automerge. Operational Transform (Google Docs legacy). Quando CRDT vs OT.
+- Confluent Schema Registry. Backward/forward/full compatibility. Avro vs Protobuf vs JSON Schema trade-offs. Schema evolution sem quebrar consumers.
+- Consensus distribuído e Raft em PT-BR: FLP, Paxos, Raft (leader, log, safety), etcd e Kubernetes — como sistemas concordam com falhas.
+- consensus distribuido, raft algoritmo, paxos, flp impossibility, etcd raft, kubernetes consensus
+- Consensus e Raft: como nós discordam e chegam a acordo
+- Constitutional AI (Anthropic, 2022): AI self-critique baseado em princípios escritos. RLAIF (RL from AI feedback). Core pra Claude safety. Aplicação: construir próprio sistema de críticos.
+- constitutional ai, rlaif, anthropic ai safety, self critique llm
+- Construa com a API da Anthropic: messages, streaming, tool use, RAG, prompt eval, MCP avançado e arquiteturas de agents em produção.
+- Construa o seu agente: system prompt engineering, output styles, permissions em produção, skills avançadas com scripts, hooks cookbook executável, plugins para o time, Agent SDK em CI/CD. O nível depois de dominar Claude Code.
+- Construa um pipeline RAG real com a API do Claude: chunking estratégico, embeddings, BM25 lexical search, hybrid retrieval e agentic search com tool use. Do protótipo ao sistema que funciona em produção.
+- containers linux, namespaces cgroups, como docker funciona, oci containers, lxc linux
+- Containers por baixo: namespaces e cgroups no Linux
+- Containers PT-BR: namespaces e cgroups Linux, como Docker funciona por dentro, OCI runtime.
+- context.Context canonical pra cancelation + deadline + request-scoped values. context.WithCancel, WithTimeout, WithDeadline. Pass context como first arg sempre. Leaked goroutines = missing context.
+- Context engineering para LLMs: prompt caching, compaction, subagents, skills, CLAUDE.md — como gerenciar janela de contexto profissionalmente.
+- context engineering, prompt caching anthropic, agent skills, subagent delegation, claude md, context window llm
+- Context Engineering: prompt caching, subagents e skills
+- Convolution mental model, pooling, batch norm. ResNet (skip connections), EfficientNet (compound scaling), ConvNeXt (2022+), ViTs como alternativa. Transfer learning.
+- Copy pode ser caro (deep clone). Move transfere ownership (fast). lvalue vs rvalue, && reference, std::move (no-op, só cast), std::forward, perfect forwarding. Critical pra perf C++ moderno.
+- core web vitals, lcp inp cls, lighthouse ci, performance budget, rum real user monitoring
+- Core Web Vitals LCP INP CLS + perf budget CI — PT-BR.
+- Coroutine basics, dispatchers (IO/Main/Default), scopes (viewModelScope, lifecycleScope). Flow (hot vs cold), SharedFlow, StateFlow. Structured concurrency.
+- CORS, CSRF, cookies seguros: segurança web fundamental
+- CORS CSRF PT-BR: same-origin policy, cookies seguros, HttpOnly Secure SameSite — segurança web.
+- cors, csrf, same origin policy, cookies httponly secure samesite, segurança web
+- cost allocation tags, cost categories, cost dashboards grafana, tag policy
+- cost anomaly detection, aws cost anomaly, datadog cloud cost, vantage cloudzero
+- Cost anomaly detection: AWS, Datadog, Vantage, CloudZero — FinOps PT-BR.
+- Cost observability: tags, allocation, dashboards — FinOps PT-BR.
+- Cost optimization avançado: rightsizing, purchasing, monitoring
+- COUNT, SUM, AVG, GROUP BY, HAVING, ROLLUP — as funções de agregação que transformam dados brutos em métricas de negócio.
+- Coverage 100% não significa testes bons. Mutation testing muta código (ex: troca + por -, remove ifs) e roda testes; se ainda passam, teste é fraco. Stryker (JS/TS), PIT (Java). Cost: lento — rode em CI nightly, não em PR.
+- c++ performance, cache locality, simd intrinsics, constexpr, perf flamegraph
+- C++ performance: cache SIMD constexpr perf flamegraph — PT-BR.
+- c pointers, pointer arithmetic, c arrays, c strings null terminated
+- cpu cache analysis, cache line, false sharing, branch prediction, perf stat
+- cpu pipeline, cache L1 L2 L3, branch prediction, como cpu funciona, latência memória
+- C++ RAII smart pointers unique_ptr shared_ptr — PT-BR.
+- c++ raii, unique_ptr shared_ptr, weak_ptr, rule of 5, rule of 0
+- crdt, yjs, automerge, operational transform, collaborative editing
+- Criando agents customizados com Claude Code e MCP: subagents, system prompt, tools, MCP server, sandbox, permissões — passo a passo em PT-BR.
+- criar agent customizado, mcp server tutorial, subagent claude, system prompt agent, agent coding protocol, claude agent sdk
+- Cripto aplicada (não acadêmica): PKI + X.509, TLS 1.3 deep, key management (KMS/Vault/HSM), JWT vs PASETO vs sessions, mTLS e zero-trust, cert rotation. Foco em usar cripto corretamente, não reinventar.
+- criptografia aplicada, aes-gcm, chacha20 poly1305, ed25519, sha256
+- Crossplane (K8s API para cloud), Pulumi, ArgoCD apps. Terraform modules reutilizáveis. Quando GitOps vs API imperative. Policy via OPA.
+- cross validation, k-fold stratified, precision recall f1, roc auc
+- Cross-validation métricas ML precisas honestas — PT-BR.
+- crypto capstone producao, mtls kms, vault secrets, certificate rotation
+- C# Span Memory ArrayPool stackalloc performance — PT-BR.
+- c# span memory, arraypool, stackalloc, ref struct, csharp perf
+- css cascade layers, css has parent selector, view transitions api, css nesting
+- css grid subgrid, container queries, flexbox vs grid, logical properties css
+- CSS layout: Grid, Flexbox, Subgrid, Container queries
+- CSS layout moderno: Grid, Subgrid, Container queries, logical props — PT-BR.
+- CSS moderno: @layer, :has, view transitions, nesting nativo — PT-BR.
+- C undefined behavior reais: signed overflow, UAF, UBSan — PT-BR.
+- c undefined behavior, signed overflow ub, ubsan, strict aliasing c
+- CUPED (Controlled experiments Using Pre-Experimental Data). Reduz variance 30-50%, meaning smaller sample sizes. Covariate adjustment. Published by Microsoft 2013.
+- cuped, variance reduction, covariate adjustment, ab testing power
+- cursor ide IA, github copilot arquitetura, cursor vs claude code, IDE aumentado IA
+- cv capstone producao, yolo fine tune, onnx triton, cv benchmark latency
+- dados inteligencia artificial, dataset machine learning, treinamento IA
+- database migrations, alembic python, zero downtime migration, schema evolution, flyway
+- Database migrations PT-BR: Alembic Python, zero-downtime migrations PostgreSQL — como não quebrar produção.
+- Data engineering profissional: batch vs stream mental model, dbt como transformação declarativa, orchestração (Airflow vs Dagster vs Prefect), revolução in-process (DuckDB/Polars), data lake/lakehouse/warehouse, CDC com Debezium, Kafka fundamentos, table formats abertos (Iceberg/Delta), qualidade de dados, capstone de pipeline end-to-end.
+- Data exfiltration agents: vetor, scoping, sandboxing — AI Safety PT-BR.
+- Data exfiltration via tools: o vetor principal em agents
+- data lake, lakehouse, data warehouse snowflake bigquery, databricks, iceberg spark
+- Data lake, lakehouse e warehouse: Snowflake, Databricks, Iceberg — comparativo PT-BR.
+- data quality, great expectations, soda core, dbt tests, data observability, data freshness sla
+- Data quality não é opcional. Testes em pipeline: volume (count esperado), shape (schema), distribution (stats), freshness (SLA), referential (FK-like em lake). Great Expectations, Soda Core, dbt tests nativos. Alerting, circuit breaker (bloqueia pipeline downstream se upstream falha).
+- Dataset quality domina resultado. Curadoria: balanceamento de classes, remover PII, dedup (exact + fuzzy com MinHash), contamination check (não incluir eval set em train). Sintético (LLM-generated) vs human-curated. 1000 exemplos curados &gt; 10k genéricos.
+- Datasets pra fine-tuning: curadoria, dedup, contaminação
+- Data structures além STRING: SETs, SORTED SETs (leaderboard), HASHes, STREAMs (Kafka-lite), HyperLogLog. Lua scripts atomic. Cluster mode. Redis Stack (JSON, Search).
+- Data warehouse (Redshift), big data (EMR Spark/Hadoop), serverless SQL (Athena), lake governance (Lake Formation), pipelines (Glue, Step Functions), real-time (Kinesis).
+- DbContext scoped lifetime, migrations (add/update/script), tracking vs no-tracking (.AsNoTracking), eager loading (.Include), compiled queries, bulk operations (EF Core 7+), raw SQL quando preciso.
+- dbt data build tool, dbt models sources, dbt tests lineage, analytics engineering, dbt core cloud
+- dbt (data build tool) é SQL + Git + tests. Models (SELECT que vira table/view), sources (raw), seeds (static data), tests (not_null, unique, relationships, custom), macros (DRY SQL), docs auto-geradas, lineage graph. Core (CLI open) vs Cloud (manager pago).
+- dbt profissional: models, sources, tests, macros, lineage — guia PT-BR.
+- DB write + Kafka publish atomicamente. Outbox table + CDC ou transactional outbox. Idempotent consumers. Por que dual writes falham em 10% das vezes.
+- debezium cdc, change data capture, logical replication postgres, kafka connect, outbox pattern
+- debezium cdc, change data capture, postgres wal cdc, mongo oplog
+- Decisão de linguagem não é religião: type system (dinâmico vs estático), concurrency model (threads vs async vs CSP vs Actor), memory management (manual vs GC vs borrow), ecosystem maturity, perf real, DX/produtividade, quando escolher cada. Sem hype, com matriz de decisão.
+- Decision trees mental model. Random Forest (bagging). XGBoost/LightGBM/CatBoost (boosting). Hyperparam tuning, early stopping, feature importance. Por que ganha Kaggle em tabular.
+- Declarative partitioning no PG 10+: RANGE (por data), LIST (por região), HASH. Partition pruning (planner ignora partitions irrelevantes). Sharding = múltiplos servers; Citus (agora Microsoft) é extensão canônica. Quando sharding? > 10TB ou >100k writes/s sustentados.
+- }},decompressFromBase64:function(e){return null==e?
+- De Copilot ao Claude Code — como os assistentes de código evoluíram de autocomplete para agentes autônomos.
+- De Graydon Hoare em 2006 → Mozilla 2010 → 1.0 em 2015 → Rust Foundation 2021. Como funciona: source → HIR → MIR → LLVM IR → asm. Sem GC, sem runtime pesado, zero-cost abstractions. Por que systems e AI infra adotaram.
+- deno deploy, bun runtime, deno permissions, bun vs node
+- Deno (TS-first, secure by default, permissions), Deno Deploy (global edge), Bun (Zig-based, 2-4x Node speed, built-in bundler/test/sqlite). Onde cada um cabe vs Node tradicional.
+- ,desc:'CAP, consensus, idempotência, sagas, event sourcing — a base técnica que separa 
+- ,desc:'CPU, memória, processos, I/O, containers por baixo. O modelo mental que transforma debugging de 
+- ,desc:'Métricas RED/USE, OpenTelemetry, SLOs, error budgets, incident response — o que separa 
+- Design de bit.ly: hash vs counter, base62, DB schema, cache layer, analytics. Trade-offs consistency, hot shortcuts.
+- design doc, technical design document, tldr design doc, template design doc
+- devcontainer, github codespaces, gitpod, dev environment, jetbrains space
+- Developer Tools: CodePipeline, CDK, CloudFormation e SAM
+- DevOps, engenharia moderna, distribuídos e SRE — sair do coder, virar engenheiro de sistemas.
+- Dez hooks reais com código testado: bloquear rm -rf, prettier automático, git context injection, notificação Slack, snapshot pré-compact, lint condicional, audit log, auto-rollback de teste que falha, copy .env para worktree, Claude classifier via hook prompt.
+- Diferença entre coder e engenheiro de software em 2026: skills que importam, como parar de depender do prompt e virar profissional que entrega sistema de verdade.
+- Direct Connect + VIFs, Site-to-Site VPN, Client VPN, PrivateLink, Gateway vs Interface Endpoints, Route 53 Resolver híbrido e Transit Gateway inter-region.
+- Direct (DAN, role play), indirect (via tool output, RAG-poisoning), adversarial suffix (GCG), persona-based. Defenses: input/output filtering, system prompt hardening, constitutional classifier.
+- Disaster Recovery: 4 estratégias (backup a multi-site)
+- disaster recovery aws, backup restore pilot light warm standby, rpo rto, aws backup cross region
+- distributed cache design, consistent hashing, cache patterns, hot keys
+- Distributed cache Redis consistent hashing — PT-BR.
+- Distributed tracing profissional: spans, baggage, head vs tail sampling, W3C Trace Context, Jaeger, Tempo — guia de produção em PT-BR.
+- distributed tracing, span parent child, w3c trace context, baggage, head tail sampling, jaeger tempo
+- Distributed Tracing: spans, baggage e sampling strategies
+- DMS + SCT para migração de bancos heterogêneos, MGN para lift-and-shift, DRS para DR, DataSync, Transfer Family e Snow Family em cenários arquiteturais.
+- DNS e TLS explicados em PT-BR: resolução DNS, handshake TLS 1.3, certificados X.509, HTTPS — o que acontece antes do request chegar.
+- DNS PT-BR: como funciona resolução DNS, registros A CNAME MX, TTL, DNSSEC — guia completo.
+- DNS, TLS e certificados: o que acontece antes do seu request
+- dns tutorial, tls certificados, https como funciona, resolucao dns, handshake tls, certificado ssl
+- Do browser ao edge — frontend moderno, mobile, workers e libs publicadas.
+- Docker e Kubernetes do zero ao avançado — os dois pilares de toda infra moderna, explicados para durar.
+- Docker não é mágica — é Linux namespaces + cgroups + union filesystem. Entender isso explica por que containers são mais leves que VMs e como security funciona.
+- docker tutorial completo, docker para iniciantes, dockerfile boas praticas, docker compose, multi-stage build, volumes docker, redes docker, containers vs vm
+- Docker tutorial completo em português: imagens, containers, Dockerfile, volumes, redes, Docker Compose, multi-stage, segurança e boas práticas.
+- Do clique de tecla ao pixel na tela: CPU, memória, sistema operacional, processo, e por que tudo isso importa para quem programa.
+- Do conceito ao sistema AI-native em produção — sem hype, com profundidade.
+- Do conceito à realidade: o que é IA, o que não é, e por que você precisa entender isso agora.
+- Dominou a API Claude, MCP, RAG e arquitetura de agents
+- Dominou harness engineering: system prompt, plugins, hooks, SDK
+- DORA 4 keys (deployment frequency, lead time, MTTR, change failure rate). SPACE framework. Anti-pattern: medir PRs/linhas. Developer experience como métrica.
+- DORA métricas SPACE framework developer experience — PT-BR.
+- dora metrics, space framework, developer experience metrics, lead time deploy
+- Do terminal ao agente em produção — o ecossistema Anthropic completo em PT-BR.
+- Do terminal ao poder total: instale, configure, domine o CLAUDE.md, crie skills, subagents, hooks e integre com GitHub e Cowork.
+- Dotfiles reproduzíveis: chezmoi, GNU Stow, git — PT-BR.
+- dotnet clr, garbage collector gen, native aot, blazor maui, self contained
+- Do zero ao LLM — entenda como a IA realmente funciona
+- dpo direct preference optimization, rlhf, alinhamento llm, preference learning, ppo llm
+- DPO e RLHF simplificado: aprender com preferências
+- DPO vs RLHF: Direct Preference Optimization, alinhamento moderno — PT-BR.
+- DS&A sem leetcode acadêmico: Big-O sem misticismo, arrays/hashmaps no dia a dia, árvores que você de fato usa, grafos na prática, recursão & DP para quem odeia, algoritmos de string, sorting real, estruturas probabilísticas (Bloom, HLL), resolver 5 problemas reais de produção.
+- Dual package ESM CJS: exports map, publint, ATTW — PT-BR.
+- Duas trilhas avançadas que consolidam a camada de dados moderna: Postgres Internals profundo (MVCC, query planner, índices avançados, vacuum, replication, partitioning) e Data Engineering Moderna (batch vs stream, dbt, orchestração, DuckDB/Polars, Iceberg, Kafka, CDC, qualidade de dados).
+- duckdb sqlite analytics, polars rust dataframe, pandas alternative, big data is dead, analytics in-process
+- Duck typing vs structural typing, GIL vs event loop, pacotes como pastas (não arquivos), escopo de variável (LEGB), truthiness mais agressivo, lista vs tuple vs set vs dict, comprehensions como ferramenta de pensamento. Os pontos que fazem TS dev travar.
+- dvc data versioning, lakefs, pachyderm, ml reproducibility
+- DVC data versioning lakeFS reprodutibilidade — PT-BR.
+- DVC git-like para data/models, lakeFS branches em lake, Pachyderm. Reprodutibilidade de training. Cost of reproducibility.
+- DX (dedicated link on-prem ↔ AWS), VPN gateway, Storage Gateway (File/Volume/Tape), DataSync. Patterns híbridos reais + encryption in-transit.
+- Dynamic (Python, JS) vs Static (Go, Rust, Java, C#). Structural (TS, Go) vs Nominal (Java, C#). Sound (Rust) vs Unsound (TS). Inference (Kotlin, Scala) vs Verbose (Java 7-). Trade-offs reais.
+- dynamodb partition key, dynamodb gsi lsi, dynamodb streams, dynamodb ttl, dynamodb transactions
+- DynamoDB pra dev: partition key, GSI LSI, Streams, TTL, transactions — PT-BR DVA.
+- DynamoDB single table design access patterns — PT-BR.
+- dynamodb single table design, alex debrie, gsi, pk sk dynamodb
+- EAS Build (managed CI/CD Expo), local builds, signing certificates, provisioning profiles, TestFlight beta iOS, Google Play internal testing, OTA updates (Expo Updates).
+- eas build, testflight, play console, ota update expo, signing certificate ios
+- ebpf, bcc tools, bpftrace, kernel tracing, ebpf observability
+- eBPF = programa no kernel sandboxed. bcc tools (tcpconnect, opensnoop), bpftrace one-liners. Quando eBPF resolve sem modificar código.
+- ebs volume types gp3 io2, efs performance modes, fsx windows lustre, storage gateway aws
+- EBS volume types gp3 io2 st1 sc1, EFS performance modes, FSx Windows Lustre NetApp, Storage Gateway.
+- EBS volume types (gp3, io2, st1, sc1), snapshots, EFS performance/throughput modes, FSx Windows/Lustre/NetApp, Storage Gateway.
+- ec2 auto scaling, alb nlb gwlb, target groups, placement groups aws, purchasing options ec2
+- EC2 Auto Scaling Groups, Application Load Balancer vs Network Load Balancer, target groups, placement groups, purchasing options.
+- EC2 instance types, purchasing options, Lambda, Fargate, ECS e EKS — os serviços de compute que todo practitioner precisa dominar.
+- . É contrato de segurança que vc promete respeitar. Quando precisa: FFI com C, performance crítica, lock-free. extern 
+- Ecossistema Anthropic completo: Claude modelos, API, Claude Code, MCP — guia completo em português.
+- Ecosystem linguagens npm pypi maven crates.io — PT-BR.
+- ecs fargate, task definition, ecs service, fargate spot, ecr lifecycle, fargate vs lambda
+- ECS (Fargate vs EC2 launch type), EKS (Kubernetes managed), service discovery, service mesh, quando escolher cada um.
+- ecs vs eks aws, fargate vs ec2, kubernetes aws, service discovery container aws
+- ECS vs EKS vs App Runner, Fargate, Lambda com container image, App Mesh (service mesh), Cloud Map (service discovery), quando escolher cada.
+- Edge = compute geograficamente próximo ao user. Cold start near-zero (V8 isolates vs Lambda). Latency real 10-50ms vs 200-500ms cloud central. Trade-offs: disk, long-running, compute pesado.
+- edge computing, v8 isolates, cold start edge, cloudflare workers vs lambda
+- Edge Functions (middleware, API), Edge Runtime (subset Node), ISR (Incremental Static Regeneration), on-demand revalidation, edge caching, streaming SSR nativo.
+- Edge patterns: HTML streaming, data collocation, A/B edge — PT-BR.
+- edge patterns, html streaming, data collocation, islands architecture, astro qwik
+- Edge vs cloud: V8 isolates, latency, trade-offs — PT-BR.
+-  é diferente de software comum, curadoria de golden sets, armadilhas de LLM-as-judge, frameworks modernos (Braintrust, Langfuse, Inspect, Promptfoo), A/B testing de prompt em produção, regression testing em agents, capstone de eval harness completo.',level:
+- Editor produtividade: VS Code, Neovim LazyVim, LSP — PT-BR.
+- ef core, dbcontext, migrations, asnotracking, compiled queries, bulk ef
+- EF Core moderno: DbContext, migrations, performance
+- EF Core moderno: DbContext migrations tracking performance — PT-BR.
+- elasticache redis memcached, dax dynamodb, cloudfront cache, cache patterns aws
+- ElastiCache Redis vs Memcached, DAX DynamoDB accelerator, CloudFront cache behaviors, cache patterns aside write-through.
+- ElastiCache Redis vs Memcached, DAX para DynamoDB, CloudFront cache behaviors, patterns (cache-aside, write-through).
+- elasticsearch opensearch, inverted index, shards replicas, fts scale
+- Elasticsearch OpenSearch: quando escalar além Postgres FTS — PT-BR.
+- ElevenLabs (quality top, voice cloning), OpenAI TTS-1 (barato, rápido), Cartesia Sonic (streaming ultra-baixa latência <100ms), Play.ht. Voice cloning ética + consent.
+- elevenlabs voice cloning, openai tts, cartesia sonic, play.ht, tts streaming
+- Embeddings 1536 dims. Brute force O(n) inviável em 10M. HNSW (Hierarchical Navigable Small World) — graph-based, 10ms p99. IVF (inverted file) — cluster-based. Postgres pgvector, Pinecone, Qdrant, Weaviate.
+-  em ciência — e faz você entender observabilidade, performance e sistemas distribuídos de verdade.',level:
+- engenheiro de software 2026, programador vs engenheiro, skills engenharia software ia, carreira developer ia, software engineer vs coder
+- Engenheiro vs Coder: o que mudou na era dos agents
+- Engineering que pensa como produto: feature flags (GrowthBook, Unleash), A/B testing rigoroso, CUPED para reduzir variance, guardrails, product analytics (PostHog, Mixpanel). Decisão baseada em dado estatístico, não sentimento.
+- Engineer que entende usuário, métrica e trade-off business. Stripe/Airbnb/Shopify como referência. Staff+ path via produto. DRI vs IC puro.
+- Entenda o que é Inteligência Artificial de verdade, sem buzzwords. Definição clara, exemplos práticos e histórico.
+- Entregáveis: app com chat (WS) + presence + colab editor (Yjs) + video call (LiveKit). Scaling via Redis pubsub. Deploy com load balancing sticky.
+- Entregáveis: app completo (Compose + Room + Retrofit + tests), bundle AAB, internal/closed/open testing tracks, publish Play Store. CI com GitHub Actions + Gradle.
+- Entregáveis: app completo (SwiftUI + SwiftData + networking + tests), TestFlight, submission App Store (privacy manifest, metadata), landing page. Build via fastlane.
+- Entregáveis: app com TLS 1.3 + mTLS entre services + JWT assinado com chave em KMS + secrets em Vault + certificate rotation automatizada + pentests documentados.
+- Entregáveis: GitHub bem curado (pin 6 repos), blog técnico com 3+ posts de profundidade, 1 projeto open source com docs decentes, LinkedIn/Twitter ativo. Referência: Fernando Franco Valle, Gergely Orosz.
+- Entregáveis: pipeline (OLTP Postgres → Debezium → Kafka → Flink/Streams → OLAP ClickHouse), schema registry, outbox pattern, exactly-once. Benchmark throughput.
+- Entregáveis: repo com training pipeline (Kubeflow/Airflow) + feature store (Feast) + registry (MLflow) + serving (Triton ou BentoML) + monitoring (Evidently) + CI/CD completo. IaC (Terraform).
+- Entregáveis: schema bem desenhado, resolvers com DataLoader, auth (JWT + directives), subscriptions (chat), cache Redis, tests (vitest + graphql-tools), deploy. Docs via Apollo Studio.
+- ==e?null:i._decompress(e.length,16384,function(a){return e.charCodeAt(a)-32})},compressToUint8Array:function(e){for(var a=i.compress(e),o=new Uint8Array(2*a.length),s=0,t=a.length;s<t;s++){var r=a.charCodeAt(s);o[2*s]=r>>>8,o[2*s+1]=r%256}return o},decompressFromUint8Array:function(a){if(null==a)return i.decompress(a);for(var o=Array(a.length/2),s=0,t=o.length;s<t;s++)o[s]=256*a[2*s]+a[2*s+1];var r=[];return o.forEach(function(a){r.push(e(a))}),i.decompress(r.join(
+- ==e?null:i._decompress(e.length,32768,function(a){return e.charCodeAt(a)})},_decompress:function(a,o,s){var t,i,r,n,c,d,l,u=[],p=4,m=4,g=3,v=
+- ==e?null:i._decompress(e.length,32,function(o){return t(a,e.charAt(o))})},compressToUTF16:function(a){return null==a?
+- Envelope encryption: CMK criptografa DEK; DEK criptografa dados. Customer Managed Key (CMK) vs AWS Managed vs AWS Owned. Grants, aliases, rotation automática. KMS policies + IAM (a lógica de interseção). Quando usar CloudHSM em vez de KMS (FIPS 140-2 L3).
+-  — e o que isso significa na prática para treinar um modelo.',seoDesc:
+- ===e.outcome)return!1;let a=e.state.studyDays.find(a=>a.date===e.today);return!!a&&a.cardsReviewed>=10}},{id:
+-  é rótulo pobre: document (Mongo), KV (Redis/DynamoDB), wide-column (Cassandra), graph (Neo4j), time-series (InfluxDB), vector (Pinecone). Quando cada.',seoDesc:
+- Erros como valores: Result, neverthrow e por que `throw` quebra
+- es2024 javascript, top level await, structuredclone, temporal api, array at findLast
+- Escolha app real (próprio ou case study). Baseline de custo (Cost Explorer). Identifique top 5 opportunities (rightsizing, commitments, spot, storage tiering, sobras). Implemente, meça, documente.
+- Escolha problem concreto (date helper, form validator, small utility). Setup: tsup bundler, vitest, changesets, publint, ATTW. Docs com TypeDoc + exemplos executáveis. Publish 1.0 no npm. README professional.
+- Escrever OpenAPI primeiro (spec-driven dev), gerar client + server skeleton + docs automáticos, mock server (Prism/Wiremock) pra desenvolver frontend sem backend pronto, contract testing (Pact) entre times. Por que YAML à mão é melhor que gerar do código.
+- Escrever RFC para mudança arquitetural do próprio projeto (migrar de X pra Y). Entregáveis: RFC completo + thread de discussão simulada + decisão final + ADR.
+- Escrita técnica como superpoder de sênior: design docs, RFCs, ADRs, postmortems blameless, READMEs editoriais, docs de API vivas. Templates reais (Google/Meta/Stripe). Escrever bem = pensar bem e escalar decisões.
+- escrita tecnica, technical writing, staff engineer escrita, writing software
+- }[e.simuladoId];if(o){let e=D(a,o);e.unlocked&&(a=e.state,i.push(o))}}return T(a),{xpGained:o,newBadges:i,leveledUp:t.newLevel>s,newLevel:t.newLevel}},
+-  e sim um sistema de tipos estrutural com inference poderosa. Tipos são asserções sobre o runtime; o compilador prova que o fluxo respeita essas asserções. O clique mental que muda tudo.',seoDesc:
+- esm cjs dual package, exports map, publint, are the types wrong attw
+- ES modules nativo no browser + Node, top-level await, async iterators, structuredClone, Array methods (at, findLast, toSorted immutable), Set methods (union, intersection), Temporal API.
+- Estimativas engineer: Hofstadter, cone of uncertainty, range estimate — PT-BR.
+- Estimativas sem mentir: # Hofstadter + cone of uncertainty
+- estimativas software, hofstadter law, cone of uncertainty, reference class forecasting
+- Estruturas probabilísticas: Bloom, HyperLogLog, Count-Min sketch na prática — PT-BR.
+- EU Accessibility Act (junho 2025) tornou a11y obrigatória em ecommerce/banking/telecom pra empresas &gt;10 funcionários. ADA lawsuits em US explodiram (4k+ por ano). WCAG 2.2/3 são os standards. Os 4 princípios POUR (Perceivable, Operable, Understandable, Robust).
+- Eval frameworks: Braintrust, Langfuse, Inspect, Promptfoo
+- Eval harness (promptfoo, LangSmith, custom), regressão de prompt, canary/A-B de prompts, drift detection, cost attribution, SLO de qualidade.
+- Evals como disciplina: por que LLM testing é diferente
+- EventBridge, SQS e SNS: qual, quando, como combinar
+- EventBridge, SQS, SNS AWS: fan-out pattern, DLQ, schema registry — PT-BR DVA.
+- Event log como source of truth, projections, CQRS (command vs query), event store (Kafka, EventStoreDB), vantagens, armadilhas, quando evitar.
+- Event loop fases (timers, poll, check, close), libuv thread pool, sync vs async FS, Readable/Writable/Transform streams, backpressure via `pipeline()`, worker_threads quando CPU-bound. Como achar o gargalo com clinic.js, --prof e heap snapshot.
+- event sourcing, cqrs, event log, projection, kafka event store, eventstoredb, command query separation
+- Event Sourcing e CQRS em PT-BR: event log, projections, command vs query, event store, Kafka, armadilhas e quando não usar.
+- Event Sourcing e CQRS: quando eventos são a fonte da verdade
+- Event tracking schema. Funnels, cohorts, retention, user flow. PostHog (open source + self-host), Mixpanel, Amplitude. GDPR/LGPD compliant tracking.
+- exactly once kafka, kafka transactions, producer idempotence, eos
+- Execution model: init phase (cold) vs invoke phase (warm). Runtime lifecycle, Lambda Execution Environment reuse. Layers pra deps compartilhadas, SnapStart pra Java/Python, provisioned concurrency quando p99 importa. Limits: 15min timeout, 10GB memória, 250MB unzipped.
+- Exemplo baseado (tradicional) testa casos que você pensou. Property-based gera INPUTS aleatórios seguindo specs, testa invariantes. fast-check (JS/TS) e Hypothesis (Python). Shrinking: quando falha, reduz ao input mínimo que quebra.
+- `). Exhaustiveness check com `never`. Por que `as` quase sempre significa que você abandonou o sistema.',seoDesc:
+- experiment capstone, ab test writeup, cuped analysis, guardrails capstone
+- experiment guardrails, metricas safety, latency guardrail, crash rate experiment
+- EXPLAIN ANALYZE PostgreSQL PT-BR: como ler plano de execução e otimizar queries lentas.
+- explain analyze postgresql, query plan, seq scan vs index scan, otimização sql
+- Expo managed workflow (fast iteration, limited native), Expo Router (file-based), config plugins (add nativo sem eject), development builds. Quando prebuild/eject realmente preciso.
+- Expo Router (file-based, Next.js-like), React Navigation (classic, flexível). Stack, Tabs, Drawer, Modal. Deep linking. Universal links. Linking strategy cross-platform.
+- expo router, react navigation, stack tab drawer, deep linking mobile
+- expo workflow, expo router, expo config plugins, eas build, when eject
+- : false (or array of files), /* @__PURE__ */ annotations pra functions puras, ESM required (CJS bundler cannot tree-shake), const-fold aggressive com rollup/tsup/esbuild.',seoDesc:
+- Fan-out on write vs read vs hybrid. Celebrity problem. Pull model. Feed ranking. Timeline storage. Cache warming.
+- Fargate = container serverless (sem gerenciar EC2). Task definition, service, ALB integration. Fargate Spot pra batch. Quando escolher Fargate sobre Lambda (> 15min, gRPC server, app com estado local, custom runtime). ECR pra imagens + lifecycle policies.
+- fastapi, apirouter, depends fastapi, oauth2 jwt fastapi, testclient fastapi, pytest async
+- FastAPI é o framework web de facto em Python moderno (async nativo, OpenAPI auto, Pydantic built-in). APIRouter, Depends (injeção de dependência elegante), middleware, background tasks. OAuth2 + JWT com Security. Testar com TestClient + pytest async.
+- FastAPI profissional: APIRouter, Depends DI, OAuth2 JWT, testes async — PT-BR.
+- fault injection, tc network chaos, stress-ng, aws fis, istio fault injection
+- Fault injection tc stress-ng AWS FIS Istio — PT-BR.
+- Feature engineering ML categorical encoding target encoding — PT-BR.
+- feature engineering ml, target encoding, categorical encoding, data leakage
+- Feature flag direciona % user pro prompt novo. Métricas: completion rate, user satisfaction (thumbs up/down), cost per request, latency. Statistical significance com sample size adequado. Guard rails: se error rate spike, rollback automático.
+- Feature flags GrowthBook Unleash LaunchDarkly — PT-BR.
+- feature flags, growthbook, unleash, launchdarkly, vercel flags
+- Features avançadas: extended thinking, citations, code execution
+- feature store, feast, tecton, training serving skew, feature governance
+- Fetch-Decode-Execute em detalhe, por que cache miss mata performance, como branch prediction funciona — e o que isso significa para o código que você escreve.
+- Fiber architecture (interruptible rendering), render phase vs commit phase, StrictMode double invoke, key prop real, useTransition, useDeferredValue, Suspense real.
+- File descriptors e I/O: o que todo processo compartilha
+- File descriptors Linux PT-BR: I/O, pipes, stdin stdout stderr, tudo é arquivo no Unix.
+- file descriptors, stdin stdout stderr, pipes linux, io linux, everything is a file
+- Filesystem e permissões: rwx, chown, symlink, hardlink
+-  finalmente solved. Features system (pré-instalados comuns), setup on open.',seoDesc:
+- Fine-tune vs RAG vs prompt: árvore de decisão pra qual escolher quando — PT-BR.
+- fine tune vs rag vs prompt, quando fine tuning, llm customizacao, rag vs fine tune
+- Fine-tuning datasets: curadoria, dedup MinHash, contamination, synthetic data — PT-BR.
+- Fine-tuning profissional: quando FT vs RAG vs prompt, SFT (Supervised Fine-Tuning), LoRA/QLoRA/PEFT, DPO/RLHF simplificado, curadoria de datasets + dedup + contaminação, avaliação rigorosa com golden set, deploy de modelo custom (vLLM, TGI, Bedrock), capstone de modelo especialista.
+- FinOps como disciplina: unit economics de software, cost anomaly detection, rightsizing sem medo, reservas/Savings Plans/Spot strategy, cultura FinOps cross-team, observability de custo (tags, allocation), capstone de redução 30% em app real.
+- FinOps cultura: Framework, showback chargeback, team accountability — PT-BR.
+- FinOps Framework (Inform/Optimize/Operate), showback vs chargeback, cost KPIs por time, central FinOps team vs embedded, monthly reviews.
+- finops framework, showback chargeback, cost kpis, central finops team
+- Fixed vs semantic vs recursive chunking, overlap, contextual retrieval, escolha de embedding (OpenAI, Voyage, BGE), redução de dimensão, cosine vs dot product.
+- flamegraph, perf record, async profiler java, py-spy python, pprof go
+- Flamegraph producao perf async profiler py-spy — PT-BR.
+- Flexbox (1D) vs Grid (2D), subgrid (2024 wide-support), container queries (responsive based on parent, não viewport), logical properties (margin-inline vs margin-left), aspect-ratio.
+- FLP impossibility, intuição do Paxos, Raft explicado (leader election, log replication, safety). Por que etcd, Consul, K8s, CockroachDB usam Raft.
+- Fork vs clone, Pull Request, code review, issues, labels, milestones, GitHub Actions para CI/CD básico — o fluxo que empresas usam.
+- ;for(r=0,c=Math.pow(2,g),d=1;d!=c;)n=h.val&h.position,h.position>>=1,0==h.position&&(h.position=o,h.val=s(h.index++)),r|=(n>0)*d,d<<=1;switch(l=r){case 0:for(r=0,c=256,d=1;d!=c;)n=h.val&h.position,h.position>>=1,0==h.position&&(h.position=o,h.val=s(h.index++)),r|=(n>0)*d,d<<=1;u[m++]=e(r),l=m-1,p--;break;case 1:for(r=0,c=65536,d=1;d!=c;)n=h.val&h.position,h.position>>=1,0==h.position&&(h.position=o,h.val=s(h.index++)),r|=(n>0)*d,d<<=1;u[m++]=e(r),l=m-1,p--;break;case 2:return f.join(
+- Forward vs reverse proxy, Nginx como reverse proxy, load balancer L4 (TCP) vs L7 (HTTP), algoritmos de balanceamento, health checks e sticky sessions.
+- FRAME: Functional requirements, Non-functional (scale, latency, consistency), API, Model (data), Estimate. 5 passos que estruturam qualquer interview.
+- Frameworks de métricas RED, USE e Golden Signals explicados em PT-BR: o que medir em serviços, recursos e APIs em produção.
+- Frontend focado nos fundamentos essenciais 2026: HTML semântico moderno, CSS layout (Grid, Flexbox, container queries, subgrid), CSS moderno (cascade layers, :has, view transitions), JS moderno (ES2024+, modules, async), React reativo real (fiber, server components, actions, Suspense) e Next.js App Router. Anti-framework-du-jour, pró-fundamentos sólidos.
+- ft dataset curadoria, dataset dedup minhash, contamination eval, synthetic data llm
+- ft evaluation, golden set curation, llm as judge, regression testing llm, ab testing ft
+- Full FT é caro (24GB+ VRAM pra 7B model). LoRA: treina adapters pequenos (matrizes low-rank), 10-100x menos params. QLoRA: 4-bit quantization + LoRA, treinando 70B em 1 GPU de 24GB. PEFT library (Hugging Face). Merge adapter ou serve separado.
+- ]}];function t(e){return e.trailIds.map(e=>a.find(a=>a.id===e)).filter(e=>!!e)}let i=new Map;function r(){if(!(i.size>0))for(let e of a)for(let a of e.modules)i.set(a.slug,{module:a,trail:e})}function n(e){return r(),i.get(e)?.module}e.s([
+- Fundamentos da AWS alinhados ao exame CLF-C02 — do zero ao certificado
+- Futures são zero-cost state machines. async/await desugar pra poll(). tokio runtime: multi-thread vs current-thread. Select!, join!, spawn. Backpressure. Structured concurrency emergente. Axum/Actix produção.
+- Game day = chaos experiment manual com time. Script com hypothesis, scope, abort criteria, timeline. Facilitator + observers. Postmortem. Google SRE book capítulo.
+- game day, chaos game day, google sre book, chaos facilitator
+- GC options: G1 (default, balanced), ZGC (low-latency &lt; 10ms), Shenandoah (Red Hat, low-latency). JFR (Flight Recorder) + JMC (Mission Control) pra profiling. JIT optimization (C1, C2 compilers).
+- gdb/lldb basics (break, next, print, bt), Valgrind memcheck (memory bugs), ASan (Address Sanitizer), TSan (Thread), UBSan, core dump analysis. printf debugging quando alternative.
+- gdb lldb debugging, valgrind memcheck, asan tsan ubsan, core dump
+- Generics além de `Array<T>`: constraints com `extends`, infer para extrair tipo de função/array, conditional types, variance (covariant, contravariant, invariant). Quando reescrever libs com generics robustos em vez de copiar-colar.
+- Generics de verdade: variance, constraints e conditional types
+- Generics finally (Go 1.18, 2022). Type parameters em funções + types. Constraints (comparable, any, custom interfaces). slices/maps packages (Go 1.21+) pra operations generic. Tradeoff: simplicity vs power.
+- Generics TypeScript profissionais: variance, constraints, conditional types, infer — PT-BR.
+- generics typescript, variance typescript, conditional types, infer typescript, generics constraints
+- Gerenciamento de contexto: como Claude Code pensa e decide
+- Gerenciando Agents: orquestração, contexto e custo
+- gerenciar agents ia, orquestracao agents, contexto agent ia, custo token llm, auditoria agent, multi agent workflow
+- GET, POST, PUT, DELETE, status codes, headers, cookies, CORS, REST vs GraphQL básico — o protocolo que move a web inteira.
+- Git de verdade: commit, branch, merge, rebase, reflog
+- GitHub Actions com DVC e MLflow. Shadow deploy, canary, progressive rollout. Evidently AI, WhyLabs para drift detection. Retraining automation.
+- github actions tutorial completo, ci cd github actions, workflow yaml, github actions oidc aws, reusable workflows, matrix build, deploy kubernetes github actions
+- GitHub Actions tutorial completo PT-BR: workflows YAML, jobs, matrix, secrets, OIDC AWS/Azure, cache, reusable workflows, release e deploy em K8s.
+- GitHub profissional em PT-BR: Pull Request, code review, issues, milestones, GitHub Actions CI/CD básico.
+- GitHub profissional: PR, review, issues, Actions básico
+- github tutorial, pull request, code review, github actions, fluxo profissional github
+- Git profissional em PT-BR: modelo mental de commits, DAG, staging area, branch, merge, rebase, reflog — do zero ao avançado.
+- git tutorial, git rebase merge, git branch, git reflog, git modelo mental, git profissional
+- Go 2026: mental model (simplicity first), concurrency com goroutines + channels, context pra cancelamento, interfaces pequenas, error handling explícito, generics (Go 1.18+), performance, capstone CLI tool + API Go idiomática.
+- go context, context withcancel withtimeout, goroutine leak
+- go error handling, errors.is as, errors.join, go panic
+- Go error handling errors.Is errors.As sentinel — PT-BR.
+- go generics 1.18, type parameters, constraints go, slices maps package
+- Go goroutines channels select race detector — PT-BR.
+- go goroutines, go channels select, buffered unbuffered, race detector
+- go historia google, rob pike ken thompson, go 1.18 generics, go compilador gc, goroutines, go docker kubernetes
+- Go história Pike Thompson compilador gc versões generics 2026 — PT-BR.
+- go interfaces, io reader writer, duck typing go, composition over inheritance
+- Go interfaces pequenas composition Rob Pike — PT-BR.
+- Golden dataset, métricas de retrieval (recall@k, MRR, nDCG), métricas de generation (faithfulness, context relevance, answer relevance), RAGAS, LLM-as-judge sem vazamento.
+- golden path, paved road, platform template, netflix paved road
+- Golden set: 100-500 exemplos (query, contexto, resposta ideal) curados por expertos. Evolve: add casos quando user reporta issue, remove quando task muda. Stratified (edge cases, easy, medium, hard). Annotator agreement: 2-3 humans, reconcilie discordance.
+- golden set llm, dataset curation, annotator agreement, eval dataset, ground truth llm
+- Golden sets LLM: curadoria, stratified, annotator agreement, growth — PT-BR.
+- Go mental model simplicity philosophy go modules — PT-BR.
+- Go nasceu em 2007 no Google (Rob Pike, Ken Thompson, Robert Griesemer) como reação ao C++ complicado e Java verboso. Go 1.0 em 2012; compatibilidade backward forte desde então. Versões marcantes: 1.11 (modules), 1.18 (generics — grande adição), 1.21 (loopvar scoping fix), 1.22-1.24 (range over func, profile-guided optimization). Compilador único oficial (gc) — fast build, static binary com runtime pequeno embutido (scheduler, GC). Diferencial: simplicidade deliberada (menos de 25 keywords), goroutines baratíssimas (stack 2KB inicial), gofmt como padrão, compilation time ~instantâneo. Mercado 2026: DevOps tooling (Docker, Kubernetes, Terraform, Prometheus), backend high-scale (Uber, Cloudflare, Netflix edge), CLIs profissionais. Go 1.22+ é o padrão atual.
+- Go performance pprof escape analysis sync.Pool — PT-BR.
+- go pprof, escape analysis, sync pool, go benchmark testing.b
+- go programming language, go modules, go fmt, go philosophy simplicity
+- Goroutines (lightweight ~2KB, millions OK), channels (send/receive synchronization primitive). Unbuffered (sync) vs buffered. select statement. Fan-in, fan-out patterns. Race conditions e race detector.
+- Governance e compliance: Config, Audit Manager, Artifact
+- GPT-4/Claude avaliando outputs é prático mas enviesado. Bias conhecidos: position bias (prefere primeiro), verbosity bias (mais longo = melhor), self-enhancement (prefere mesmo modelo), família bias. Mitigações: pairwise A-vs-B com order swap, rubric estruturada, cross-model validation, human calibration.
+- GPT-4o Realtime API (voice native, < 500ms RTT), OpenAI Realtime, LiveKit + agents. Arquitetura WebRTC, turn-taking, interruption handling, VAD (voice activity detection).
+- gpt-4o realtime, voice ai realtime, webrtc voice, vad turn taking, livekit agents
+- Gradiente descendente, loss function, backpropagation — explicados sem complicar.
+- Grafo como abstração comum (deps de pacote, roteamento, social graph). BFS pra menor número de hops, DFS pra ciclos, Dijkstra pra shortest path com pesos. Representação: adjacency list vs matrix. Detectar ciclos em build systems.
+- Grafos em código real: BFS DFS Dijkstra, adjacency list, detectar ciclos — PT-BR.
+- Grafos na prática: BFS, DFS, Dijkstra e quando aparecem
+- GraphQL além do hype: schema design disciplinado, resolvers sem N+1, DataLoader, Apollo server/client em produção, subscriptions real-time, federation para escalar com múltiplos times. Quando GraphQL bate REST e quando não.
+- graphql capstone, graphql producao, apollo studio, graphql auth directives
+- graphql federation, apollo federation 2, subgraph, graphql gateway
+- GraphQL Federation Apollo subgraphs gateway — PT-BR.
+- graphql mental model, graphql vs rest, over fetching, under fetching
+- graphql profissional, n+1 dataloader, apollo federation, persisted queries, graphql vs rest
+- GraphQL profissional: N+1, DataLoader, Federation, persisted queries — guia PT-BR.
+- GraphQL quando faz sentido: N+1, DataLoader e federation
+- GraphQL resolve problemas reais (over-fetching, agregação de APIs) mas cria outros (N+1, caching complexo). DataLoader pra batchar resolvers, persisted queries pra cache. Apollo Federation vs schema stitching. Quando REST + BFF é resposta melhor.
+- graphql resolver, dataloader, graphql n+1 problem, graphql batch
+- graphql schema design, relay connections, nullable non null, schema evolution
+- graphql subscriptions, websocket graphql, graphql-ws, realtime graphql
+- GraphQL subscriptions websocket graphql-ws — PT-BR.
+- GROUP BY, HAVING e agregações que resolvem 80% dos casos
+- gRPC e Protobuf profissional: RPC tipado, streaming bidirecional, schema evolution — PT-BR.
+- grpc profissional, protobuf, rpc tipado, streaming grpc, grpc vs rest, protobuf field tags
+- gRPC + Protobuf: RPC tipado e streaming bidirecional
+- GuardDuty (threat detection ML), Detective (investigation), Security Hub (unified view), Macie (PII descoberta), Network Firewall, WAF avançado, Inspector continuous.
+- Hardware cache levels e latência (L1 1ns, L2 3ns, L3 12ns, RAM 100ns). Cache lines (64B). False sharing. Branch misprediction cost. perf stat.
+- harness agente IA, componentes agente programacao, claude code vs cursor
+- Harness engineering Claude Code: anatomia do agente, 7 eixos customizáveis — guia PT-BR.
+- harness engineering, claude code harness, customizar agente ia, anatomia claude code
+- Haseeb Qureshi playbook. Never first number. Competing offers (leveraged). Base vs bonus vs equity vs signing. RSU vs options. Vesting cliff. Levels.fyi como benchmark.
+- hashicorp vault, sops age kms, aws secrets manager, dynamic secrets, doppler secrets
+- hashmap javascript, map vs object js, array cache locality, hash collision, weakmap set
+- Hash ring (consistent hashing), replication, failover. Cache patterns (aside, through, back). Eviction policies. Hot keys, thundering herd.
+- Headline + about que vendem sem exagero. Projects destacados. Open to work signaling. Network genuíno (comentários, não spam). Engagement realista vs farming.
+- Hermes engine (default 2024+), FlashList (Shopify, 10x vs FlatList em listas grandes), useMemo/React.memo adequado, avoid bridge overhead, Flipper + React DevTools profiler.
+- hermes react native, flashlist shopify, rn performance, flipper devtools
+- Hero paragraph, quickstart, install, exemplos, API overview, contributing. Anti-patterns. Shields.io. Social proof (users). Projetos famosos como referência.
+- HNSW, IVF, scalar quantization. pgvector (quando Postgres basta), Pinecone (managed), Weaviate (hybrid), Qdrant (rust-based), Milvus. Custo per M vetors.
+- hnsw vector index, ivf inverted file, pgvector, pinecone qdrant weaviate
+- Hooks: automatizar revisões, validações e ações customizadas
+- Hooks cookbook: 10 receitas executáveis prontas para copiar
+- Hooks são scripts que rodam automaticamente em eventos do Claude Code (antes/depois de editar, submeter, etc.). Como criar hooks para lint, testes, validação e notificações.
+- HTML moderno: dialog, popover, invoker commands, form constraints — PT-BR.
+- html semantico, dialog nativo, popover api, invoker commands, form constraints
+- HTML streaming (Islands architecture, Astro/Qwik), data collocation (D1/Durable Objects no edge vs DB central), edge auth validation, A/B testing no edge, feature flags.
+- HTTP/1.1, /2, /3: multiplexing, HPACK, server push
+- HTTP/1.1 vs HTTP/2 vs HTTP/3 PT-BR: multiplexing, HPACK, QPACK, server push comparação.
+- http2 vs http3, multiplexing http, hpack compressão, http versões comparação
+- HTTP API (nova, barata, simples) vs REST API (features completas, WAF, request validation) vs WebSocket (conexões persistentes). Usage plans, API keys, Lambda authorizer, Cognito integration, mapping templates (ainda importa no REST).
+- HTTP do zero: request, response, status, headers, cookies
+- HTTP explicado em PT-BR: métodos, status codes, headers, cookies, CORS — o protocolo da web do zero ao avançado.
+- http tutorial, status codes http, headers http, cookies, cors, rest api, protocolo http
+- Hybrid: BM25 (keyword) + vector (semantic) combinados. Fusion: RRF (Reciprocal Rank Fusion — simples, robust), weighted. Reranker cross-encoder (Cohere Rerank, BGE-reranker) em top-50. +30% NDCG típico.
+- Hybrid search e reranking em RAG: BM25 + vetor, RRF, cross-encoder rerank, HyDE, query expansion — stack de retrieval profissional.
+- hybrid search rag, bm25 vector, reciprocal rank fusion, cross encoder rerank, cohere rerank, hyde query expansion
+- hybrid search, reciprocal rank fusion rrf, cohere reranker, bge reranker cross encoder
+- Hybrid Search + Reranking: do BM25 ao cross-encoder
+- Hybrid search + reranking: RRF + Cohere + BGE reranker — PT-BR.
+- Hypothesis, power analysis, sample size. Stat sig real (p-values são tricky). CUPED variance reduction. Peeking problem. Sequential testing.
+- IaaS, PaaS, SaaS, deployment models, economia de escala — o que a nuvem realmente muda e por que a AWS venceu.
+- iam policy json aws, sts assume role, aws organizations scp, identity center sso, cross account access
+- IA multimodal profissional: speech-to-text (Whisper), text-to-speech (ElevenLabs, OpenAI), Realtime APIs (GPT-4o voice, Anthropic), vision (Claude vision, GPT-4V), OCR moderno (Azure Doc Intelligence), video generation (Sora, Runway), capstone assistente de voz end-to-end.
+- Iceberg vs Delta vs Hudi: open table formats, ACID em data lake — PT-BR.
+- :i._compress(e,6,function(e){return o.charAt(e)})},decompressFromEncodedURIComponent:function(e){return null==e?
+- ),i._decompress(e.length,32,function(a){return t(o,e.charAt(a))}))},compress:function(a){return i._compress(a,16,function(a){return e(a)})},_compress:function(e,a,o){if(null==e)return
+- idempotencia api, idempotency key, retry backoff jitter, circuit breaker, exactly once, at least once, deduplicacao
+- Idempotência e Retries: o antídoto pra rede que quebra
+- Idempotência e retries profissionais: idempotency keys, backoff com jitter, circuit breaker, dedup — como sobreviver a redes não confiáveis.
+- Idempotency-Key header (modelo Stripe) pra POST seguro contra retry, store com TTL e response cacheada. Webhooks com assinatura HMAC, timestamp pra evitar replay, retry exponencial, DLQ quando consumer falha. Design de payload mínimo + event fetching.
+- Idempotency keys e webhooks: exactly-once na prática
+- Idempotency keys e webhooks profissionais: HMAC, retry, DLQ, exactly-once — guia PT-BR.
+- Idempotency keys, exponential backoff com jitter, circuit breaker, deadline propagation, dedup via Redis/Postgres, at-least-once vs exactly-once.
+- idempotency key, webhook hmac, exactly once api, stripe idempotency, webhook retry dlq, replay protection
+- Identifique decisão real (minha atual, anterior, ou caso fictício: escolher tech stack, arquitetura, migration). Escreva ADR completo: context, options considered, decision, consequences, rollback plan.
+- idp capstone, backstage scaffolder, paved road template, platform capstone
+- )}if(0==p&&(p=Math.pow(2,g),g++),u[l])v=u[l];else{if(l!==m)return null;v=i+i.charAt(0)}f.push(v),u[m++]=i+v.charAt(0),p--,i=v,0==p&&(p=Math.pow(2,g),g++)}}};return i}();if(
+- if err != nil { return err } é idiomático (polarizing). errors.Is (sentinel match), errors.As (type assertion), errors.Wrap (errors.Join Go 1.20+). Custom error types. panic reservado pra programmer errors.
+- Imagens como arrays numpy. Color spaces (BGR/RGB/HSV). Filters (blur, edge detection Sobel/Canny). Contours. Quando CV clássico ainda ganha.
+- Imagens, containers, Dockerfile, Compose, volumes, redes, multi-stage builds, segurança e otimização — tudo que um dev precisa saber sobre Docker em um só lugar.
+- image processing pipeline, albumentations, cupy, nvidia dali
+- Image processing pipeline albumentations CuPy — PT-BR.
+- image segmentation, unet, mask rcnn, sam segment anything meta
+- Image understanding: Claude 3.5 Sonnet vision, GPT-4V, Gemini 1.5 Pro. Use cases: doc extraction, UI understanding (Playwright + vision), diagrama parsing, chart-to-data.
+- Incident Commander, Comms Lead, Ops Lead, timeline, postmortem blameless, 5 whys, action items com SLA, learning review mensal.
+- Incident Response: comando, comunicação e postmortem blameless
+- incident response, incident commander, postmortem blameless, 5 whys, comms lead ops lead, learning review
+- Incident response profissional: Incident Commander, papéis, timeline, postmortem blameless, 5 whys, action items — playbook em PT-BR.
+- indexOf moderno (Two-Way/Boyer-Moore por baixo), regex NFA vs DFA (por que regex ruim trava), fuzzy matching (edit distance, Jaro-Winkler), suffix array básico. Quando buscar em memória vs delegar pro Postgres FTS.
+- Índices avançados: B-tree, BRIN, GIN, GiST, partial, covering
+- índices postgresql, b-tree index, gin index, covering index, indice composto sql
+- Índices PostgreSQL PT-BR: B-tree, hash, GIN, índice composto, covering index — quando cada um funciona.
+- Índices que funcionam: B-tree, hash, GIN, covering, composto
+- integration testing, contract testing pact, e2e playwright cypress, test containers, testing strategy
+- Integration vs contract vs e2e: test-containers, Pact, Playwright — trade-offs profissionais PT-BR.
+- Inverted index, tokenization, ranking (BM25 + learning-to-rank), query suggest, autocomplete. Elasticsearch arch. Vector search hybrid.
+- I/O bloqueante não bloqueante PT-BR: epoll, select, poll, async I/O — base de event loops.
+- iOS async await actors Sendable MainActor — PT-BR.
+- ios capstone, app store submission, fastlane ios, testflight
+- iOS nativo em 2026: Swift moderno (macros, result builders), SwiftUI declarativo, concurrency (async/await + actors), SwiftData (persistência nativa), networking com URLSession, testing (XCTest + UI tests), build + publishing App Store.
+- ios networking, urlsession async, codable json, alamofire
+- ios testing xctest, xcuitest, swift testing framework, snapshot testing
+- jailbreak llm, prompt injection, dan prompt, gcg attack, constitutional classifier
+- Jailbreaks e prompt injection: taxonomia e defesas
+- Jailbreaks e prompt injection: tipos e defenses — AI Safety PT-BR.
+- Java 17/21 features: records, sealed, pattern matching
+- Java 17 21 records sealed pattern matching — PT-BR.
+- java 21 features, records java, sealed classes, pattern matching, text blocks var
+- java historia, jvm hotspot jit, java 8 11 17 21 lts, virtual threads loom, java mercado 2026 graalvm
+- Java moderno 2026: records, pattern matching, sealed classes, virtual threads (Loom, Java 21), Spring Boot 3+, Micronaut, performance em JVM, async reativo (Reactor) vs virtual threads, capstone de serviço Spring Boot production-ready.
+- java virtual threads, project loom, structured concurrency java
+- Jenkinsfile declarativo, agents dinâmicos, shared libraries, Blue Ocean, credentials, integração com K8s e o porquê do Jenkins ainda ser o padrão em grandes empresas.
+- Jenkins tutorial completo PT-BR: pipeline declarativo, Jenkinsfile, agents Kubernetes, shared libraries, credentials, webhooks, Blue Ocean e migração de freestyle.
+- jenkins tutorial, jenkinsfile declarative pipeline, jenkins kubernetes agent, shared libraries jenkins, jenkins blue ocean, ci cd jenkins enterprise
+- jetpack compose, composable, recomposition, material 3, android ui
+- Jetpack Compose UI declarativa recomposition — PT-BR.
+-  (Jordan Tigani, 2023) — maioria dos times não precisa cluster.',seoDesc:
+- JPA Hibernate performance: N+1 EntityGraph jOOQ — PT-BR.
+- jpa hibernate performance, n+1 query, entitygraph, jooq, spring data
+- JS bridge (old) vs JSI/Fabric/TurboModules (new arch 2024+). FlatList vs ul/li, View vs div, gesture handling, safe area, status bar, orientation. Mapa TypeScript dev → mobile concepts.
+- JSON e YAML como formatos universais de config, variáveis de ambiente e .env, 12-factor app — como configurar sistemas sem hardcode.
+- JSON logs, trace_id/span_id correlation, log levels (o que DEBUG, INFO, WARN, ERROR realmente significam), structured logging libs, formatter cost.
+- JSON, YAML e variáveis de ambiente: config moderna
+- JSON, YAML e variáveis de ambiente em PT-BR: formatos de config, .env, 12-factor app — como configurar sistemas modernos.
+- json yaml tutorial, variaveis de ambiente, arquivo env, 12 factor app, configuracao aplicacao
+- Jupyter ≠ código bagunçado. nbdev pra testar/documentar em notebooks. papermill pra parametrizar e executar em batch. jupytext pra diff amigável em git. Marimo como alternativa sem state oculto. Quando notebook é a ferramenta certa (exploração, modelos, relatórios) e quando não.
+- jupyter notebook profissional, nbdev, papermill, jupytext git, marimo notebook
+- Jupyter profissional: nbdev, papermill, jupytext, Marimo, reprodutibilidade — PT-BR.
+- JVM: async-profiler, JFR. Node: clinic.js, 0x. Python: py-spy, scalene. Go: pprof (built-in). Rust: perf + cargo-flamegraph. Quando CPU vs memory vs allocation profiler.
+- jvm gc, g1 zgc shenandoah, jfr flight recorder, jit compiler c2
+- JWT armadilhas (alg:none, weak keys, no revocation). PASETO v4 moderno. Sessions server-side (Redis). Quando cada. Refresh tokens. Leak mitigation.
+- JWT: quando é bom (stateless, edge), quando é péssimo (logout, revoke, claim bloat). Paseto v4 como alternativa moderna (sem algorithm confusion). Sessions com Redis pra apps clássicos. Refresh token rotation, sliding expiration, revocation lists.
+- jwt security, paseto v4, session vs jwt, refresh token leak
+- JWT vs Paseto vs sessions: trade-offs, refresh rotation, revoke — PT-BR profissional.
+- jwt vs session, paseto v4, refresh token rotation, revoke jwt, algorithm confusion
+- Kafka como commit log distribuído. Topic dividido em partitions (ordem garantida dentro de partition, não entre). Consumer groups dividem carga. Exactly-once via idempotent producer + transactional writes. Retention configurável (pode ser infinito). Event sourcing natural.
+- kafka fundamentos, kafka partitions, consumer groups, exactly once kafka, event sourcing
+- Kafka fundamentos: partições, consumer groups, exactly-once
+- kafka pipeline capstone, debezium clickhouse, schema registry outbox
+- kafka producao, kraft controller, kafka partitions replication, tiered storage
+- Kafka profissional: partitions, consumer groups, exactly-once, event sourcing — PT-BR.
+- kafka schema registry, avro kafka, protobuf kafka, schema evolution
+- Kafka sério em 2026: arquitetura (brokers, partitions, replication), schema registry (Avro/Protobuf), CDC com Debezium, exactly-once semantics, outbox pattern, Kafka Streams + ksqlDB, alternativas (Redpanda, Pulsar). Cost-aware.
+- Kafka Streams ksqlDB stateful stream processing — PT-BR.
+- kafka streams, ksqldb, stream processing, kstreams ktables
+- Keyboard navigation e focus management: sem mouse também
+- Keyboard navigation e focus management: tab order, focus trap, skip link, roving tabindex — PT-BR.
+- keyboard navigation, focus management, tabindex, focus trap modal, skip link, roving tabindex
+- Key management AWS KMS HashiCorp Vault HSM — PT-BR.
+- K-fold, stratified, time-series split, leak prevention. Classification (precision/recall/F1/ROC/PR), regression (MAE/RMSE/MAPE/R²), imbalanced (balanced accuracy). Confidence intervals.
+- kms envelope encryption, cmk customer managed key, secrets manager parameter store, waf rules shield advanced
+- KMS envelope encryption, CMK vs AWS managed key, Secrets Manager vs Parameter Store, WAF rules, Shield Standard vs Advanced.
+- KMS envelope encryption, customer managed key CMK, Secrets Manager vs Parameter Store, AWS WAF rules, Shield Advanced.
+- KMS, Secrets Manager, GuardDuty, Shield, WAF, Inspector, Macie — o arsenal de segurança que cobre 30% do exame.
+- Kotlin 2.0 (2024): K2 compiler 2x mais rápido, multiplatform stable. Data classes, sealed classes, inline value classes, scope functions. Null safety real.
+- kotlin 2, k2 compiler, kotlin multiplatform, null safety, sealed classes
+- kotlin coroutines, kotlin flow, stateflow sharedflow, android async
+- Kubernetes Completo: do Pod ao cluster de produção
+- Kubernetes tutorial completo em português: arquitetura, Pods, Deployments, Services, Ingress, ConfigMaps, Secrets, RBAC, HPA, Helm e kubectl essencial.
+- kubernetes tutorial completo, k8s para iniciantes, arquitetura kubernetes, pod deployment service, ingress kubernetes, rbac k8s, helm charts, hpa kubernetes, kubectl cheat sheet
+- KV Cache, MoE, Tool Calling, avaliação — como modelos funcionam em produção
+- kv cache transformers, key value cache LLM, memoria eficiente IA
+- lambda cold start concurrency, api gateway rest http, step functions workflow, serverless aws
+- lambda cold start, lambda layers, lambda snapstart, provisioned concurrency, lambda timeout
+- Lambda deep dive (cold start, concurrency, layers, destinations), API Gateway (REST vs HTTP), Step Functions workflows.
+- lambda edge, cloudfront functions, aws edge compute, viewer events
+- Lambda profundo: cold start, layers e provisioned concurrency
+- Landmarks (header, main, nav, aside, footer), heading hierarchy (h1-h6 sem pular), label associado a input, button vs div com onClick, ul/ol em vez de div com bullet. 80% dos problemas de a11y somem com HTML semântico correto.
+- Landmarks, heading hierarchy, dialog nativo, details/summary, form constraints, popover API (2024+), invoker commands. HTML é a fundação — dominar supera frameworks hype.
+- Large Language Models: o que os torna diferentes, como foram treinados e por que o ChatGPT foi um divisor de águas.
+- Latência (L1 0.5ns, disk 10ms, cross-region 150ms). Throughput (QPS por tipo). Storage (MB/record). Cost napkin. Powers of 10 + memorizados.
+- LCP, INP (substituiu FID 2024), CLS. Budget em CI (Lighthouse CI), bundlewatch, imagens responsivas, preloading strategy, resource hints, RUM (Real User Monitoring).
+- legacy code, chesterton fence, strangler fig pattern, characterization tests
+- library typings, bundled types, generics library, tsdoc jsdoc
+- Lib vs app mindset: peer deps, side effects, stability — PT-BR.
+- Lifetimes não são magia: são labels que o compilador usa pra provar que refs não sobrevivem seus donos. Elision rules (maioria dos casos, você omite). Traits como interfaces poderosas: From/Into, Display/Debug, Iterator. Generics + constraints.
+- !==l){if(Object.prototype.hasOwnProperty.call(n,l)){if(256>l.charCodeAt(0)){for(s=0;s<m;s++)v<<=1,f==a-1?(f=0,g.push(o(v)),v=0):f++;for(s=0,t=l.charCodeAt(0);s<8;s++)v=v<<1|1&t,f==a-1?(f=0,g.push(o(v)),v=0):f++,t>>=1}else{for(s=0,t=1;s<m;s++)v=v<<1|t,f==a-1?(f=0,g.push(o(v)),v=0):f++,t=0;for(s=0,t=l.charCodeAt(0);s<16;s++)v=v<<1|1&t,f==a-1?(f=0,g.push(o(v)),v=0):f++,t>>=1}0==--u&&(u=Math.pow(2,m),m++),delete n[l]}else for(s=0,t=r[l];s<m;s++)v=v<<1|1&t,f==a-1?(f=0,g.push(o(v)),v=0):f++,t>>=1;0==--u&&(u=Math.pow(2,m),m++)}for(s=0,t=2;s<m;s++)v=v<<1|1&t,f==a-1?(f=0,g.push(o(v)),v=0):f++,t>>=1;for(;;){if(v<<=1,f==a-1){g.push(o(v));break}f++}return g.join(
+- Linearizability, sequential consistency, causal, eventual. Session guarantees (read-your-writes, monotonic reads, bounded staleness). Qual usar em cada cenário.
+- Linear/logistic regression, regularização L1/L2. Support vectors. Naive Bayes. KNN. Scikit-learn pipelines. Quando usar cada.
+- linguagens ecosystem, npm pypi maven, crates.io, tooling ide support
+- Linguagens performance benchmarks honestos techempower — PT-BR.
+- LinkedIn developer headline profile sem hype — PT-BR.
+- linkedin developer, linkedin headline engineer, linkedin sem hype, linkedin dev
+- Linux no terminal: os 30 comandos que valem por 300
+- litmuschaos, chaos kubernetes, cncf chaos engineering, chaoshub
+- LitmusChaos CNCF incubating. Pod delete, node drain, network chaos, disk fill, resource stress. ChaosHub (library experiments). Integration com Prometheus/Grafana.
+- livekit, mediasoup, sfu selective forwarding, pion webrtc, twilio agora
+- llm api producao, streaming sse llm, structured output json schema, batch api anthropic openai, prompt caching, retry jitter
+- LLM APIs em Produção: streaming, structured output, batch e cache
+- LLM APIs em produção: streaming, tool use, structured output, batch API, prompt caching, retry — padrões profissionais OpenAI/Anthropic/Google.
+- llm as judge, judge bias, position bias, verbosity bias, pairwise evaluation, human calibration
+- LLM-as-judge: position bias, verbosity, mitigações, pairwise swap — PT-BR.
+- LLM eval frameworks: Braintrust, Langfuse, Inspect, Promptfoo comparados — PT-BR.
+- LLM evals como disciplina: por que testar LLM é research-like, não CI clássico — PT-BR.
+- llm evals, llm testing, llm nondeterministic, bleu rouge limitation, vibes testing llm
+- LLMOps: eval harness, drift detection e canary de prompts
+- llmops, eval harness, promptfoo langsmith, drift detection llm, canary prompt, cost attribution llm, slo llm
+- LLMOps profissional: eval harness, drift detection, canary de prompts, cost attribution, SLO de qualidade — operando LLMs em escala.
+- llm red team, pyrit microsoft, ai harm categories, adversarial testing llm
+- load balancer l4 l7, reverse proxy nginx, round robin, sticky sessions, balanceamento carga
+- Load balancer PT-BR: L4 vs L7, reverse proxy, Nginx, algoritmos round-robin, sticky sessions.
+- Load (carga esperada), stress (até quebrar), soak (24h+), spike (rajada). k6 em TS como código, artillery YAML-simples. Perf budgets: p99 < 500ms é regressão. Run em CI staging antes de prod.
+- Lock contention I/O bottleneck io_uring strace — PT-BR.
+- lock contention profiling, io_uring, iostat iotop, strace io
+- Logs Estruturados: JSON, correlation IDs e levels com propósito
+- Logs estruturados profissionais: JSON, correlation IDs, trace_id, log levels, structured logging — padrões de produção em PT-BR.
+- logs estruturados, structured logging json, correlation id, trace id logs, log levels semantica, structured logging producao
+- Long polling vs SSE vs WebSocket: quando cada protocolo se encaixa. O handshake de upgrade do WebSocket, back-pressure em streaming, e SSE para updates unidirecionais.
+- lora fine tuning, qlora, peft, quantization 4bit, low rank adaptation, llm efficient ft
+- LoRA, QLoRA, PEFT: fine-tuning eficiente de LLMs com pouco VRAM — PT-BR.
+- ls, cd, grep, find, pipe, redireção, man — os comandos que você vai usar todo dia com fluência real, não decoreba.
+- Machine learning clássico mental model quando usar — PT-BR.
+- machine learning classico, ml mental model, regressao classificacao, bias variance
+- macro_rules! (declarative) vs proc_macro (compile-time code gen). vec!, println! como macros. serde derive como proc_macro. Quando macro faz sentido vs função. Hygienic macros.
+- makefile, just task runner, task yaml, project automation
+- Makefiles vs just vs task: task runners projeto — PT-BR.
+- Make (primeiro, ubíquo, syntax rigid), CMake (meta-build generator, cross-platform standard), Ninja (fast backend), Meson (Python-ish config). Compiler flags sanity: -Wall -Wextra -Werror -O2 -g.
+- Make (universal, weird syntax, tabs), just (Rust, simpler, modern), task (YAML, cross-platform). Dependency management, .PHONY, parallel execution. Project automation central.
+- Manual (C, C++): control total, bugs fáceis. GC (Java, C#, Go, JS): zero worry, pause time. Borrow checker (Rust): compile-time safety sem GC. Reference counting (Swift, ObjC). Trade-offs runtime vs compile-time.
+- Matriz decisão linguagens: quando escolher cada cenário — PT-BR.
+- Matriz de decisão real: quando o Claude Code brilha, quando o Cursor vence, quando o Codex na nuvem faz sentido. Sem achismo.
+- Matriz práctica: web backend (Go/Node/C# são excelentes, Rust OK se perf crítica), mobile (Swift/Kotlin nativo, TS/RN cross), systems (Rust hoje, C em legacy), data/ML (Python), scripting (Python/Bash), UI (JS), game dev (C++/C#/Rust).
+- MCP além do básico: sampling para LLM-in-LLM, notificações de log e progresso, roots para controle de acesso a arquivos, transporte STDIO vs StreamableHTTP e como deployar um servidor MCP em produção.
+- mcp avancado, mcp sampling, streamablehttp mcp, mcp producao, mcp roots, mcp notificacoes
+- MCP avançado: sampling, StreamableHTTP, notificações, roots — Model Context Protocol em produção PT-BR.
+- MCP Avançado: sampling, transports, StreamableHTTP e produção
+- MCP Deep Dive: construindo um servidor profissional
+- MCP fundamentos: Model Context Protocol tools resources prompts — como construir servidor MCP do zero PT-BR.
+- mcp fundamentos, model context protocol tutorial, mcp server python, mcp typescript, mcp tools resources prompts
+- MCP Fundamentos: tools, resources e prompts do protocolo
+- mcp model context protocol, claude mcp, claude google drive, claude github, claude banco dados, anthropic mcp
+- MCP Model Context Protocol na prática: conectar Google Drive, GitHub, bancos de dados ao Claude Code — PT-BR.
+- MCP (Model Context Protocol) tutorial profissional PT-BR: construir servidor MCP do zero, tools, resources, prompts, auth, deploy.
+- MCP na prática: conectar Drive, GitHub, Slack e bancos de dados
+- mcp server tutorial, model context protocol, mcp typescript, mcp python, mcp auth, mcp deploy, anthropic mcp
+- memory management languages, gc vs borrow checker, rust ownership
+- Memory management: manual GC Rust borrow checker — PT-BR.
+- Mentoria técnica engineer: teach pattern, office hours, career laddering — PT-BR.
+- mentoria tecnica, teach pattern, office hours engineer, career laddering
+- Method R (Brendan Gregg). USE method (utilization, saturation, errors). Latência de tail (p99 importa mais que média). Amdahl vs Gustafson. Perf budget.
+- Method syntax (mais usado) vs query. IEnumerable vs IQueryable (LINQ-to-SQL). Deferred execution (lazy vs .ToList/.ToArray), aggregation (Sum, GroupBy), performance gotchas (N+1 evitável com Include).
+- Métricas: precision@k, recall@k, F1, MRR (Mean Reciprocal Rank), NDCG (discounted cumulative gain). Quando user wants top-1 vs top-10. Golden set pra eval.
+- Métricas RED e USE: os frameworks que cobrem 90% dos casos
+- metricas red use, red method, use method, golden signals sre, metricas servico, metricas recurso
+- Metrics de segurança que NÃO podem regredir (latency, crash rate, revenue). Guardrails fail-fast. Statistical power em ambas direções. Netflix/LinkedIn playbooks.
+- Micronaut (ahead-of-time compile, ótimo pra serverless/cloud native), Quarkus (Red Hat, Kubernetes-native, GraalVM-first). Startup time << Spring Boot. Quando cada um supera Spring Boot.
+- micronaut framework, quarkus red hat, java serverless, graalvm native java
+- Micronaut Quarkus alternativas Spring Boot — PT-BR.
+- Migration Hub, Application Migration Service (MGN), DMS, Application Discovery Service, DataSync e Mainframe Modernization — o arsenal de migração AWS.
+- Migrations profissionais: reversíveis, zero-downtime
+- Minimal APIs (.NET 6+), route handlers direct, dependency injection built-in, OpenAPI/Swagger auto, authentication & authorization, health checks, rate limiting middleware. Zero boilerplate vs Controllers clássico.
+- mixture of experts MoE, mixtral arquitetura, sparse model IA
+- ml ci cd, shadow deploy canary, drift detection, evidently whylabs, retraining
+- MLflow experiment tracking model registry — PT-BR.
+- MLflow tracking (experiments, runs, params, metrics, artifacts). MLflow registry (stages: dev/staging/prod). Weights & Biases, Neptune. Model cards.
+- mlflow tracking, model registry, weights biases, neptune, model cards
+- ML flywheel: data → train → eval → deploy → monitor → retrain. Google MLOps maturity levels 0/1/2. Diferença de LLMOps. Ferramentas 2026.
+- ML/IA para Arquiteto: SageMaker, Bedrock e Pipelines
+- ML/IA sob ótica de arquiteto: Bedrock, SageMaker, Comprehend
+- mlops capstone, plataforma ml producao, mlflow feast triton
+- mlops ciclo vida, mlops maturity, mlops vs llmops, ml flywheel
+- MLOps real: training pipelines (Airflow/Kubeflow), feature stores (Feast), experiment tracking + model registry (MLflow), data versioning (DVC), serving (Triton/TorchServe/BentoML), monitoring drift, CI/CD para modelos. Infraestrutura sólida, não hype.
+- ml pipeline capstone, feature engineering producao, fastapi ml deploy
+- ML tradicional que ainda paga contas: regressão e classificação, feature engineering sério, árvores (RF/XGBoost/LightGBM), cross-validation, métricas que não mentem, time series (ARIMA/Prophet), recommender systems. Sem LLM, com estatística honesta.
+- MMLU, HumanEval, benchmark contamination — como saber se um modelo é realmente melhor.
+- Mobile pragmático pra dev web: React Native mental model, Expo workflow (+ quando eject), navegação moderna, state/async em mobile, native modules básicos, build + deploy iOS/Android, performance, capstone app offline-first.
+- Modelagem e normalização: 1NF–3NF + quando desnormalizar
+- Model Context Protocol do zero: o que é, como se comunica (STDIO e HTTP), os três primitivos (tools, resources, prompts) e como construir seu primeiro servidor MCP funcional em Python ou TypeScript.
+- Model Context Protocol em profundidade: stdio vs HTTP, tools/resources/prompts, autenticação, rate limit, logging, exemplo real em TypeScript e Python.
+- Model Context Protocol (MCP) permite que Claude acesse ferramentas externas. Como configurar servidores MCP prontos para Google Drive, GitHub, Postgres, Slack e mais.
+- @Model macro, Schema, ModelContext, queries declarativas. Migration from Core Data. Integration com SwiftUI. Quando SwiftData vs SQLite direto.
+- Modelo de responsabilidade compartilhada AWS, segurança da nuvem vs segurança na nuvem, shared responsibility model.
+- modelo osi, tcp ip, camadas de rede, protocolo rede, encapsulamento
+- Modelo OSI TCP/IP PT-BR: as camadas de rede que explicam como a internet funciona.
+- modelo responsabilidade compartilhada aws, shared responsibility model, seguranca aws cliente
+- modelos consistencia, linearizability, eventual consistency, causal consistency, read your writes, session guarantees
+- Modelos de consistência em sistemas distribuídos: linearizability, causal, eventual, read-your-writes, bounded staleness — quando usar cada um.
+- Modelos de Consistência: strong, eventual, causal, read-your-writes
+- Model serving Triton TorchServe BentoML Ray Serve — PT-BR.
+- Modos de uso: interativo, não-interativo, pipe e headless
+- Modules substituem #include legacy: faster compilation, encapsulação real. Coroutines: co_await, co_yield, co_return. Generators, async sem callback hell. MSVC + Clang + GCC suporte estável 2024+.
+- mongodb producao, mongodb schema design, aggregation pipeline, change streams
+- MongoDB producao schema design aggregation — PT-BR.
+-  > monitoring, cardinalidade, events como 4º pilar, profiles (pprof, Pyroscope) como 5º, o que realmente medir.',seoDesc:
+- Monolith schema não escala. Federation 2 (Apollo), schema stitching. Subgraphs, gateway, types shared. Quando federation vs BFF (backend-for-frontend).
+- Monolito modular vs microserviços, DDD pragmático, ADRs (Architecture Decision Records), modelo C4, evolução sem big-rewrite, fitness functions.
+- Monorepo profissional: pnpm workspaces + Turbo + shared configs
+- monorepo typescript, pnpm workspaces, turbo repo, tsconfig shared, monorepo profissional, turborepo pipeline
+- Monorepo TypeScript: pnpm workspaces, Turbo, shared configs — guia profissional PT-BR.
+- mtls mutual tls, zero trust, beyondcorp, spiffe spire, service mesh mtls
+- Multi-account estratégia: OUs, SCPs, Control Tower guardrails, AFT (Account Factory for Terraform), IAM Identity Center (antes SSO). Padrão em enterprise AWS.
+- multi agent system, orchestrator worker, openai swarm, crewai, agent handoff, multi agent llm
+- Multi-agent systems em produção: orchestrator-worker, swarms, handoffs, CrewAI, hierarquias — quando múltiplos agents valem o custo.
+- Multi-Agent Systems: orchestrator-worker, swarms e handoffs
+- multi database architecture, polyglot persistence, postgres redis mongodb pgvector
+- multimodal ai, gpt-4o claude 3.5, gemini multimodal, unified model
+- Multimodal mental model: unified vs specialized, GPT-4o Claude Gemini — PT-BR.
+- Multi-projeto e contextos persistentes: sessions, settings hierarchy e team onboarding
+- Multi-Version Concurrency Control: Postgres não locka reads, cria snapshots. xmin/xmax em cada tuple. Isolation levels reais no PG: Read Committed (default), Repeatable Read (snapshot), Serializable (SSI — detecta dangerous patterns). Dirty read impossível no PG.
+- Mutation testing profissional: Stryker, PIT, cobertura real em vez de line coverage — PT-BR.
+- mutation testing, stryker mutator, pit java, mutation score, testing the tests
+- Mutual TLS (client cert + server cert). Service mesh auto-inject (Istio, Linkerd). BeyondCorp (Google) zero-trust. SPIFFE/SPIRE workload identity.
+- MVCC cria dead tuples em cada UPDATE/DELETE. Autovacuum limpa — mas em workloads agressivos, não dá conta → bloat (tabela crescendo, performance caindo). Configurar autovacuum_vacuum_scale_factor por tabela. VACUUM FULL bloqueia — use pg_repack. Monitoring: pg_stat_user_tables.
+- MVCC e isolation levels de verdade (sem simplificação)
+- n+1 query problem, connection pool postgresql, pgbouncer, sqlalchemy pool, asyncpg
+- N+1 query problem PT-BR: connection pool PostgreSQL, PgBouncer, como detectar N+1 — performance de banco.
+- N+1 query problem (uso @EntityGraph), lazy vs eager fetch, batch size, 2nd level cache, Hibernate Envers (audit). Alternativa moderna: jOOQ (type-safe SQL builder). Spring Data abstraction.
+-  não escala em 200+ devs. IDPs como resposta.',seoDesc:
+- Não só os comandos — o modelo mental de commits como snapshots, DAG de objetos, staging area, rebase vs merge, reflog como rede de segurança.
+- Narrowing e discriminated unions: o coração real do TypeScript
+- Native modules React Native: Kotlin Swift mínimo — PT-BR.
+- Navegação React Native: Expo Router vs React Navigation — PT-BR.
+- negociacao salario engenheiro, haseeb negotiation, rsu vs options, levels fyi
+- Negotiation salário engenheiro equity haseeb — PT-BR.
+- nemo guardrails nvidia, llama guard meta, claude guardrails, llm safety filters
+- Netflix Chaos Monkey (kill instances), Chaos Kong (region failure), Chaos Gorilla (AZ failure). Gremlin SaaS com GUI. ChaosToolkit open source. Quando cada.
+- Network (latency, packet loss via tc), CPU/memory pressure (stress-ng), disk fill, clock skew. Service mesh (Istio fault injection), AWS FIS (Fault Injection Simulator).
+- Neurônios, camadas, ativações — a arquitetura que imita (e supera) o cérebro em tarefas específicas.
+- . New service em 1 comando. Off-path é OK, mas sem suporte. Netflix, Spotify, Google paved road.',seoDesc:
+- node event loop, streams node, backpressure pipeline, worker threads, performance nodejs, libuv
+- normalização banco dados, 1NF 2NF 3NF, modelagem relacional, quando desnormalizar, erd
+- Normalização de banco de dados PT-BR: 1NF, 2NF, 3NF, quando desnormalizar — modelagem relacional.
+- nosql mental model, document store, key value, wide column, vector database
+- Notebook/VM limpa. Script ou devcontainer que: instala Homebrew/Chocolatey, git, shell, dotfiles (chezmoi), editor config, Docker, linguagens (Node/Python via version manager), SSH keys. Cronometrar — meta &lt; 20min.
+- Notification system design push email SMS — PT-BR.
+- notification system, push notification design, delivery tracking
+- npm (JS, 2.5M packages), PyPI (500k), Maven (Java, 500k), NuGet (C#, 400k), crates.io (Rust, 150k), Go modules. Tooling quality (TS tsc vs Go go), IDE support, hiring pool, long-term stability.
+- npm library authoring, peer dependencies, side effects, library design
+- ntp linux, clock skew, monotonic clock, wall clock, tempo distribuído sistemas
+- nvda screen reader, voiceover ios mac, jaws, testing a11y screen reader, a11y testing real
+- NVIDIA NeMo Guardrails (dialog flow + checks), Llama Guard (Meta classifier pra safety), Claude Built-in Guardrails. Implementation patterns em produção.
+- O 3-way handshake passo a passo, como TCP garante entrega ordenada, sliding window, slow start e congestion avoidance — por que TCP fica lento em alta latência.
+- O Amazon Q Developer e o novo Kiro têm filosofias distintas — um é extensão de IDE corporativo, o outro é spec-driven development.
+- oauth2 pkce, oidc openid connect, authorization code flow, device code flow, id token claims
+- Object, block, file storage — S3 storage classes, EBS volume types, EFS, Glacier, Storage Gateway. Como escolher.
+- object detection, yolo v8 v10, detr rt-detr, map nms, ultralytics
+- observability 3 pilares, logs metricas traces, cardinalidade metricas, continuous profiling pprof, monitoring vs observability
+- Observability de custo: tags, allocation, dashboards
+- Observability enterprise: CloudWatch, X-Ray, OpenSearch
+- Observability: os 3 pilares (logs, métricas, traces) e por que não basta
+- O canivete suíço do Claude Code em 2026: 70+ slash commands built-in organizados por categoria, atalhos de teclado (Ctrl+O transcript, Esc+Esc rewind, Shift+Tab modes), flags da CLI mais usadas, 15 padrões do dia a dia e 10 variáveis de ambiente essenciais. A página que você deixa aberta em um monitor.
+- O chão invisível da produtividade: shell (zsh/bash sérios), dotfiles reproduzíveis (chezmoi), devcontainers + codespaces, Makefiles e task runners modernos, editor produtividade (VS Code + Neovim), terminal multiplexers (tmux, zellij). Capstone: setup de dev do zero em 20min.
+- ===o.charAt(0))s=o;else{let e=null;try{e=a.default.decompress(o)}catch{}s=e||o}let r=(e=JSON.parse(s),t=
+- O Claude Agent SDK transforma Claude Code numa biblioteca Python/TypeScript. query(), built-in tools, hooks programáticos, subagents, MCP, sessions — tudo via código, sem terminal.
+- O CLAUDE.md é o arquivo que define como Claude age no seu projeto — comandos, contexto, regras e preferências. Como criar um CLAUDE.md eficaz e o que evitar.
+- OCR legacy (Tesseract) vs moderno LLM-powered (Azure Doc Intelligence, AWS Textract, LandingAI Agentic OCR, Mistral OCR). Tabelas, forms, assinaturas. Quando cada.
+- O ecossistema Anthropic: Claude, modelos, produtos e roadmap
+- Offset pagination (LIMIT/OFFSET) vs cursor-based (opaque token) — por que cursor vence em datasets grandes. Keyset pagination com index composto. Filter DSL sem explodir (RSQL, Google AIP filter syntax), ordenação estável (tiebreaker por id).
+- O handshake TLS 1.3 em detalhe: ECDHE para troca de chaves, certificados X.509, SNI para virtual hosting, ALPN para negociar protocolo. Por que HTTPS é mais rápido hoje.
+- O harness é tudo que envolve o LLM — system prompt, ferramentas, permissões, hooks, skills, subagents, output. Cada ponto é customizável. Este módulo mapeia os 7 eixos de harness engineering e quando customizar cada um.
+- Oito trilhas para virar engenheiro de sistemas de verdade: Docker + Kubernetes + CI/CD profissional, engenharia na era dos agents, API Design & Contratos, Security Engineering (OAuth2/OIDC, OWASP, pentest), Testing Engineering (TDD, property-based, mutation, Pact), Accessibility & Inclusive Engineering (WCAG, ARIA, screen readers), sistemas distribuídos (CAP, Raft, sagas, event sourcing) e observabilidade + SRE (OpenTelemetry, SLOs, incident response).
+- O loop de produtividade do Claude Code: explorar o codebase, planejar com o agente, implementar com controle e commitar com confiança. Como encaixar Claude Code no seu dia a dia real.
+- Online status, typing indicators, cursor tracking. Heartbeats, timeouts. Redis-based pubsub. Scale challenges (N² connections em big rooms). Liveblocks, Ably.
+- O novo Codex (2025) é completamente diferente do antigo — roda em sandbox na nuvem, é assíncrono e paralelo. Entenda o que isso muda.
+- openai codex 2025, codex cloud sandbox, openai coding agent, codex vs claude code
+- OpenAPI como contrato vivo: codegen, mock server, contract testing, Pact — guia PT-BR.
+- OpenAPI como contrato vivo: codegen, mock server e contract testing
+- openapi contrato, swagger codegen, mock server prism, contract testing pact, spec driven development
+- opencv basico, computer vision classico, image processing, canny sobel
+- OpenTelemetry end-to-end: instrumentação app → backend
+- OpenTelemetry SDK (auto vs manual), Collector (receivers, processors, exporters), context propagation, resource detection, pipelines reais em Node, Python e Go.
+- opentelemetry tutorial, otel collector, otel sdk, context propagation, instrumentacao auto manual, opentelemetry producao
+- OpenTelemetry tutorial profissional PT-BR: SDK, Collector, receivers, processors, exporters, context propagation, pipelines end-to-end.
+- Operational Excellence, Security, Reliability, Performance, Cost Optimization, Sustainability — o framework que guia toda decisão AWS.
+- O que acontece quando você digita um URL: resolver recursivo, root servers, TLD, authoritative. Registros A, AAAA, CNAME, MX, TXT, CAA. Cache e TTL.
+- O que diferencia um thread de um processo no SO, context switch, por que green threads existem, e como Go goroutines e Python asyncio resolvem diferente.
+- O que é Amazon Q Developer, o que é Kiro AWS, spec-driven development, diferença entre Q e Kiro.
+- o que é cloud computing, IaaS PaaS SaaS, cloud publica privada hibrida, aws cloud practitioner
+- O que é cloud computing, modelos IaaS PaaS SaaS, cloud pública privada híbrida, vantagens e desvantagens da nuvem.
+- o que é inteligencia artificial, IA para iniciantes, definição IA
+- O que é KV Cache em transformers, como funciona Key-Value Cache, por que é essencial para inferência eficiente.
+- o que é LLM, large language model explicado, como funciona chatgpt
+- O que é Mixture of Experts (MoE), como funciona o roteamento de experts, Mixtral e modelos MoE explicados.
+- O que é responsabilidade da AWS e o que é sua. A linha que cai em metade das questões de segurança do exame.
+- O que é tool calling em IA, como agentes usam ferramentas, function calling na API do Claude e OpenAI.
+- O que é uma syscall, por que trocar entre user mode e kernel mode tem custo, como strace revela o que seu programa faz de verdade.
+- O que é um coding harness para agentes de IA, os 6 componentes de um agente de programação, Claude Code vs Cursor.
+- O que é um LLM (Large Language Model), como funciona o ChatGPT, Claude e Gemini. Explicação completa.
+- O que muda do Practitioner para o SAA-C03, os 4 domínios do exame, pré-requisitos e a mentalidade do arquiteto AWS.
+- O que são coding agents, diferença entre autocomplete e agentes de IA para código, histórico e evolução.
+- O que são redes neurais artificiais, como funcionam neurônios artificiais, camadas e funções de ativação.
+- O que são tokens em IA, como funciona tokenização BPE, por que contexto é medido em tokens e como isso afeta o custo.
+- Orchestrator-worker, swarm com handoffs (OpenAI Swarm), CrewAI, hierarquias, quando multi-agent vale (e quando só aumenta custo).
+- Os 4 níveis do Richardson Maturity Model, verbos HTTP corretamente (idempotência de PUT/DELETE vs segurança de GET), status codes que comunicam (201 vs 204 vs 200), HATEOAS na prática (raramente vale a pena). O REST sem jargão de livro de 2010.
+- Os 6 componentes que fazem um agente de IA funcionar de verdade.
+- Os 6 pilares (Operational Excellence, Security, Reliability, Performance, Cost, Sustainability). WA Tool pra auto-review. Padrões comuns de antipattern e remediation.
+- Os atalhos de teclado que mudam tudo, plugins essenciais, multi-cursor, terminal integrado, Vim básico para quando não tem outra opção.
+- Os JOINs que resolvem 90% dos problemas reais: INNER, LEFT/RIGHT, FULL OUTER, self-join para hierarquias, CTEs para legibilidade.
+- O topo da carreira técnica: ADRs e decisões reversíveis vs irreversíveis, mentoria e code review como ferramenta pedagógica, estimativas sem mentir, lidar com legacy, carreira técnica vs gestão, comunicação com executivos, capstone de ADR completo real.
+- outbox pattern, transactional outbox, dual write problem, idempotent consumer
+- Outposts (AWS on-prem rack), Wavelength (edge 5G telcos), Local Zones (urban low-latency), Snow Family (offline transfer). Quando cada um cabe.
+- OWASP Top 10 2024 com exemplos TypeScript reais: injection, SSRF, misconfig — PT-BR.
+- owasp top 10 2024, injection typescript, ssrf, broken access control, security misconfig
+- package.json exports (ESM vs CJS condicional), types condicional, subpath exports, publint (check consistency), Are The Types Wrong (check .d.ts). Modern package (2026): ESM-first com CJS fallback.
+- . Padronizações: C++98, C++11 (moderno começa aqui — move semantics, auto, lambdas), C++14, C++17, C++20 (modules, concepts, ranges, coroutines), C++23 (std::expected, std::print). Compiladores: GCC g++, Clang++, MSVC; cada um com subset de C++23 suportado. Diferencial: zero-overhead abstractions (RAII, templates) com controle total de memória. Mercado 2026: games (Unreal, Unity runtime), browsers (Chrome V8, Firefox), trading HFT, bibliotecas numéricas (Eigen, OpenCV). C++17 é o patamar em produção; C++20/23 adoção crescente mas incompleta.',seoDesc:
+- paginacao api, cursor pagination, keyset pagination, filter dsl rsql, ordenacao estavel api
+- Paginação profissional: cursor vs offset, keyset, filter DSL, ordenação estável — PT-BR.
+- Paralelismo na prática: worktrees, fan-out, background e múltiplas sessões
+- Parameter Store (grátis até 10k std, $0.05/advanced) pra config + SecureString. Secrets Manager ($0.40/secret/mês) pra credenciais DB com rotation automática. Quando usar cada. Integration com Lambda via extension (cache local). Hierarchy: /env/service/key.
+- parameter store ssm, secrets manager aws, securestring, rotation automatica, lambda extension
+- Par de chaves RSA/Ed25519, ssh-keygen, authorized_keys, ssh-agent, config file, tunelamento — tudo que você precisa para nunca mais digitar senha.
+- Parquet é formato de arquivo; table formats adicionam ACID + time-travel + schema evolution em cima. Iceberg (Apple/Netflix, open): leader em 2026. Delta (Databricks): maduro, proprietário-ish. Hudi (Uber): focado em upserts. Open Table Format é o futuro — fim do vendor lock-in.
+- Partial, Required, Readonly, Pick, Omit, Record, Exclude, Extract, NonNullable, ReturnType, Awaited. O que cada um faz, quando é gambiarra (ex: Partial<T> escondendo modelagem fraca) e como prefers tipos nomeados a combinações monstruosas.
+- Partition key + sort key compondo primary key. Hot partition (por que escolha de PK importa). LSI vs GSI (GSI pode ter PK diferente). DynamoDB Streams (CDC nativo). TTL, transactions, conditional writes, optimistic locking. Capacity: on-demand vs provisioned + auto scaling.
+- Partition tolerance, availability, consistency — e por que você sempre escolhe entre 2. PACELC estende para latência. Decisões reais: Dynamo vs Spanner, Cassandra vs HBase.
+- Password hashing profissional: argon2id, bcrypt, pepper, migração — guia PT-BR.
+- Patterns edge-first: HTML streaming, data collocation
+-  + paved road template (FastAPI + Postgres + monitoring + CI/CD auto-generated). Documentação de user research.',seoDesc:
+- Pay-as-you-go, Free Tier, Pricing Calculator, Cost Explorer, Budgets, TCO Calculator e os 4 Support Plans — tudo sobre a fatura da AWS.
+- Pegar app que você construiu (ex: Trail 21 capstone) e atacar: Burp Suite pra MITM, ffuf pra fuzzing, nuclei pra scan automatizado, sqlmap pra testar injection. Documentar cada vuln encontrada, severity (CVSS), fix aplicado, regression test. Entregável: relatório de pentest + PRs corrigindo.
+- Pegar sistema com perf problem real (próprio ou repo público), aplicar método. Entregáveis: writeup com hipótese, flamegraphs antes/depois, fix, benchmark. Estilo Gergely Orosz ou high-scalability.
+- Pegue agent produção ou capstone anterior. Attacks sistemáticos: jailbreak (10 métodos), injection direct+indirect, data exfil via tools, PII leak, prompt stealing. Report com CVSS-ish severity + remediation.
+- pentest etico, burp suite, ffuf fuzzing, nuclei scan, sqlmap, cvss severity, capstone security
+- Perf engineering como disciplina: flamegraphs, eBPF, profilers por linguagem, cache analysis, lock contention, I/O bottlenecks. Método científico: hipótese → medir → otimizar → repetir. Sem chutes.
+- Performance em Node: event loop, streams e backpressure
+- performance engineering, brendan gregg, use method, p99 latency, amdahl law
+- Performance engineering method Brendan Gregg USE — PT-BR.
+- performance linguagens, techempower benchmarks, rust vs go java, cpu bound benchmark
+- Performance Node.js profissional: event loop, streams, backpressure, worker threads — PT-BR.
+- Performance testing: k6, artillery, load/stress/soak, perf budgets em CI — guia PT-BR.
+- performance testing, k6 load test, artillery, soak test, p99 perf budget, stress testing
+- perf record + perf script + flamegraph.pl. Async profiler (Java). py-spy (Python). pprof (Go). Diffed flamegraph. Off-CPU flamegraph. Icicle.
+- Permissions em produção: allowlist, deny rules, sandbox e auto mode
+- Permissões e segurança: o que Claude pode e não pode fazer
+- permissoes linux, chmod chown, rwx linux, symlink hardlink, filesystem linux
+- Permissões Linux explicadas em PT-BR: rwx, chmod, chown, symlink, hardlink — o que quebra em produção e como evitar.
+- PID, fork, exec, foreground/background, kill, SIGTERM vs SIGKILL, ps, top, htop — entenda o que roda no seu sistema.
+- Pirâmide clássica (Mike Cohn): muitos unit, alguns integration, poucos e2e. Trophy (Kent C. Dodds): integration como maioria. Diamond pra backend-heavy. Como escolher baseado em onde bugs realmente aparecem.
+- pki x509, certificate authority, chain of trust, lets encrypt acme, ocsp stapling
+- PK/SK, GSI, sparse indexes. Single-table design (Alex DeBrie). Access patterns first. Streams, TTL, DAX. Custo por RCU/WCU, on-demand vs provisioned.
+- Planner compara planos por cost estimado. Nodes: Seq Scan, Index Scan, Bitmap Index Scan, Nested Loop, Hash Join, Merge Join. EXPLAIN ANALYZE executa e mostra real. Ler plan: cost, rows estimates vs actual (diferença = stats desatualizadas). BUFFERS mostra I/O.
+- platform as product, team topologies, stream aligned team, enabling team
+- Platform as product user research team topologies — PT-BR.
+- Platform engineering real: Internal Developer Platforms (IDPs), Backstage como catalog, golden paths, self-service infra, platform as product mindset, métricas DORA/SPACE. Distinto de DevOps: time dedicado, stakeholder = dev interno.
+- platform engineering vs devops, idp internal developer platform, toil leverage
+- Plugins: empacotar skills + agents + MCP + hooks para o time inteiro
+- Pointer é endereço de memória, array decai pra pointer, string é char* terminated \\0. Arithmetic, dereferencing, pointer to pointer, const correctness. Mental model sólido destrava tudo.
+- Policy JSON em profundidade, STS AssumeRole, cross-account access, AWS Organizations, SCPs, Identity Center (SSO).
+- Política de permissão real para times: allow/ask/deny granulares, sandbox.network.deniedDomains, wrappers (env/sudo), auto mode com classifier, /fewer-permission-prompts para gerar allowlist do uso real, enterprise policy como camada absoluta.
+- Por que 100 queries são piores que 1 query com JOIN. N+1 query problem e como detectar. PgBouncer, SQLAlchemy pool, asyncpg — configuração correta.
+- Por que 2PC trava tudo, saga orchestration vs choreography, compensating actions, outbox pattern, idempotência nas compensações.
+- Por que 80% do que você faz vai ser automatizado — e o que sobra como skill real: decompor problema, ler sistema, escrever spec, revisar PR de agent, tomar decisão de arquitetura.
+- Por que feature store: training/serving skew, reutilização, governança. Feast arquitetura (offline store + online store), Tecton, Hopsworks. Integração com data warehouse.
+- Por que HTTP/1.1 força 6 conexões paralelas por domínio, como HTTP/2 resolve com multiplexing, e o que HTTP/3 muda no transporte.
+- Por que o modelo OSI de 7 camadas existe (e por que ninguém usa), como TCP/IP realmente funciona em 4 camadas, e o que cada camada encapsula.
+- Por que relógios em servidores diferentes mentem. NTP e PTP, clock drift, por que nunca usar wall clock para medir duração, e como sistemas distribuídos lidam com tempo.
+- Por que servidores web usam epoll em vez de um thread por conexão. Blocking vs non-blocking vs async I/O — o fundamento de event loops como asyncio e Node.js.
+- Por que SHA-256 puro é crime em 2026. Argon2id (OWASP #1), bcrypt (aceitável), scrypt. Salt sempre, pepper opcional (server-side secret extra). Timing-safe compare. Migrar hash antigo sem quebrar login (re-hash no login).
+- Por que times sérios usam monorepo: shared packages, atomic commits cruzando apps, CI unificada. pnpm workspaces (packages/*), Turbo pipeline.json com cache, shared tsconfig base, shared ESLint/Prettier. Anti-padrões (circular deps, shared mutáveis).
+- Por que um modelo de 30GB pode precisar de 60GB de VRAM — e como o KV Cache resolve isso.
+- portfolio tecnico, github pin repos, blog tecnico developer, portfolio engineer
+- POSIX vs bash vs zsh. Starship prompt (cross-shell). Aliases, functions, here-docs. $PATH sanity. Exit codes, pipes, xargs, jq integration. Zero ambiguity between shell scripts interactive.
+- Postgres connection pooling: pgbouncer, transaction mode, serverless exhaustion — PT-BR.
+- postgres connection pool, pgbouncer transaction mode, rds proxy, supabase pooler, serverless postgres
+- Postgres deep, data engineering moderna, analytics como engenharia — além do CRUD.
+- Postgres EXPLAIN ANALYZE profissional: planner, cost, nested loop, hash join, buffers — PT-BR.
+- postgres explain analyze, query planner, seq scan vs index, nested loop hash join, buffers explain
+- Postgres FTS: tsvector GIN ts_rank pg_trgm — PT-BR.
+- postgres full text search, tsvector tsquery, gin index, pg_trgm fuzzy
+- postgres index tipos, brin index, gin jsonb, gist geometric, partial index, covering index include
+- Postgres índices avançados: B-tree, BRIN, GIN, GiST, partial, covering, INCLUDE — PT-BR.
+- Postgres MVCC e isolation levels profissional: snapshot, SSI, xmin/xmax — PT-BR.
+- Postgres MVCC, isolation levels, locks e VACUUM explicados a fundo — o que todo engenheiro precisa saber antes de escalar Postgres.
+- postgres mvcc, isolation levels postgres, select for update, advisory lock postgres, vacuum bloat, repeatable read serializable
+- postgres mvcc, isolation levels postgres, snapshot isolation, ssi serializable, xmin xmax tuple
+- postgres partitioning, declarative partition, partition pruning, citus sharding, postgres scale
+- Postgres partitioning e sharding: declarative RANGE/LIST/HASH, Citus, trade-offs — PT-BR.
+- Postgres profissional além do CRUD: MVCC e isolation levels reais (snapshot, serializable, RR, RC), query planner com EXPLAIN ANALYZE, índices avançados (B-tree, BRIN, GIN, GiST, partial, covering), vacuum e bloat (causa #1 de DB morrendo), connection pooling (pgbouncer), replication (sync/async, failover), partitioning declarativo. Capstone: tuning real de workload.
+- PostgreSQL vs MongoDB vs Redis vs DynamoDB: modelos de dados, trade-offs de consistência e quando a escolha importa de verdade.
+- Postgres replication: streaming, logical, synchronous, failover com Patroni — guia PT-BR.
+- postgres replication, streaming replication, logical replication cdc, synchronous commit, patroni failover
+- Postgres usa 1 process por conexão (pesado). App moderno com pool em cada instância + autoscale = easy 10k conexões. pgbouncer entre aplicação e PG, em 3 modes: session (1 conn por client), transaction (reuse entre txs — mais comum), statement. Serverless (Lambda) trap: spawn exhaustion; use RDS Proxy ou Supabase pooler.
+- Postgres vacuum, autovacuum e bloat: dead tuples, pg_repack, monitoring — guia PT-BR.
+- postgres vacuum, autovacuum tuning, bloat table, pg_repack, dead tuples mvcc
+- postmortem blameless, 5 whys, incident review, atlassian template
+- pprof (cpu, memory, goroutine, mutex profiles) built-in. Escape analysis (stack vs heap). Allocations count. Benchmarking (testing.B). sync.Pool pra reutilizar. sync/atomic pra lock-free.
+- precision recall search, ndcg, mrr mean reciprocal rank, search evaluation
+- ,predicate:e=>e.state.perfectQuizStreak>=l.GAME_CONFIG.SNIPER_PERFECT_STREAK}],S={schemaVersion:2,xp:0,level:1,streak:0,lastStudyDate:null,completedModules:[],quizScores:{},badges:[],totalStudyTime:0,startedAt:null,reviewCards:[],archivedCards:[],studyDays:[],freezes:0,dailyGoal:3,lastReviewDate:null,lastArticle:null,preferredHub:null,onboardedAt:null,articleProgress:{},perfectQuizStreak:0,earlyMorningDays:[],trailStartedAt:{}};function x(){try{let o=(0,u.getRaw)(l.STORAGE_KEYS.GAME_STATE);if(o){var e;let s,t,i;if(
+- ,predicate:e=>{for(let a of o.CURRICULUM){if(!f(a.id,e.state.completedModules))continue;let o=a.modules.filter(a=>e.state.quizScores[a.slug]);if(0!==o.length&&o.every(a=>{let o=e.state.quizScores[a.slug];return o&&o.score===o.total}))return!0}return!1}},{id:
+- ,predicate:e=>{for(let a of o.CURRICULUM){if(!f(a.id,e.state.completedModules))continue;let o=e.state.trailStartedAt[a.id];if(o&&(Date.parse(e.now)-Date.parse(o))/36e5<=l.GAME_CONFIG.SPEEDRUN_TRAIL_HOURS)return!0}return!1}}],b=[{id:
+- ,predicate:e=>(function(e){let a=0;for(let o=0;o<l.GAME_CONFIG.DAILY_GOAL_7_DAYS;o++){let s=new Date;s.setDate(s.getDate()-o);let t=s.toISOString().slice(0,10),i=e.studyDays.find(e=>e.date===t);if(i&&i.cardsReviewed>=e.dailyGoal)a++;else break}return a})(e.state)>=l.GAME_CONFIG.DAILY_GOAL_7_DAYS}],k=[{id:
+- ,predicate:e=>g(e.state).size>=l.GAME_CONFIG.POLYGLOT_HUBS},...o.CURRICULUM.map(e=>({id:`${e.id}_done`,predicate:a=>f(e.id,a.state.completedModules)})),...o.CURRICULUM.map(e=>({id:`${e.id}_mastery`,predicate:a=>{if(!f(e.id,a.state.completedModules))return!1;let o=e.modules.filter(e=>a.state.quizScores[e.slug]);return 0!==o.length&&o.reduce((e,o)=>{let s=a.state.quizScores[o.slug];return e+(s?s.score/s.total:0)},0)/o.length>=l.GAME_CONFIG.MASTERY_QUIZ_AVG}})),{id:
+- ,predicate:e=>{if(0!==e.dayOfWeek&&6!==e.dayOfWeek)return!1;let a=new Date(e.today);a.setDate(a.getDate()+(6===e.dayOfWeek?1:-1));let o=a.toISOString().slice(0,10);return e.state.studyDays.some(e=>e.date===o&&(e.modulesCompleted>0||e.cardsReviewed>0))}},{id:
+- ,predicate:e=>{if(!e.state.startedAt||e.state.studyDays.length<2)return!1;let a=[...e.state.studyDays].sort((e,a)=>e.date.localeCompare(a.date)),o=a.findIndex(a=>a.date===e.today);return!(o<=0)&&d(a[o-1].date,e.today)>=l.GAME_CONFIG.COMEBACK_DAYS_GAP}},{id:
+-  prefix (nit:/suggestion:/blocking:), praise in public, correct in DM, small PRs.',seoDesc:
+- Presence systems typing indicator heartbeat — PT-BR.
+- presence system, typing indicator, cursor tracking, liveblocks ably
+- , preservar comportamento quirky se users dependem.',seoDesc:
+- Presigned URLs (upload/download direto do client, nunca expor credentials). Multipart upload (> 100MB obrigatório, resume). S3 Event Notifications → Lambda/SQS/SNS. Cross-Region Replication, versioning, object lock pra compliance. Transfer Acceleration.
+- Primeira, segunda e terceira formas normais com exemplos reais. Quando desnormalizar intencionalmente (analytics, performance). ERD na prática.
+- Princípios Zero Trust (verify explicitly, least privilege, assume breach). mTLS pra autenticação mútua entre serviços. SPIFFE/SPIRE pra identidade de workload. Service mesh (Istio, Linkerd) como camada. Alternativa simples: Tailscale/Cloudflare Zero Trust em dev.
+- Principles of Chaos (Netflix manifesto). Steady-state hypothesis, vary real-world events, run in production (com cuidado), minimize blast radius, automatize experiments.
+- Processos, jobs, sinais: como o SO organiza execução
+- Processos Linux: PID, fork, exec, jobs, sinais (SIGTERM/SIGKILL), ps, top — como o SO gerencia execução de programas.
+- processos linux, pid fork exec, kill sigterm sigkill, jobs background, ps top htop linux
+- product analytics, posthog, mixpanel, amplitude, event tracking
+- Product analytics PostHog Mixpanel Amplitude — PT-BR.
+- Product engineering mindset staff engineer — PT-BR.
+- product engineering, product engineer mindset, dri engineer, staff engineer product
+- profiler comparison, async profiler jvm, clinic node, py-spy scalene, cargo flamegraph
+- Profilers linguagem JVM Node Python Go Rust — PT-BR.
+- Profiling locks (contention via eBPF, JFR). Adaptive spin/block. Lock-free alternatives. I/O: iostat, iotop, strace. Async I/O (io_uring). EFIX patterns.
+- Projeto: agent Claude API com tool use (3+ tools custom), prompt caching, MCP pra contexto, observability (Langfuse), eval harness, rate limit graceful, deploy em produção com feature flag. Usuário real usa; você mede qualidade.
+- Projeto: app que usa Postgres (source of truth) + Redis (cache/sessions) + MongoDB (user-generated docs) + pgvector (semantic search). Sync estratégia. Trade-offs documentados.
+- Projeto: CLI clap + API REST Axum + Postgres sqlx + auth jwt + Dockerfile mínimo (<20MB). Entregáveis: cargo workspace, lib + cli + server, testes + criterion bench, Docker multi-stage, README de produção.
+- Projeto consolidando a trilha: API de gestão de tarefas com OpenAPI spec-driven, versionamento /v1, auth com JWT, paginação cursor, idempotency em POST, webhook em mudanças, rate limit por tenant, testes de contrato com Pact. Deploy + docs.
+- Projeto consolidando a trilha: CLI com commander/citty, flags tipadas com Zod, async com AbortController, erros via Result, publicação em npm com bin/, tests com vitest, release automático com changesets. Saída: binário usável de verdade.
+- Projeto: dataset real (100M+ rows), query inicial lenta (30s+). Diagnosticar com EXPLAIN ANALYZE + BUFFERS. Adicionar índices corretos. Rewrite query se necessário. Medir melhoria (pg_stat_statements). Entregável: before/after benchmark + análise escrita.
+- Projeto: dataset real (Kaggle), EDA + feature eng + modelo + eval + deployment (FastAPI ou BentoML). Entregáveis: notebook + código testado + README + deploy.
+- Projeto: definir SLIs (latency, availability) pra serviço real, calcular SLO (99.9%?), error budget mensal, alertas multi-burn-rate (fast/slow), runbook com ações por alerta, gameday simulado pra validar.
+- Projeto: detector YOLO fine-tuned em dataset próprio, export ONNX, inference em Triton com dynamic batching, API FastAPI, monitoring drift. Entregáveis: repo + docker + benchmark latência.
+- Projeto: documentar CLAUDE.md profissional pra seu repo + catálogo de skills + hooks de CI (code review auto, spec review) + settings hierarchy org-wide + onboarding guide. Entregável: PR no repo do time com Claude Code setup maduro.
+- Projeto: e-commerce com 3 serviços (orders, payments, inventory). Saga orchestrator em Step Functions/Temporal. Compensations em cada fail. Outbox pattern pra eventos. Idempotency em retry. Tracing distribuído.
+- Projeto: escolha domínio (legal, médico, code review). Colete 1k-5k exemplos reais. LoRA em Llama 3 ou Mistral. Avaliar com golden set. Deploy com vLLM atrás de FastAPI. Comparar vs base model em métricas específicas. Publicar modelo no Hugging Face Hub.
+- Projeto: ingestão (Kafka → S3/Iceberg), transformação (dbt + DuckDB), orchestration (Dagster), CDC de Postgres OLTP, data quality (GE tests), dashboard (Metabase/Superset). Mostra cada camada funcionando juntas; mede SLA de freshness.
+- Projeto integrador: app Node em container, build em GitHub Actions, push pra ECR, deploy em EKS via ArgoCD, observability com Prometheus/Grafana, secrets via External Secrets Operator, ingress com HTTPS auto (cert-manager). GitOps do zero com produção-grade policies.
+- Projeto: pegar app real (próprio ou open source) e montar test harness completo — unit com vitest, integration com test-containers, contract com Pact, e2e Playwright, mutation Stryker nightly, k6 em pre-prod. CI orquestra paralelo com cache inteligente.
+- Projeto: pegar repo legacy (próprio ou open-source) e refatorar aplicando toda a trilha — extract modules, adicionar testes antes de mudar, ADR documentando decisão, fitness function via CI, migração gradual sem big-rewrite.
+- Projeto: pegar site próprio ou voluntário (não-profit local, open-source) com problemas de a11y. Audit com axe + testing manual com NVDA. Relatório de achados por WCAG criterion. PRs corrigindo. Retest até WCAG 2.2 AA compliance.
+- Projeto: RAG completo — ingestão (chunking + embed), store (Postgres pgvector ou Pinecone), retrieval (hybrid BM25 + vector + reranker), eval harness (golden set + LLM judge), observability (Langfuse), cost attribution. Deploy com feature flag pra canary.
+- Promise é um valor, não uma função. `async` wrappa função em Promise. `await` é a única forma sã de consumir. AbortController para cancelar fetch, setTimeout, streams. `Promise.all` vs `Promise.allSettled` vs `Promise.race`. Erros silenciosos em `.then` sem catch.
+- promo doc, brag doc julia evans, engineer promotion, promo packet
+- Promo doc brag doc Julia Evans engineer promotion — PT-BR.
+- Prompt: comportamento de task. RAG: acesso a knowledge dinâmico. Fine-tune: mudar estilo/domínio/formato consistente. Decisão por cenário: format output → FT. Knowledge freshness → RAG. Raciocínio geral → prompt. FT é caro/lento — última escolha.
+- prompt engineering claude, claude prompts, anthropic prompts, chain of thought claude, xml tags claude
+- Prompt engineering para Claude: técnicas avançadas — chain-of-thought, XML tags, prefill, few-shot — PT-BR.
+- Prompt engineering para Claude: técnicas que realmente funcionam
+- Prompt evaluation Claude: datasets, LLM-as-judge, eval harness, grading automático — como avaliar prompts PT-BR.
+- Prompt Evaluation: datasets, grading automático e eval harness
+- prompt evaluation, llm as judge, eval harness claude, datasets prompt, grading automatico ia
+- Promptfoo: YAML-driven, open, bom pra CI. Braintrust: platform pro eval, viz top. Langfuse: open-source, traces + evals combinados. Inspect (UK AI Safety Institute): research-grade. Quando usar cada: time pequeno (Promptfoo), startup (Langfuse), enterprise (Braintrust).
+- Property-based testing com fast-check: achar bugs em edge cases
+- Property-based testing: fast-check, Hypothesis, invariantes, shrinking — guia PT-BR.
+- property based testing, fast-check, hypothesis python, shrinking test, invariant testing
+- Protobuf como IDL compacto (binário, schema evolution, field tags), gRPC com HTTP/2 multiplexing, 4 modos (unary, server streaming, client streaming, bidi). Quando gRPC bate REST (interno de microserviços de baixa latência) e quando não (APIs públicas browser-facing).
+- pthreads, c11 threads, c atomics, mutex condition variable, lock free c
+- pthreads (POSIX, universal), C11 &lt;threads.h&gt; (standard, less universal). Mutex, condition variables, atomics (C11 _Atomic), data races. Thread-local storage. Lock-free primitives básicos.
+- Publicar libraries profissionais: mentalidade lib vs app, ESM/CJS dual package, tree-shaking, semver pragmático com changesets, typings como produto, capstone publicar lib popular.
+- Purchasing options profundos, Auto Scaling Groups, ALB vs NLB vs GWLB, target groups, placement groups, health checks.
+- Push (APNs/FCM), email (SES/Sendgrid), SMS. Templates, user preferences, quiet hours. Priority queues, rate limiting por user. Delivery tracking.
+- Pydantic v2 (escrito em Rust, blazing) é o Zod do Python. BaseModel, field validators, model_validator. Serialization com model_dump. BaseSettings pra config com env vars. discriminator pra tagged unions. Dez vezes mais rápido que v1.
+- Pydantic v2 profissional: BaseModel, validators, BaseSettings, discriminator — PT-BR.
+- pydantic v2, pydantic basemodel, field validator, basesettings env, discriminator pydantic
+- Python 3.12+ com PEP 695 (syntax de generics mais limpa). TypedDict pra dicts tipados. Protocol pra structural typing (o TS inside). Literal, Annotated, NotRequired. mypy strict + ruff. Type hints são a ferramenta #1 pra escalar código Python.
+- python asyncio, trio structured concurrency, anyio, coloring problem, asyncio gather
+- Python async profissional: asyncio, trio, anyio, estruturado, to_thread — PT-BR.
+- python para dev typescript, gil python, duck typing, comprehensions, legb scoping
+- Python pra devs TypeScript que querem atacar camadas de IA: diferenças mentais TS↔Python, ambiente moderno com uv, type hints rigorosos, Pydantic v2, asyncio sem dor, FastAPI, Jupyter pra engenharia, capstone de agent completo com Claude SDK Python.
+- Python pra dev TypeScript: GIL, duck typing, comprehensions, escopos — guia PT-BR.
+- python type hints, pep 695 generics, typeddict, protocol structural, mypy strict, ruff
+- Python type hints profissional: PEP 695, Protocol, TypedDict, mypy strict — PT-BR.
+- Qualidade de dados: Great Expectations, dbt tests, Soda
+- Qualidade de dados: Great Expectations, Soda, dbt tests, data observability — PT-BR.
+- Quando FTS Postgres não dá: escala grande (>10M docs), relevance tuning avançado, aggregations complexas. Elasticsearch vs OpenSearch (fork AWS post-licença). Inverted index, shards, replicas.
+- Quando JS não dá: câmera avançada, bluetooth, background tasks, platform APIs específicas. Expo config plugins primeiro. Se precisar nativo: Turbo Modules API, Kotlin/Swift 20-50 linhas suficiente pra maioria.
+- Quando um índice é usado (e quando não é). B-tree vs hash vs GIN, índice composto e a ordem importa, covering index para evitar heap scan.
+- quando usar linguagem, escolher linguagem cenário, matriz decisão programação
+- Quando usar SDK em vez de CLI, query() com ClaudeAgentOptions, custom tools via @tool, subagents programáticos, hooks programáticos, MCP servers, sessions com fork. Dois scripts reais: GitHub Action que revisa PRs + cron de PR triage em Node.
+- Quatro trilhas para quem constrói o produto na ponta: Frontend Moderno (HTML/CSS/JS/React sem framework-fadiga), Mobile pra devs web (React Native + Expo), Edge Computing (Workers, Durable Objects) e Library Authoring (publicar no npm como adulto — tsup, changesets, ESM/CJS dual).
+- Quatro trilhas que consolidam a base técnica sem a qual nada em cima faz sentido: fundamentos técnicos (terminal, filesystem, SSH, Git, HTTP, DNS), SQL & databases (relacional de verdade, índices, transações, migrations), como o computador funciona (CPU, memória, syscalls, containers), e redes & web (OSI, TCP, TLS, HTTPS, WebSocket, CORS).
+- Query language + runtime type system + transport-agnostic. Over-fetching/under-fetching do REST. Quando GraphQL vence (cliente mobile + web), quando perde (simple CRUD).
+- rag claude, retrieval augmented generation anthropic, chunking embeddings, bm25 search, hybrid rag, agentic search
+- RAG com Claude API: chunking, embeddings, BM25 hybrid search, agentic search — tutorial completo PT-BR.
+- RAG e Agentic Search com Claude: chunking, embeddings e BM25
+- RAG real, agent patterns, MCP, LLMOps, evaluation — o que separa um protótipo de IA de um sistema AI-native em produção.
+- rag retrieval augmented generation, o que e rag, rag vs fine tuning, arquitetura rag producao, rag llm
+- RAG (Retrieval-Augmented Generation) profissional em PT-BR: arquitetura, limites de contexto, falhas comuns, quando usar vs fine-tuning.
+- RAII (Resource Acquisition Is Initialization) é o diferencial C++ real. unique_ptr, shared_ptr, weak_ptr. Quando cada um. raw pointer só pra non-owning. Rule of 5 (ou Rule of 0 em moderno).
+- Rancher: gerenciando múltiplos clusters K8s sem sofrer
+- rancher kubernetes, rancher manager, rke2, fleet gitops, multi cluster kubernetes, rancher vs argo cd, rancher rbac
+- Rancher Manager, RKE2, importar clusters, Fleet para GitOps multi-cluster, RBAC unificado, projetos, monitoring e quando Rancher vale (ou não) a pena.
+- Rancher tutorial PT-BR: Rancher Manager, RKE2, multi-cluster, Fleet GitOps, RBAC, Projects, monitoring — como gerenciar dezenas de clusters Kubernetes.
+- random forest, xgboost, lightgbm, catboost, gradient boosting
+- Ranges substituem iterator pairs. Lazy evaluation. Composable (views::filter | views::transform | views::take). std::ranges algorithms. Format library (std::format — C++20). Print (C++23).
+- rate limiter design, token bucket, leaky bucket, sliding window, redis lua
+- Rate limiter distribuído token bucket Redis — PT-BR.
+- rate limiting api, token bucket, leaky bucket, 429 retry-after, quota api, sliding window
+- Rate Limiting Distribuído: token bucket, sliding window, Redis
+- Rate limiting distribuído: token bucket, sliding window, Redis + Lua atômico, algoritmos comparados — implementação profissional PT-BR.
+- rate limiting distribuido, token bucket, sliding window, redis lua rate limit, leaky bucket, api rate limit
+- Rate limiting e quotas: token bucket, leaky bucket e fairness
+- Rate limiting profissional: token bucket, leaky bucket, headers, 429 Retry-After — PT-BR.
+- rds multi-az read replicas, aurora cluster serverless, dynamodb gsi lsi dax, dynamodb streams
+- RDS Multi-AZ vs Read Replicas, Aurora cluster serverless, DynamoDB GSI LSI DAX streams, on-demand provisioned.
+- RDS Multi-AZ vs Read Replicas, Aurora (cluster + Serverless v2), DynamoDB (GSI/LSI, DAX, Streams, on-demand vs provisioned).
+- React fiber: commit phase, concurrent, useTransition, Suspense — PT-BR.
+- react fiber, render commit phase, useTransition, useDeferredValue, suspense react
+- Reactive (Reactor) vs Virtual Threads: qual escolher
+- Reactive (Spring WebFlux, Reactor, RxJava): non-blocking callback style, high throughput. Virtual threads: synchronous code, millions of threads. Post-Loom, reactive vale pra backpressure + streaming.
+- React Native mental model: JSI Fabric TurboModules, diferenças browser — PT-BR.
+- react native mental model, jsi fabric turbomodules, rn new architecture
+- react native native module, turbomodule kotlin swift, expo config plugin
+- react query tanstack mobile, zustand, mmkv storage, async storage alternative
+- React Query (TanStack) — server state cache + offline. Zustand (local state). Async storage vs MMKV (10x mais rápido). Handling network conditions, stale-while-revalidate.
+- react server components, rsc, server actions, next.js app router
+- ReAct (think-act-observe), Reflexion (self-critique), Tree of Thoughts, Plan-and-Execute, Router — padrões empíricos com quando cada um funciona e quando quebra.
+- README editorial quickstart hero paragraph — PT-BR.
+- readme editorial, readme profissional, quickstart readme, shields.io
+- Realtime APIs: GPT-4o Realtime, conversational voice
+- real time capstone, app realtime completo, websocket yjs livekit
+- Real-time moderno: WebSockets em produção, SSE, WebRTC (voice/video/data), CRDTs para colaboração (Yjs/Automerge), presence systems, LiveKit/mediasoup para SFU. Quando WebSocket vs SSE vs polling.
+- Realtime voice APIs: GPT-4o, WebRTC, VAD turn-taking — PT-BR.
+- Recommender systems collaborative filtering matrix factorization — PT-BR.
+- recommender systems, collaborative filtering, matrix factorization, two tower
+- Records (immutable DTOs), sealed classes (exhaustive sum types), pattern matching (switch expressions, instanceof), text blocks, var local inference. Java moderno parece diferente do Java 8.
+- Records (immutable value types), pattern matching exaustivo, primary constructors (C# 12), collection expressions, required properties, file-scoped namespaces. C# moderno parece uma linguagem diferente de C# 5.
+- Recursão e DP para quem odeia: pensando em subproblemas
+- Recursão e programação dinâmica na prática: memoization, tabulation, edit distance — PT-BR.
+- recursao javascript, dp programacao dinamica, memoization, edit distance, stack overflow recursao
+- Recursão sem misticismo: caso base + passo. Memoization top-down, tabulation bottom-up. DP clássicos úteis (knapsack pra budget, LCS pra diff, edit distance pra fuzzy search). Quando recursão estoura stack e como reescrever iterativo.
+- Rede Híbrida: Direct Connect, VPN, PrivateLink e VPC Endpoints
+- redes neurais artificiais, deep learning, como funciona rede neural
+- redis avancado, redis streams, redis sorted set, lua script atomic, redis stack
+- RED (Rate, Errors, Duration) para serviços, USE (Utilization, Saturation, Errors) para recursos, Golden Signals do Google SRE, quando aplicar cada um.
+- Red team playbook LLM: harm categories, PyRIT, attack methods — PT-BR.
+- Regions, Availability Zones, Edge Locations, Local Zones, Wavelength — como a AWS distribui capacidade no planeta.
+- regressao logistica, classificacao, regularizacao l1 l2, scikit-learn
+- Regressão vs classificação vs clustering. Quando ML bate regra/heurística, quando não. Bias-variance trade-off. Por que em 2026 ainda dominamos mercado de tabular com XGBoost, não LLM.
+- Regression testing pra agents: evitar regredir por mudança
+- relacional nosql, postgresql vs mongodb, quando usar sql nosql, banco de dados comparação
+- Relacional vs NoSQL PT-BR: quando usar PostgreSQL, MongoDB, Redis ou DynamoDB — trade-offs reais.
+- Relacional vs NoSQL vs analítico. RDS, Aurora, DynamoDB, ElastiCache, Redshift — quando usar cada um no CLF-C02.
+- Release flag vs experiment flag vs permission flag. GrowthBook (open source, stats-first), Unleash, LaunchDarkly, Vercel Flags. Kill switch. Flag debt.
+- Reservas, Savings Plans e Spot: estratégia de portfolio
+- reserved instances savings plans, spot instances aws, trusted advisor, cost allocation tags
+- Resolução DNS (recursivo, autoritativo, TTL), handshake TLS 1.3, certificados X.509, CA, HTTPS — tudo antes do seu código rodar.
+- Resolver pattern, context, info. Problema N+1 classic. DataLoader batch + cache por request. Quando DataLoader ainda não basta (joins complexos).
+- REST maduro: Richardson levels, idempotência e HATEOAS (raramente)
+- REST maduro (Richardson levels, idempotência), versionamento sem dor, GraphQL quando faz sentido (N+1, dataloader), gRPC + protobuf, OpenAPI como contrato vivo, paginação profissional, idempotency keys e webhooks, rate limiting. O que diferencia uma API amadora de uma que sustenta produto.
+- rest maduro, richardson maturity, idempotencia http, hateoas, status codes rest, rest api design
+- REST profissional: Richardson levels, idempotência, HATEOAS, status codes — guia PT-BR.
+- result type typescript, neverthrow, railway oriented, erros como valores, throw typescript, tipos erros
+- resume tech engineer, cv desenvolvedor, resume ats friendly, quantified impact
+- Retrieval-Augmented Generation na prática: limite de contexto, alucinação, arquitetura em dois estágios (retrieve → generate), quando RAG vence fine-tuning.
+- retrofit, okhttp, moshi, kotlinx serialization, android networking
+- Retrofit + OkHttp + Moshi/kotlinx.serialization. Interceptors, retry, caching. Cert pinning. WebSocket. Ktor client como alternativa.
+- );return`${a}-${o}-${s}`}function d(e,a){let o=new Date(e);return Math.round((new Date(a).getTime()-o.getTime())/864e5)}e.s([
+- rfc request for comments, python pep, rust rfc, ietf rfc
+- RFC = Request for Comments. Python PEPs, Rust RFCs, IETF como referência. Diferença vs design doc. Process: draft → discussão → ratify. Templates.
+- rightsizing aws, compute optimizer, vertical pod autoscaler, capacity planning
+- Rightsizing cloud: metodologia sem quebrar — FinOps PT-BR.
+- Rightsizing sem medo: metodologia de cortar sem quebrar
+- RLHF clássico: reward model + PPO — complexo, instável. DPO (Direct Preference Optimization, 2023): objetivo equivalente, matemática mais simples, 10x menos hyperparams. Dataset: (prompt, preferred, rejected). Usa pra alinhamento, style matching, safety.
+- Rodar experiment em sistema próprio: hypothesis, scope, abort criteria, execute, observe, document. Entregáveis: runbook + findings + action items + melhorias de resiliência.
+- Rodar experiment real: hypothesis, flag setup, power analysis, deploy, monitor guardrails, análise com CUPED, writeup. Repro em datasets públicos ok.
+- Rode N subagents em paralelo sem conflito de arquivos: git worktrees automáticos, tasks em background (Ctrl+B), múltiplas sessões simultâneas, /batch para migrações massivas, /loop para polling, /schedule para cron remoto. O módulo que transforma Claude Code de assistente em frota.
+- Room = abstraction sobre SQLite. @Entity, @Dao, @Query. Migrations. Type converters. Coroutines/Flow integration. Relations (1-1, 1-N, N-N).
+- route 53 routing policies, cloudfront behaviors, global accelerator aws, dns failover weighted
+- Route 53 routing policies simple weighted latency failover geolocation, CloudFront behaviors, AWS Global Accelerator.
+- Route 53 routing policies (simple, weighted, latency, failover, geo, multi-value), CloudFront behaviors, Global Accelerator.
+- ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD, FIRST_VALUE, SUM OVER — as funções de janela que eliminam subqueries e self-joins complicados.
+- RSC (Server Components) — async funções que rodam no server, streaming HTML, zero JS client. Server Actions (form actions directly no server). Next.js App Router é referência.
+- rust async, tokio runtime, axum actix, futures rust, structured concurrency
+- rust capstone, axum produção, clap cli, sqlx postgres, rust docker multi stage
+- Rust cargo crates.io perf editions versões 2026 — PT-BR.
+- rust cargo, crates.io, rust edition 2024, rust performance, criterion bench, rust 2026
+- Rust história filosofia como funciona compilador LLVM — PT-BR.
+- Rust: história, filosofia e como funciona de verdade
+- rust historia, rust mozilla foundation, rust compilador llvm, zero cost abstractions, rust systems ai
+- rust lifetimes, rust traits, rust generics, from into trait, iterator trait
+- Rust lifetimes traits generics idiomáticos — PT-BR.
+- rust macros, proc macro, macro_rules, serde derive, compile time code generation
+- Rust ownership borrow checker mental model — PT-BR.
+- rust ownership, borrow checker, rust lifetimes basics, data race compile time
+- Rust sério de 2026: ownership/borrow como mental model, lifetimes sem medo, traits e generics idiomáticos, async com tokio, macros declarativos e procedurais, unsafe com responsabilidade, cargo/crates ecosystem, perf real e interop com C/Python/Node. História (Mozilla → Foundation), evolução por edição (2015/2018/2021/2024), e por que Rust virou linguagem-padrão de infra AI (tokenizers, candle, polars).
+- rust unsafe, rust ffi, pyo3 python, napi-rs node, bindgen
+- S3 features pra dev: presigned URLs, multipart e events
+- S3 features pra dev: presigned URLs, multipart upload, events, CRR — PT-BR DVA.
+- s3 presigned url, s3 multipart upload, s3 event notification, s3 replication, s3 versioning
+- S3 storage classes detalhado, lifecycle policies, CRR SRR replication, Object Lock WORM, SSE-S3 SSE-KMS SSE-C encryption.
+- s3 storage classes, s3 lifecycle policy, s3 replication crr srr, s3 object lock, s3 encryption sse
+- SaaS economics: CAC, LTV, gross margin, cost per request, cost per user, unit cost curves. Como engineering decisions impactam economics.
+- saga pattern, two phase commit 2pc, orchestration choreography, outbox pattern, compensating action, transacao distribuida
+- Sagas vs 2PC: transações distribuídas sem perder o sono
+- sagemaker endpoints arquitetura, bedrock integracao, mlops pipeline aws, data lake ml, inferencia real time serverless async
+- SageMaker, Rekognition, Comprehend, Polly, Transcribe, Translate, Lex, Kendra, Bedrock e Amazon Q — o stack de IA da AWS para o CLF-C02.
+- Same-origin policy e por que existe, preflight CORS, CSRF tokens vs SameSite cookies, HttpOnly/Secure/SameSite — o mínimo de segurança web que todo dev precisa.
+- Savings Plans (Compute vs EC2 vs SageMaker), Reserved Instances (Standard vs Convertible), Spot capacity + interruption handling, commitment portfolio mix.
+- savings plans, reserved instances, spot instances strategy, commitment portfolio
+- sbom cyclonedx spdx, sigstore cosign rekor, dependency confusion, trivy snyk, xz backdoor
+- Schema design (embed vs reference), indexes compostos/parciais, aggregation pipeline, change streams, transactions multi-doc, Atlas. Anti-patterns (massive arrays, unbounded).
+- Scope (task → component → system → org). Impact (self → team → company). IC vs manager track. Staff engineer archetypes (tech lead, right hand, solver, architect).
+- Screen readers na prática: NVDA, VoiceOver, JAWS, testing real de a11y — PT-BR.
+- SDD, gerenciamento e criação de agents, testes profissionais, segurança real e arquitetura — deixar de ser coder e virar engenheiro de software de verdade.
+- SDD não é documento morto: é spec executável que vira teste, código e PR. Anatomia de uma spec, workflow com agent, templates reais, controle de qualidade.
+- Search métricas: precision recall NDCG MRR — PT-BR.
+- Search profissional: precision vs recall, full-text search em Postgres (tsvector), Elasticsearch/OpenSearch básico, BM25 e TF-IDF sem misticismo, vector search profundo (HNSW, IVF), hybrid search + reranking, capstone de busca multimodal.
+- search system design, inverted index, elasticsearch arch, ranking
+- Secret em env var é pior que sem segredo. HashiCorp Vault (dynamic secrets, leases), SOPS (git-friendly com KMS/age), AWS Secrets Manager (rotation automática), Doppler pra times pequenos. Padrão: secret never leaves vault; aplicação pede short-lived.
+- Secrets management profissional: Vault, SOPS, AWS SM, dynamic secrets — PT-BR.
+- Secrets management: Vault, SOPS e AWS Secrets Manager
+- Segments, subsegments, sampling rules. Integration com Lambda (auto), ECS, EC2. Service map. X-Ray SDK vs ADOT (AWS Distro for OpenTelemetry — mais moderno). Custo: cobra por trace armazenado. Retention 30 dias.
+- Segurança como disciplina própria: threat modeling STRIDE, authn vs authz, OAuth2/OIDC do zero, JWT/Paseto/sessions, password hashing moderno (argon2), OWASP Top 10 com código, secrets management (Vault/SOPS), supply chain (SBOM, sigstore), Zero Trust + mTLS, capstone pentest em app próprio.
+- Segurança de IA como disciplina: jailbreaks e prompt injection, data exfiltration via tools, constitutional AI (Anthropic), guardrails (NeMo, Llama Guard, Claude Guardrails), red team playbook, capstone red team de agent próprio.
+- Segurança de Software de Verdade: threat model ao SBOM
+- Segurança de software profissional em 2026: threat modeling STRIDE, OWASP Top 10, SBOM, SLSA, SAST/DAST, supply chain — guia real em PT-BR.
+- Segurança enterprise: GuardDuty, Detective, Security Hub
+- seguranca software, threat modeling stride, owasp top 10, sbom slsa, supply chain security, sast dast, shift left security
+- Seis trilhas que cobrem a IA moderna por dentro: fundamentos matemáticos, arquiteturas além do LLM (KV cache, MoE, tool calling), as ferramentas de código que reorganizaram o mercado dev, engenharia AI-Native real (RAG, agents, MCP, LLMOps), Fine-tuning & customização de LLMs (SFT, LoRA/QLoRA, DPO) e LLM Evals Profissional (golden sets, LLM-as-judge, regression de agents).
+- Self-hosted: vLLM (PagedAttention, throughput top) e TGI (Hugging Face Text Generation Inference). Managed: AWS Bedrock Custom Models, SageMaker JumpStart. Cost trade-off: 1 GPU A100 $3/h vs Bedrock pay-per-token. Cold start, autoscale, batch size tuning.
+- self service infra, crossplane, pulumi, argocd, opa policy
+- Self service infra Crossplane Pulumi ArgoCD — PT-BR.
+- semantic html, landmarks html, heading hierarchy, button vs div, form label associado
+- Semantic HTML profissional: landmarks, heading hierarchy, button vs div — PT-BR.
+- Semantic vs instance vs panoptic. U-Net (biomédica), Mask R-CNN, SAM (Segment Anything Model da Meta 2023). Click-based prompting em 2024-2026.
+- Semver changesets release-please changelog — PT-BR.
+- semver changesets, release please, conventional commits, changelog automation
+- SemVer strict: major (breaking), minor (feature), patch (fix). changesets workflow (pnpm changeset add → CI release). release-please (Google). changelog auto-gen. Conventional commits opt.
+- Seq Scan vs Index Scan vs Bitmap Scan, Nested Loop vs Hash Join vs Merge Join — como ler o plano de execução e transformar queries lentas em rápidas.
+- serialização dados, endianness, utf-8 encoding, protobuf vs json, messagepack
+- Serialização, endianness, UTF-8: os bytes que viajam
+- server sent events, sse, text event stream, sse vs websocket
+- SFT: dataset de (input, output) exemplos, treina o modelo a imitar. Chat format (system/user/assistant). Epochs, learning rate, batch size. Over-fitting signs. Hugging Face Transformers + TRL (library), OpenAI fine-tuning API, Anthropic Claude fine-tuning (limited).
+- sft supervised fine tuning, hugging face trl, openai fine tune, llm training, chat format dataset
+- SFU (Selective Forwarding Unit) vs MCU. LiveKit (open source, Go-based), mediasoup (Node). Pion (Go WebRTC lib). Self-host vs SaaS (Twilio, Agora, Daily).
+- Shell zsh bash serios: starship, POSIX, exit codes — PT-BR.
+- Signed integer overflow, null pointer deref, use-after-free, strict aliasing violation, uninitialized memory. Compiler optimizes assuming UB impossible — bugs viram catastróficos. UBSan pra flag.
+- Simulado AWS Cloud Practitioner CLF-C02 comentado, 20 questões com respostas explicadas, preparação para o exame.
+- simulado aws cloud practitioner, clf-c02 questoes comentadas, prova aws practitioner, preparacao exame aws
+- Simulado AWS DVA-C02 com 15 questões comentadas — prep final PT-BR.
+- Simulado AWS SAA-C03 Solutions Architect Associate, 25 questões comentadas, preparação para o exame oficial AWS.
+- Simulado AWS SAP-C03 comentado — capstone pro certification PT-BR.
+- simulado aws sap c03, solutions architect professional exam, aws certification prep
+- Simulado de 15 questões estilo exam com explicações completas: por que a correta é correta, por que cada distrator é errado, service doc oficial pra aprofundar. Cobre os 4 domínios. Prep final antes de marcar a prova.
+- simulado dva c02, aws developer associate simulado, dva questions, aws exam prep, dva preparacao
+- Simulado estilo SAP-C03 com 10+ questões comentadas cobrindo todos os domínios. Estratégia de time management, elimination pattern, leitura de questões longas (250+ palavras).
+- simulado saa-c03, solutions architect associate questoes, prova aws saa, preparacao exame saa
+- Simular interview 45min: dropbox-like OU booking-like OU youtube-like. Usar framework. Entregáveis: diagrama + back-of-envelope + trade-offs escritos.
+- Sistema de permissões do Claude Code: trust levels, o que é permitido por padrão, como configurar limites, sandbox e boas práticas de segurança ao usar IA no terminal.
+- Skills avançadas: scripts auxiliares, dynamic context e hooks scoped
+- Skills com pastas completas (scripts/, reference.md), frontmatter avançado (allowed-tools, context: fork, agent: Explore, paths glob), dynamic context injection com !`cmd`, hooks que ativam só durante a skill. O padrão profissional de 2026.
+- Skills e slash commands: criar seus próprios workflows
+- Skills são workflows customizados invocados via /nome-do-comando. Como criar skills para tarefas repetitivas: deploy, revisão de código, geração de documentação.
+- SLI → SLO → SLA, error budget, burn rate alerts multi-window/multi-burn, toil budget, política de freeze quando orçamento estoura.
+- slo error budget, sli slo sla, burn rate alert, multi window multi burn, toil budget, sre confiabilidade
+- SLOs e Error Budgets: a contabilidade da confiabilidade
+- SLOs, error budgets e burn rate alerts explicados em PT-BR: como medir confiabilidade sem viver em 100% e o que fazer quando o orçamento estoura.
+- SNS pub/sub (fan-out, até 12.5M subs). SQS fila (FIFO vs Standard, DLQ, visibility timeout, long polling). EventBridge (antiga CloudWatch Events) com schema registry e filtros avançados. Padrão fan-out: SNS → múltiplos SQS → Lambdas.
+- Software catalog (entities, relationships), TechDocs, scaffolder (templates), plugins. CNCF incubating. Quando Backstage vs alternativas (Port, Cortex).
+- SolarWinds, XZ backdoor: atacante entra via deps. SBOM (CycloneDX, SPDX) pra inventário. Sigstore (cosign, rekor) pra assinatura verificável. Scanning com Trivy, Snyk, Dependabot, Socket.dev. Dependency confusion: como namespace privado vaza pra npm público.
+- . Solução: write like a journalist, inverted pyramid.',seoDesc:
+- Sorting na prática: timsort, quickselect para top-k, quando usar lib padrão — PT-BR.
+- Sorting real: timsort, quickselect e por que Array.sort basta
+- Span&lt;T&gt; (stack-only, ref struct) — zero allocation slices. Memory&lt;T&gt; (heap-ok, async-compatible). stackalloc, ArrayPool, ValueTask, ref returns. Performance-critical code moderno C#.
+- Spans, parent-child, context propagation (W3C Trace Context), baggage, head vs tail sampling, probabilistic vs rule-based, Jaeger e Tempo comparados.
+- Spec-Driven Development em PT-BR: como escrever specs que agents transformam em código e testes, templates, workflow, boas práticas.
+- Spec-Driven Development (SDD): a nova espinha dorsal
+- spec driven development, sdd, spec to code, specification agent coding, product requirements doc tech, prd para agent ia
+- Speech-to-text: Whisper, Deepgram, AssemblyAI — streaming diarization PT-BR.
+- spring boot 3, spring 6, jakarta ee, graalvm native image, spring actuator
+- Spring Boot 3+ (Spring 6, Jakarta EE): native image com GraalVM, auto-configuration, starters, profiles, actuator (health + metrics). Controller vs @RestController vs functional routes.
+- spring webflux reactor, virtual threads vs reactive, rxjava java
+- sql group by, having sql, agregações sql, count sum avg, postgresql
+- SQLite em 2026: Turso (edge replication), Litestream (streaming backup), Cloudflare D1, libSQL. Por que SQLite bate Postgres em leituras locais. WAL mode.
+- sqlite moderno, turso libsql, litestream, cloudflare d1, edge sqlite
+- sql join, inner join, left join, cte sql, postgresql select
+- SQL JOIN na prática PT-BR: INNER JOIN, LEFT JOIN, self-join, CTE — exemplos reais com PostgreSQL.
+- SQL real com PostgreSQL: JOINs, índices, EXPLAIN ANALYZE, transações ACID e modelagem de dados. A base que todo backend developer precisa antes de escalar.
+- SQL Window Functions PT-BR: ROW_NUMBER, RANK, LAG, LEAD, SUM OVER PARTITION — guia completo.
+- sql window functions, row_number, rank, lag lead, over partition by, postgresql
+- sqs standard fifo dlq, sns fanout, eventbridge rules, kinesis streams firehose
+- SQS (Standard vs FIFO, DLQ), SNS (topic fanout), EventBridge (event bus, rules, schedules), Kinesis (Streams vs Firehose vs Analytics).
+- SSE simples, one-way server→client, auto-reconnect nativo. Text/event-stream format. Quando SSE bate WebSocket (pure notifications). Cloudflare SSE at edge.
+- SSH completo em PT-BR: chaves RSA/Ed25519, ssh-keygen, authorized_keys, ssh-agent, config, port forwarding.
+- SSH e chaves: como acessar máquinas remotas com segurança
+- ssh tutorial, chaves ssh, ssh-keygen, authorized keys, ssh config, acesso remoto seguro
+- Stack (automatic, fast, limited) vs heap (dynamic, manual). malloc/calloc/realloc/free. Common bugs: leak, double-free, use-after-free, buffer overflow. Valgrind + ASan pra detectar.
+- stack heap memória, virtual memory, page fault, stack overflow, como memória funciona
+- Stack vs heap, por que stack overflow acontece, virtual memory como abstração, page fault e swapping — como o SO gerencia memória de todos os processos.
+- Stack vs heap PT-BR: virtual memory, page fault, como memória funciona — sistemas operacionais.
+- Standard vs Express (1y vs 5min, $1.25 vs $1 /M exec). States: Task, Choice, Parallel, Map, Wait, Succeed, Fail. Retries, catch, timeouts. Callback pattern pra approval humano. Nested workflows. Observabilidade nativa com visual.
+- STAR (Situation/Task/Action/Result) structured. Brag doc: banco de histórias por categoria (conflict, ownership, failure, leadership). Amazon Leadership Principles. System design behavioral.
+- @State, @Binding, @Observable (2024). View composition. Layout system (HStack/VStack/Grid/LazyGrid). Navigation (NavigationStack). Quando UIKit ainda precisa.
+- Stationarity, ACF/PACF, ARIMA/SARIMA, Prophet do Meta, DeepAR/NBEATS. Backtesting temporal. Forecasting em produção.
+- stdin/stdout/stderr como file descriptors, por que tudo é arquivo no Linux, pipes, redirecionamento — e como isso afeta performance de I/O.
+- step functions aws, standard express workflow, state machine aws, map parallel, callback token
+- Step Functions AWS: Standard vs Express, Map parallel, Choice, callback — PT-BR DVA.
+- Streaming replication (binary WAL) — primary→replica quase sync. Logical replication (decoded, selective) pra CDC/partial. synchronous_commit: off (fast but can lose) / on (default, replica ACK) / remote_apply (replica applied). Failover: Patroni, pg_auto_failover. Split-brain é real; STONITH obrigatório.
+- Streaming SSE, tool use, structured output com JSON schema/Zod, batch API (50% desconto), prompt caching, retry com jitter, rate limit handling.
+- Stream processing stateful. KStreams, KTables, windows, joins. ksqlDB SQL sobre streams. Quando Streams vs Flink vs Spark Streaming.
+- STRIDE (Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege) como checklist pragmático; DFD (data flow diagram) pra visualizar surface; priorizar por DREAD ou Risk Matrix; integrar no design review.
+- Subagents são instâncias isoladas do Claude que rodam em janelas de contexto separadas. Como criar, configurar e usar subagents para tarefas paralelas, pesadas ou especializadas — sem poluir o contexto principal.
+- . Suite de cenários end-to-end com golden answer. Rodar em cada commit de prompt/tool. Captura user sessions falhas, vira regression test automático.',seoDesc:
+- Summary, timeline, root cause (5 whys), impact, action items. Cultura blameless: Etsy, Google. Errar humano é expected. Templates Atlassian.
+- Supply chain: SBOM, sigstore e dependency confusion
+- Supply chain security: SBOM, sigstore, dependency confusion, Trivy — guia PT-BR.
+- Swift 6 (2024): strict concurrency checking por padrão, typed throws, noncopyable types, macros. Result builders (SwiftUI, Regex). Evolução desde Swift 1 (2014).
+- swift 6, swift moderno 2026, macros swift, strict concurrency, noncopyable
+- swift async await, actors swift, sendable, main actor, structured concurrency
+- swiftdata, model macro, swiftdata vs core data, ios persistencia
+- SwiftData persistência iOS 2026 Core Data — PT-BR.
+- Swift moderno 2026 macros strict concurrency — PT-BR.
+- Swift moderno: macros, result builders, strict concurrency
+- SwiftUI declarativo producao Observable NavigationStack — PT-BR.
+- swiftui, observable macro, navigation stack, swiftui producao
+- syscalls linux, user space kernel, strace, system call, modo usuário modo kernel
+- Syscalls PT-BR: user space vs kernel space, strace, como sistema operacional funciona.
+- Systematic red teaming: harm categories (Anthropic, DeepMind taxonomies), attack methods, reporting format. Automated red team (PyRIT Microsoft). Quando hire external red team.
+- System design back of envelope cálculos latência — PT-BR.
+- System design como disciplina de interview e de carreira: framework estruturado, back-of-envelope, cases canônicos (URL shortener, Twitter feed, rate limiter, chat, search, notification, distributed cache) e templates de whiteboard. Nível sênior/staff.
+- system design framework, sd interview estrutura, sd requirements scale
+- system design mock, sd interview capstone, whiteboard interview
+- System design URL shortener bit.ly interview — PT-BR.
+- system prompt claude code, output styles claude, statusline customizado, theme claude code
+- System prompt engineering com --system-prompt/--append-system-prompt/--system-prompt-file, output styles em .claude/output-styles/, statusline customizado com refresh interval, themes. Como construir a voz e o visual do seu agente.
+- System prompt, output styles e statusline: a personalidade do agente
+- Tab order (natural via DOM), tabindex (0, -1, negativos ruins), focus trap em modals, skip links, focus visible (outline não deletável), roving tabindex em listas, restaurar focus pós modal close. Zero valor se não dá pra usar teclado.
+- Tagging strategy, Cost Categories (agrupar por project/team/env), Cost Anomaly Detection, AWS Budgets action-enabled, reserved capacity portfolio multi-account.
+- Tagging strategy (mandatory vs optional), AWS Cost Allocation Tags, Cost Categories, dashboards Grafana/Datadog com cost, tag policies enforcement.
+- Task vs Task<T>, await ≠ wait, ConfigureAwait(false) em libs, cancellation token obrigatório, ValueTask pra hot paths, IAsyncEnumerable (C# 8+) pra streams, async void só em event handlers.
+- Taxonomy: misuse, misalignment, misgeneralization. EU AI Act 2025. Corporate risk (reputational, legal). Engenheiro precisa entender pra operar IA em prod responsavelmente.
+- TCP de verdade: handshake, congestion control, retransmissão
+- tcp handshake, congestion control, sliding window, tcp slow start, retransmissão tcp
+- TCP/IP, HTTP/1-2-3, TLS, DNS, CORS — o que acontece entre o teclado e a resposta. A fundação que faz arquitetura de nuvem, APIs e observabilidade fazerem sentido.
+- TCP PT-BR: handshake, congestion control, sliding window — como TCP funciona por dentro.
+- TDD clássico (red-green-refactor), outside-in TDD (London), BDD com cucumber. Onde ganha (design emergente, API clara), onde perde (exploração, UI complexa). Tom anti-dogma: TDD é ferramenta, não religião.
+- TDD e BDD na prática: red-green-refactor, cucumber, quando usam e quando não — PT-BR.
+- tdd red green refactor, bdd cucumber, outside-in tdd, london school tdd, quando usar tdd
+- Teach pattern (explain → do together → they solo → review). Office hours estruturado. Unblocking vs doing for them. Career laddering: discuss growth, não só tasks. Delegate responsabilidade, não tarefa.
+-  tem bytes diferentes em UTF-8 e Latin-1. Big-endian vs little-endian. JSON vs Protobuf vs MessagePack — trade-offs de serialização.',seoDesc:
+- Templates era SFINAE hell. C++20 Concepts: requires clauses, named concepts, abbreviated templates (auto params). Error messages 10x melhor. template metaprogramming simplificado.
+- Tempo distribuído: NTP, clock skew, monotonic vs wall
+- Tempo distribuído PT-BR: NTP, clock skew, monotonic clock, wall clock — sistemas distribuídos.
+- Teorema CAP e PACELC explicados a fundo: partition, availability, consistency, latência. Decisões reais em bancos distribuídos.
+- teorema cap, pacelc, sistemas distribuidos, consistencia disponibilidade, dynamo spanner, cassandra hbase
+- Tesseract legacy, PaddleOCR open-source moderno, TrOCR (HuggingFace), AWS Textract, Azure Document Intelligence. Layout analysis, tables, forms.
+- Test doubles: mock, stub, fake, spy, dummy (Meszaros)
+- test doubles, mock vs stub, fake in memory db, spy vitest, meszaros taxonomia
+- Test doubles profissional: mock vs stub vs fake vs spy vs dummy, taxonomia Meszaros — PT-BR.
+- Testes como disciplina: test pyramid/trophy/diamond, TDD e BDD quando funcionam, test doubles rigorosos (mock/stub/fake/spy), property-based com fast-check, mutation testing com Stryker, integration vs contract vs e2e, performance testing com k6. Capstone: harness de testes completo.
+- Testes Profissionais: pirâmide, propriedades, contrato e fuzz
+- test pyramid, testing trophy, kent c dodds testing, diamond test, pyramid testing estrategia
+- Test pyramid, trophy e diamond: formato certo por contexto — guia PT-BR.
+- Test pyramid, trophy ou diamond: formato certo pro seu time
+- TF (term frequency) + IDF (inverse document frequency) = TF-IDF clássico. BM25 refina: saturação de TF, length normalization (k1, b params). Default em Elastic, Lucene, tantivy.
+- The bigger the interface, the weaker the abstraction
+- Threads (Java, C#, C++) — OS threads, complex. Async (JS, C#, Python) — single-threaded event loop. CSP (Go channels, Clojure core.async) — communicate via messages. Actor (Erlang, Akka) — isolated state + message passing. Virtual threads (Java 21) — mix.
+- threads vs processos, context switch, green threads, goroutines, concorrência sistemas operacionais
+- Threads vs processos PT-BR: context switch, green threads, goroutines — modelos de concorrência.
+- Threads vs processos vs fibras: modelo de concorrência
+- Threat modeling com STRIDE: de onde vêm os ataques
+- threat modeling stride, dfd security, dread risk, design review seguranca, modelagem ameaca
+- Threat modeling (STRIDE), OWASP Top 10 de verdade, secrets, supply chain (SBOM, SLSA, SHA pinning), shift-left vs shift-right, DAST/SAST/IAST.
+- Threat modeling STRIDE para engenheiros: DFD, DREAD, design review — guia PT-BR.
+- `throw` é goto tipado fraco — quebra inference, não aparece na assinatura, impede exhaustiveness. Result<T, E> (estilo Rust) transforma erros em retorno explícito. Biblioteca neverthrow, padrões de railway-oriented programming, quando `throw` ainda faz sentido (unrecoverable).
+- time series, arima sarima, prophet facebook, forecasting, backtesting
+- Timsort (V8, Python, JDK), quicksort pragmático, mergesort quando estabilidade importa, quickselect pra top-k sem ordenar tudo, counting/radix em casos específicos (ints pequenos). 99% do tempo: use lib padrão, não reinvente.
+- timsort v8, quickselect top k, array sort javascript, mergesort estavel, radix sort
+- Tipo compilado não protege no runtime. Todo boundary (API, form, localStorage, query param) precisa parse com schema Zod/Valibot/io-ts. Padrão `safeParse` retornando Result. Como inferir tipo TS do schema com z.infer, fechando o loop.
+- Tipos de testes profissionais em 2026: pirâmide, contrato, property-based, fuzz, mutation, snapshot, E2E e cobertura inteligente. Guia em PT-BR.
+- tipos de testes software, piramide de testes, contract testing, property based testing, mutation testing, fuzz testing, cobertura de testes
+- Tipos utilitários (Partial, Pick, Omit...) e quando NÃO usar
+- Tipos utilitários TypeScript: Partial, Pick, Omit, Record e quando NÃO usar — PT-BR.
+- ,title:'Big-O sem misticismo: pense em custo, não em 
+- TL;DR, context, goals/non-goals, proposed solution, alternatives considered, risks, rollout. Templates Google, Uber, Stripe. Quando precisa design doc.
+- TLS 1.3 deep handshake 0-RTT post-quantum — PT-BR.
+- TLS 1.3 handshake simplificado (1-RTT). 0-RTT riscos (replay). Cipher suites modernos. Post-quantum hybrid (ML-KEM em 2024+). PFS sempre.
+- tls 1.3, handshake tls, certificados ssl, sni, alpn, https como funciona
+- TLS 1.3 PT-BR: handshake, certificados, SNI, ALPN — como HTTPS funciona por dentro.
+- tls 1.3, tls handshake, 0-rtt replay attack, post quantum tls, ml-kem
+- tmux multiplexer, zellij, persistent ssh sessions, terminal panes
+- tmux (universal, 20 anos), zellij (Rust, moderno, UX friendly). Persistent sessions (detach/attach SSH), panes, windows, plugins. Survive disconnection. Remote dev essential.
+- tmux zellij multiplexer: persistent sessions, panes — PT-BR.
+- Todas storage classes, lifecycle policies, versioning, replication (CRR/SRR), Object Lock, encryption (SSE-S3, SSE-KMS, SSE-C, CSE).
+- Token bucket, leaky bucket, sliding window (counter + log). Redis-based (lua script atomic). Consistent vs approximate. Cross-region.
+- Token bucket, leaky bucket, sliding window log, sliding window counter, implementação com Redis + Lua script atômico, distributed rate limit em produção.
+- tokens IA, tokenização LLM, contexto tokens, BPE tokenizacao
+- tool calling IA, function calling LLM, agentes IA ferramentas
+- Tool Use com Claude: definir, chamar e orquestrar ferramentas
+- Tool use é o que transforma Claude de chatbot em agente. Como definir ferramentas com JSON Schema, lidar com tool_use blocks, orquestrar chamadas multi-turn e construir o primeiro agente funcional.
+- Trabalhe em múltiplos repos ao mesmo tempo com contextos isolados: sessions nomeadas (--name, --resume, --from-pr), --add-dir para cross-project, settings hierarchy (enterprise/user/project/local), /team-onboarding para gerar guia do time e /branch/--fork-session para experimentar sem destruir.
+- Training pipelines Airflow Kubeflow Prefect — PT-BR.
+- Transações distribuídas: 2PC vs sagas, orchestration vs choreography, outbox pattern, compensating actions — implementação real em PT-BR.
+- Transações SQL PT-BR: ACID, isolation levels, dirty read, phantom read — PostgreSQL na prática.
+- transformer arquitetura IA, mecanismo atencao IA, attention is all you need
+- Transit Gateway pra hub-and-spoke, RAM (Resource Access Manager) compartilhando subnets, Cloud WAN (global WAN managed), VPC Lattice. Designs multi-region/multi-account complex.
+- Trata devs internos como usuários. User research (interviews, shadowing). Roadmap quarterly. Usage metrics. SLAs para platform. Team Topologies.
+- tree shaking, sideeffects false, pure annotation, esbuild rollup tsup
+- Três caminhos oficiais — CLF-C02, DVA-C02 e SAA-C03 — com profundidade real.
+- Três trilhas para dominar tudo da Anthropic: Claude Code do zero ao poder total (workflow, skills, subagents, hooks, MCP, GitHub, Cowork, paralelismo, multi-projeto), API & Agents (messages, tool use, prompt eval, MCP avançado, RAG, arquitetura de agents) e Claude Code Pro — Harness Engineering (system prompt engineering, plugins, SDK em produção, hooks cookbook).
+- Três trilhas que consolidam a camada de código: TypeScript profissional de verdade (narrowing, generics, runtime validation, async sem pegadinha), Estruturas de Dados & Algoritmos na prática (Big-O, grafos, DP, estruturas probabilísticas — sem LeetCode acadêmico), e Python para Engenheiros (uv, Pydantic v2, FastAPI, asyncio — a camada que devs TS precisam pra IA).
+- Trilha completa pra certificação AWS DVA-C02: Lambda profundo, API Gateway, DynamoDB pra dev, S3 features (presigned, multipart), Step Functions, EventBridge/SQS/SNS, Cognito, KMS, CI/CD AWS-nativo, X-Ray, Secrets/Parameter Store, ECS Fargate, CloudFormation/SAM/CDK. Capstone: simulado de 65 questões comentadas.
+- Triton Inference Server (NVIDIA), TorchServe, Seldon, BentoML, Ray Serve. Dynamic batching, ensemble, A/B. GPU vs CPU inference.
+- triton inference server, torchserve, bentoml, ray serve, model serving
+- TS como prova matemática: narrowing real, discriminated unions, generics com variance, validação runtime (Zod), async sem pegadinha, erros como valores, performance em Node, monorepos com pnpm/turbo. O TypeScript que times profissionais escrevem — não o que um tutorial de 5 min ensina.
+- tsvector (normalized tokens), tsquery, ranking (ts_rank, ts_rank_cd), GIN index (GIN vs GiST), weights (A/B/C/D), multilingual (Portuguese dictionary), fuzzy via pg_trgm.
+- twitter feed design, timeline fanout, celebrity problem, feed ranking
+- Two-stage (Faster R-CNN) vs one-stage (YOLO). YOLOv8/v10 arquitetura. DETR/RT-DETR (transformer-based). mAP, NMS, anchors. Ultralytics ecossistema.
+- Type hints rigorosos: PEP 695, Protocol, TypedDict
+- ==typeof define&&define.amd)e.r,void 0!==s&&e.v(s);else null!=a?a.exports=s:
+- ==typeof document?document.currentScript:void 0,99707,(e,a,o)=>{var s=function(){var e=String.fromCharCode,a=
+- ==typeof e.schemaVersion?e.schemaVersion:0,i={...e},t<1&&(i={...i,schemaVersion:1}),t<2&&(i={...i,schemaVersion:2,perfectQuizStreak:
+- ==typeof i.perfectQuizStreak?i.perfectQuizStreak:0,earlyMorningDays:Array.isArray(i.earlyMorningDays)?i.earlyMorningDays:[],trailStartedAt:i.trailStartedAt&&
+- ==typeof i.trailStartedAt?i.trailStartedAt:{}}),i);return{...S,...r,schemaVersion:2,reviewCards:Array.isArray(r.reviewCards)?r.reviewCards:[],archivedCards:Array.isArray(r.archivedCards)?r.archivedCards:[],studyDays:Array.isArray(r.studyDays)?r.studyDays:[],freezes:
+- ==typeof r.articleProgress?r.articleProgress:{},perfectQuizStreak:
+- ==typeof r.dailyGoal?r.dailyGoal:3,lastReviewDate:
+- ==typeof r.lastArticle?r.lastArticle:null,preferredHub:
+- ==typeof r.lastReviewDate?r.lastReviewDate:null,lastArticle:r.lastArticle&&
+- ==typeof r.onboardedAt?r.onboardedAt:null,articleProgress:r.articleProgress&&
+- ==typeof r.perfectQuizStreak?r.perfectQuizStreak:0,earlyMorningDays:Array.isArray(r.earlyMorningDays)?r.earlyMorningDays:[],trailStartedAt:r.trailStartedAt&&
+- ==typeof r.preferredHub?r.preferredHub:null,onboardedAt:
+- ==typeof r.trailStartedAt?r.trailStartedAt:{}}}}catch{}return{...S,startedAt:new Date().toISOString()}}function T(e){let o=function(e){let a=[],o=[];for(let s of e.reviewCards)s.easeFactor>3&&s.interval>90?o.push(s):a.push(s);if(0===o.length)return e;let s=new Set(e.archivedCards.map(e=>e.id)),t=[...e.archivedCards,...o.filter(e=>!s.has(e.id))];return{...e,reviewCards:a,archivedCards:t}}(e),s=a.default.compress(JSON.stringify(o));if(!(0,u.setRaw)(l.STORAGE_KEYS.GAME_STATE,s)){let e={...o,studyDays:o.studyDays.slice(-l.GAME_CONFIG.FALLBACK_STUDY_DAYS_TRIM),reviewCards:o.reviewCards.slice(-l.GAME_CONFIG.FALLBACK_CARDS_TRIM)};(0,u.setRaw)(l.STORAGE_KEYS.GAME_STATE,a.default.compress(JSON.stringify(e)))}}function C(e,a){let o=n(),s=e.studyDays.find(e=>e.date===o)??{date:o,minutes:0,xpEarned:0,cardsReviewed:0,modulesCompleted:0},t={date:o,minutes:s.minutes+(a.minutes??0),xpEarned:s.xpEarned+(a.xpEarned??0),cardsReviewed:s.cardsReviewed+(a.cardsReviewed??0),modulesCompleted:s.modulesCompleted+(a.modulesCompleted??0)},i=[...e.studyDays.filter(e=>e.date!==o),t].sort((e,a)=>e.date.localeCompare(a.date)).slice(-365);return{...e,studyDays:i}}function w(e){let a=new Date().toDateString(),o=e.lastStudyDate;if(!o)return e;let s=new Date(o),t=new Date;return(t.setDate(t.getDate()-1),s.toDateString()!==t.toDateString()&&s.toDateString()!==a&&e.streak>0)?e.freezes>0?{...e,freezes:e.freezes-1,lastStudyDate:t.toDateString()}:{...e,streak:0}:e}function P(e){let a=new Date().toDateString();if(e.lastStudyDate===a)return e;let o=e.lastStudyDate,s=new Date;s.setDate(s.getDate()-1);let t=e.streak,i=e.freezes;return o&&new Date(o).toDateString()===s.toDateString()?t+=1:t=1,t>0&&t%7==0&&i<2&&(i+=1),{...e,streak:t,freezes:i,lastStudyDate:a}}function A(e,a){let s=e.level,t=e.xp+a,i=(0,o.getLevelInfo)(t).level;return{state:{...e,xp:t,level:i},leveledUp:i>s,newLevel:i}}function D(e,a){if(e.badges.includes(a))return{state:e,unlocked:!1};let s=o.BADGES_DEF.find(e=>e.id===a);return s?{state:{...e,badges:[...e.badges,a],xp:e.xp+s.xpBonus},unlocked:!0}:{state:e,unlocked:!1}}e.s([
+- Type safety em boundaries: Zod, io-ts e validação runtime
+- TypeScript como mental model: tipos são prova, não anotação
+- typescript mental model, tipos como prova, sistema tipos estrutural, inference typescript, typescript fundamentos
+- typescript narrowing, discriminated unions, tagged unions, exhaustiveness check, never typescript, type guards
+- TypeScript Result type, neverthrow, railway-oriented: erros como valores — PT-BR.
+- TypeScript runtime validation: Zod, io-ts, parse em boundaries de API, localStorage — PT-BR.
+- TypeScript sério, DS&A anti-LeetCode, Python para engenheiros — como times profissionais escrevem código.
+- Types, interfaces, unions, enums, inputs. Nullable vs non-null. Connections pattern (Relay). Naming conventions. Schema evolution sem quebrar clients.
+- Types são feature-equal a runtime. Bundled (.d.ts in package) vs @types/package-name separate. Generics bem pensados (infer user types). JSDoc TSDoc pra lib sem TS. Strict types sem any.
+- type system comparison, dynamic static typing, structural nominal, typescript rust
+- Type systems comparados: dynamic static structural nominal — PT-BR.
+- Typings como produto: .d.ts bundled, generics, TSDoc — PT-BR.
+- ,u=2,p=3,m=2,g=[],v=0,f=0;for(i=0;i<e.length;i+=1)if(c=e.charAt(i),Object.prototype.hasOwnProperty.call(r,c)||(r[c]=p++,n[c]=!0),d=l+c,Object.prototype.hasOwnProperty.call(r,d))l=d;else{if(Object.prototype.hasOwnProperty.call(n,l)){if(256>l.charCodeAt(0)){for(s=0;s<m;s++)v<<=1,f==a-1?(f=0,g.push(o(v)),v=0):f++;for(s=0,t=l.charCodeAt(0);s<8;s++)v=v<<1|1&t,f==a-1?(f=0,g.push(o(v)),v=0):f++,t>>=1}else{for(s=0,t=1;s<m;s++)v=v<<1|t,f==a-1?(f=0,g.push(o(v)),v=0):f++,t=0;for(s=0,t=l.charCodeAt(0);s<16;s++)v=v<<1|1&t,f==a-1?(f=0,g.push(o(v)),v=0):f++,t>>=1}0==--u&&(u=Math.pow(2,m),m++),delete n[l]}else for(s=0,t=r[l];s<m;s++)v=v<<1|1&t,f==a-1?(f=0,g.push(o(v)),v=0):f++,t>>=1;0==--u&&(u=Math.pow(2,m),m++),r[d]=p++,l=String(c)}if(
+- UDP não é TCP sem garantias — é um protocolo diferente. QUIC reimplementa confiabilidade em user-space sobre UDP, resolvendo head-of-line blocking do TCP.
+- udp protocolo, quic protocolo, http3, head of line blocking, tcp vs udp
+- UDP vs QUIC vs HTTP3 PT-BR: por que QUIC supera TCP, head-of-line blocking, protocolo QUIC.
+- Uma variável tem um dono. Move vs copy. &T (shared) vs &mut T (exclusive). Borrow checker prova em compile-time que não há data race nem use-after-free. Sem GC, sem runtime cost. Como pensar em Rust em vez de brigar com o compilador.
+- Unified vs specialized: modelos que aceitam imagem+texto+audio (Gemini, GPT-4o, Claude 3.5) vs pipeline de modelos. Quando cada arquitetura. Custo por modalidade.
+- Unit economics em software: CAC, LTV, cost per request
+- Unit economics software: CAC LTV cost per request — FinOps PT-BR.
+- unit economics software, cac ltv saas, cost per request, engineering economics
+- Unit, integração, contrato, E2E, property-based, snapshot, mutation, fuzz, chaos. Qual usar, onde usar e por que cobertura sozinha mente.
+- URLSession com async/await. Codable JSON. Certificate pinning. Retry policies. WebSocket nativo. Alamofire quando. Background transfer.
+- url shortener design, bitly system design, base62, sd case
+- . Use HTML nativo primeiro. ARIA só pra widgets custom (combobox, tree, menu). role, aria-label, aria-describedby, aria-live (polite vs assertive), aria-expanded. Armadilhas comuns: role=
+- User Pools (authn — signup, signin, MFA, social IdP via SAML/OIDC). Identity Pools (federação pra credenciais AWS temporárias). Fluxos: SRP (padrão), USER_PASSWORD, custom auth (Lambda triggers). Integration com API Gateway authorizer.
+- Users, Groups, Roles, Policies, MFA, root account — os blocos fundamentais de segurança na AWS.
+- utility types typescript, partial pick omit, record typescript, returnType awaited, tipos utilitarios
+- uv (escrito em Rust, 10-100x mais rápido que pip/poetry) é o futuro. pyproject.toml, uv.lock, scripts. Gerenciar múltiplas versões Python. Migrar de requirements.txt/poetry/pipenv. Quando ainda usar pip (scripts inline).
+- uv Python moderno: pyproject, lock, multi-version, substituir pip/poetry — PT-BR.
+- uv python, pyproject toml, python versions manager, rye hatch, python dependencies
+- Vacuum, autovacuum e bloat: causa #1 de DB morrendo
+- ;var a=e.i(99707),o=e.i(308066);let s={again:0,hard:3,good:4,easy:5};function t(e,a,o,s,t,i,r,c){return{id:`${e}_q${s}`,slug:e,title:a,trailColor:o,question:t,options:i,correct:r,explanation:c,easeFactor:2.5,interval:0,repetition:0,dueDate:n(),lastReview:null}}function i(e,a){let o=s[a],{easeFactor:t,interval:i,repetition:r}=e;o<3?(r=0,i=1):(r+=1,i=1===r?1:2===r?3:Math.round(i*t)),(t+=.1-(5-o)*(.08+(5-o)*.02))<1.3&&(t=1.3);let d=new Date;d.setHours(0,0,0,0);let l=new Date(d);return l.setDate(l.getDate()+i),{...e,easeFactor:t,interval:i,repetition:r,dueDate:c(l),lastReview:n()}}function r(e){let a=n();return e.filter(e=>e.dueDate<=a)}function n(){return c(new Date)}function c(e){let a=e.getFullYear(),o=String(e.getMonth()+1).padStart(2,
+- ;var o=i._compress(e,6,function(e){return a.charAt(e)});switch(o.length%4){default:case 0:return o;case 1:return o+
+- vector database, pgvector, pinecone, weaviate, qdrant, hnsw ivf
+- Vector database pgvector Pinecone Weaviate Qdrant — PT-BR.
+- Vector search HNSW IVF: pgvector Pinecone Qdrant — PT-BR.
+- vercel edge functions, isr incremental regeneration, edge runtime, streaming ssr
+- versionamento api, rest versioning, sunset header, deprecation api, backward compatibility api
+- Versionamento de API: URL, header, sunset, estratégia de migração — guia PT-BR.
+- Versionamento sem dor: URL, header, sunset e estratégia de migração
+- . Versões LTS marcantes: Java 8 (lambdas, streams — divisor de águas), 11 (primeiro LTS pós-Oracle), 17 (records, sealed, pattern matching preview), 21 (virtual threads, structured concurrency — revolução concorrente). Pipeline: javac → bytecode → JVM (HotSpot JIT C1/C2, ZGC) → asm em runtime. Diferencial: JVM como plataforma madura (30 anos de otimizações), observabilidade profunda (JFR, async-profiler), ecossistema Spring/Jakarta/Quarkus, GraalVM para AOT. Mercado 2026: enterprise backend (70% dos bancos), Android runtime (ART), big data (Hadoop/Spark/Kafka/Flink). Java 17 e 21 LTS são os padrões; muita base em Java 8/11 ainda.',seoDesc:
+- ViewModel + UI State (UDF unidirectional data flow). Repository pattern. Hilt (DI). Use cases. Separation of concerns. Anti-patterns clássicos.
+- Virtual threads: light-weight threads (~1KB cada vs ~1MB platform). Million-scale concurrency sem reactive overhead. Thread.startVirtualThread(), Executors.newVirtualThreadPerTaskExecutor(). Matou 80% casos reativos.
+- Vision models: Claude, GPT-4V, Gemini — OCR UI chart — PT-BR.
+- vllm llm serving, tgi text generation inference, bedrock custom model, sagemaker jumpstart, llm deploy
+- Vocabulário de Gerard Meszaros: Dummy (preenche slot), Stub (retorna canned), Fake (implementação simplificada — ex: in-memory DB), Mock (verifica interação), Spy (registra chamadas). Quando cada um — e quando você está mockando demais.
+- Você não testa a11y de verdade sem usar screen reader. NVDA (Windows, free), JAWS (enterprise), VoiceOver (mac/iOS — built-in). Shortcuts essenciais, modo browse vs focus, rotor/landmark nav. Teste seu app com olhos fechados — vai chocar.
+- voice assistant capstone, whisper claude elevenlabs, webrtc voice app
+- vpc avancado aws, transit gateway vpc peering, nat gateway nat instance, privatelink vpn direct connect
+- VPC design real, subnets públicas/privadas, NAT Gateway vs NAT Instance, VPC Peering, Transit Gateway, PrivateLink, VPN vs Direct Connect.
+- VPC em Profundidade: NAT, Peering e Transit Gateway
+- VPC, subnets, Internet Gateway, NAT, Route 53 DNS, CloudFront CDN, Direct Connect, VPN — a rede da AWS demistificada.
+- vscode atalhos, vim basico, produtividade editor, plugins vscode, multi cursor, terminal integrado vscode
+- VSCode e Vim produtivos em PT-BR: atalhos, plugins, multi-cursor, terminal integrado — configuração para desenvolvimento real.
+- VS Code: multi-cursor, snippets custom, keyboard-first, profiles. Neovim (LazyVim, LunarVim distros). LSP cross-editor. Settings sync. Custom keybindings. Pair editor choice with team.
+- vs code power user, neovim lazyvim lunarvim, lsp editor, multi cursor snippets
+- VSCode/Vim produtivos: atalhos, plugins, multi-cursor
+- Warehouse (Snowflake/BigQuery/Redshift): estruturado, performance, caro. Lake (S3 + Parquet): flexível, barato, compute separado, menos performático sem optimization. Lakehouse (Databricks, Iceberg+spark): converge com ACID. Qual escolher por escala + pricing model.
+- WebRTC arch (signaling, STUN/TURN, ICE). Peer-to-peer vs SFU. Data channels para baixa latência. Browser APIs (getUserMedia, RTCPeerConnection).
+- webrtc, stun turn ice, sfu, webrtc data channel, getusermedia
+- WebSocket-based subscriptions. graphql-ws protocol. Server-sent Events alternative. Pubsub (Redis, GraphQL Yoga). Scaling subscriptions cross-instance.
+- WebSocket connections, long polling fallback. Delivery semantics (at-least-once + idempotency). Read receipts. Group chat fan-out. Encryption at-rest + E2E.
+- websocket, server sent events, streaming http, long polling, tempo real web
+- websockets producao, ws scaling sticky session, socket.io, ws reconnection
+- WebSocket, SSE, streaming: comunicação bidirecional
+- WebSocket vs SSE PT-BR: streaming, long polling, HTTP upgrade — comunicação em tempo real.
+- well architected framework aws, 6 pilares aws, operational excellence security reliability
+- well architected framework, wa tool, operational excellence, sustainability pilar
+- Whisper (OpenAI, open source), Deepgram, AssemblyAI. Streaming vs batch. Language detection. Diarization (quem falou). Cost ($0.006/min Whisper API). Self-host Whisper em GPU.
+- whisper speech to text, deepgram assemblyai, diarization, self host whisper
+- Window functions: ranking, running totals, lead/lag
+- Workers runtime (V8 isolates), KV (eventual-consistent kv), D1 (SQLite distribuído), R2 (S3-compatible no egress), Durable Objects (stateful, atomic), Queues, Analytics Engine.
+- Workflows, jobs, matrix, reusable workflows, secrets, OIDC para cloud, cache inteligente, release automatizado e deploy em Kubernetes — GH Actions como plataforma de CI/CD séria.
+- Workflows profissionais com Claude Code: spec, implementação, revisão, deploy — casos reais PT-BR.
+- Workflows profissionais: do problema ao resultado com Claude Code
+- WS handshake, framing, ping/pong, close codes. Scaling (sticky sessions vs stateless + pubsub). Reconnection, exponential backoff. Socket.io quando.
+- XCTest unit tests, XCUITest UI automation, snapshot testing (SnapshotTesting lib), Testing framework novo (Swift 6). CI com fastlane + Xcode Cloud.
+- ,xp:40,readTime:9,desc:'Escrita escala decisões. 1h escrevendo = 10h de reunião. Staff engineer vira staff escrevendo. Anti-pattern: 
+- ,xp:45,readTime:10,desc:'1 página, impacto quantificado (XRY shipped Z%), tech stack limitado ao relevante. Anti-patterns (
+- ,xp:45,readTime:10,desc:'URL versioning (/v1/) vs header (Accept: application/vnd.api+json;version=1) vs parameter. Quando cada um cabe. Headers Sunset e Deprecation para comunicar descontinuação. Backward compat, feature flags, e o padrão 
+- ,xp:45,readTime:11,desc:'DevOps é cultura, PE é time+produto. Toil vs leverage. 
+- ,xp:50,readTime:12,desc:'C++ nasceu em 1979 (Bjarne Stroustrup, Bell Labs) como 
+- ,xp:50,readTime:12,desc:'Go philosophy: pequena linguagem, composable, explicit. Go fmt. Go workspace conventions. GOPATH era — agora go modules (go.mod). 
+- ,xp:50,readTime:12,desc:'IC track (Staff/Principal/Distinguished) vs Manager track. Dual ladder. 
+- ,xp:50,readTime:12,desc:'Java nasceu em 1995 (James Gosling, Sun Microsystems) com filosofia 
+- ,xp:50,readTime:12,desc:'Review como teaching moment: ask questions em vez de afirmar, distinguir blockers vs nitpicks, 
+- ,xp:50,readTime:12,desc:'Software tradicional: input X → output Y determinístico. LLM: estocástico, sem ground truth em tasks criativas, métricas (BLEU/ROUGE) ruins pra semantic. Eval é research-like: hipóteses, dataset, métrica, resultados. 
+- ,xp:50,readTime:12,desc:'Template de caminho feliz. 
+- ,xp:55,readTime:12,desc:'DuckDB: SQLite pra analytics — embedded, colunar, 0-copy integra Pandas/Parquet. Polars: DataFrame em Rust 10-100x mais rápido que pandas. Matam cluster Spark pra dataset < 1TB. 
+- ,xp:55,readTime:12,desc:'Integration (módulos reais + DB real em test-container), Contract (consumer-provider via Pact), e2e (Playwright, Cypress — navega UI real). Trade-offs de velocidade vs confiança vs estabilidade. Matar 
+- ,xp:55,readTime:13,desc:'Agent tem estado complexo: tool selection, multi-turn, memory. Regression cases: 
+- ,xp:55,readTime:13,desc:'Chesterton\'s Fence (não remova o que não entende), strangler fig pattern, characterization tests antes de mudar, 
+- ,xp:55,readTime:13,desc:'devcontainer.json spec (CNCF standard). GitHub Codespaces, Gitpod, JetBrains Space. 
+- ,xp:55,readTime:13,desc:'Hofstadter Law (sempre demora mais), cone of uncertainty, range estimates (best/worst/likely), reference class forecasting, explicit assumptions, 
+- ,xp:55,readTime:13,desc:'Narrowing via typeof, instanceof, `in`, truthiness, equality. Discriminated unions com tag field (`kind: 
+- ,xp:75,readTime:15,desc:'Os 3 pilares clássicos, por que 
+- ,xp:85,readTime:20,desc:'Entregáveis: Backstage instance com catalog + techdocs + scaffolder para 
+- ,xp:90,readTime:20,desc:'Projeto: app LLM real (RAG, agent, ou assistant). Monte harness: 200+ golden set stratified, LLM-as-judge com pairwise, A/B em prod com feature flag, regression suite em CI, dashboard em Langfuse. Rodar hypothesis: 
+- Zero Trust e mTLS: verificar sempre, nunca confiar na rede
+- zero trust, mtls mutual tls, spiffe spire, service mesh istio, tailscale zero trust
+- Zero Trust mTLS SPIFFE SPIRE service mesh: arquitetura moderna — guia PT-BR.
+- zod typescript, runtime validation, io-ts valibot, parse api boundary, z.infer, tipos seguros runtime
+- zsh bash serio, starship prompt, posix shell, exit codes, xargs jq

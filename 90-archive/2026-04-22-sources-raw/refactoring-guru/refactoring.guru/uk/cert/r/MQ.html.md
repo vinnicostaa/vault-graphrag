@@ -1,0 +1,47 @@
+:::::::::::::: certificate
+::::::::::::: certificate-inner
+![](../../../images/content-public/logos/logo-plain0ce3.png?id=5bc49c5c8f22b9538b0b570800d68083){.cert-bg}
+
+::: cert-title
+Сертифікат
+:::
+
+::: cert-name
+Alexander Shvets (neochief)
+:::
+
+::: cert-caption
+Про успішне проходження курсу\
+«*Занурення в Рефакторинг*»
+:::
+
+::: cert-signature-words
+Автор та інструктор
+:::
+
+::: cert-signature-words2
+Швець О.О.
+:::
+
+::: cert-signature-img
+![](../../../images/content-public/cert-signature2c02.png?id=8851b6208824a2e57316ef6b2fd2dd9c)
+:::
+
+::: cert-date
+26.01.2018
+:::
+
+::: cert-number
+#000000001
+:::
+
+::: cert-qr
+[![](data:image/png;base64,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)](MQ.html)
+:::
+
+::: cert-url
+Перевірити сертифікат можна тут:\
+[refactoring.guru/uk/cert/r/MQ](MQ.html)
+:::
+:::::::::::::
+::::::::::::::

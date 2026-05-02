@@ -1,0 +1,338 @@
+:::::::::::::::::::::::: {.main-content .top-content .center-content role="main" page_class=""}
+::::::::::::::::::::::: {.main-content-container .center-content-container}
+::::::::::::::::: {.pattern .pattern-example .page .text}
+::: breadcrumb
+[](../../../../index.html){.home} / [Patrons de
+conception](../../../design-patterns.html){.type} /
+[Monteur](../../builder.html){.type} / [C#](../../csharp.html){.type}
+:::
+
+:::: pattern-example-title-block
+::: pattern-example-title-block-image
+![Monteur](../../../../images/patterns/cards/builder-mini6d24.png?id=19b95fd05e6469679752c0554b116815){srcset="/images/patterns/cards/builder-mini-2x.png?id=de6d0938678b86903a1426dddfdd13bf 2x"}
+:::
+
+# **Monteur** en C# {#monteur-en-c .pattern-example-title-block-title}
+::::
+
+::::::::::: pattern-example-body
+::: pattern-example-brief
+Le **Monteur** est un patron de conception de création qui permet de
+construire des objets complexes étape par étape.
+
+Le monteur n'est pas comme les autres patrons de création : les produits
+n'ont pas besoin d'avoir une interface commune. Il est ainsi possible de
+créer différents produits en utilisant le même procédé de fabrication.
+:::
+
+::: {style="text-align:center; margin-bottom: 40px;"}
+[ En savoir plus sur la patron Monteur ](../../builder.html){.btn
+.btn-lg .btn-primary}
+:::
+
+:::::::: {.sidebar-navigation .with-scroll}
+::: en-title
+Navigation
+:::
+
+::: en-intro
+ [Intro](#)
+:::
+
+::: en-intro
+ [Exemple conceptuel](#example-0)
+:::
+
+::: en-file
+ [Program](#example-0--Program-cs)
+:::
+
+::: en-file
+ [Output](#example-0--Output-txt)
+:::
+::::::::
+
+**Complexité :** []{.fa-stars}
+
+**Popularité :** []{.fa-stars}
+
+**Exemples d'utilisation :** Le monteur est bien connu dans le monde du
+C#. Il se montre très utile lorsque vous devez créer un objet possédant
+de nombreuses configurations possibles.
+
+**Identification :** Le monteur peut être identifié à l'intérieur d'une
+classe qui n'a qu'une seule méthode de création et plusieurs méthodes
+permettant de configurer l'objet en résultant. Les méthodes du monteur
+prennent souvent en charge le chaînage (par exemple,
+`someBuilder.setValueA(1).setValueB(2).create()`).
+:::::::::::
+
+[]{#example-0}
+
+## Exemple conceptuel {#example-0-title}
+
+Dans cet exemple, nous allons voir la structure du patron de conception
+**Monteur**. Nous allons répondre aux questions suivantes :
+
+-   Que contiennent les classes ?
+-   Quels rôles jouent-elles ?
+-   Comment les éléments du patron sont-ils reliés ?
+
+#### []{#example-0--Program-cs .anchor} **Program.cs:** Exemple conceptuel
+
+<figure class="code">
+<pre class="code" lang="csharp"><code>using System;
+using System.Collections.Generic;
+
+namespace RefactoringGuru.DesignPatterns.Builder.Conceptual
+{
+    // The Builder interface specifies methods for creating the different parts
+    // of the Product objects.
+    public interface IBuilder
+    {
+        void BuildPartA();
+        
+        void BuildPartB();
+        
+        void BuildPartC();
+    }
+    
+    // The Concrete Builder classes follow the Builder interface and provide
+    // specific implementations of the building steps. Your program may have
+    // several variations of Builders, implemented differently.
+    public class ConcreteBuilder : IBuilder
+    {
+        private Product _product = new Product();
+        
+        // A fresh builder instance should contain a blank product object, which
+        // is used in further assembly.
+        public ConcreteBuilder()
+        {
+            this.Reset();
+        }
+        
+        public void Reset()
+        {
+            this._product = new Product();
+        }
+        
+        // All production steps work with the same product instance.
+        public void BuildPartA()
+        {
+            this._product.Add(&quot;PartA1&quot;);
+        }
+        
+        public void BuildPartB()
+        {
+            this._product.Add(&quot;PartB1&quot;);
+        }
+        
+        public void BuildPartC()
+        {
+            this._product.Add(&quot;PartC1&quot;);
+        }
+        
+        // Concrete Builders are supposed to provide their own methods for
+        // retrieving results. That&#39;s because various types of builders may
+        // create entirely different products that don&#39;t follow the same
+        // interface. Therefore, such methods cannot be declared in the base
+        // Builder interface (at least in a statically typed programming
+        // language).
+        //
+        // Usually, after returning the end result to the client, a builder
+        // instance is expected to be ready to start producing another product.
+        // That&#39;s why it&#39;s a usual practice to call the reset method at the end
+        // of the `GetProduct` method body. However, this behavior is not
+        // mandatory, and you can make your builders wait for an explicit reset
+        // call from the client code before disposing of the previous result.
+        public Product GetProduct()
+        {
+            Product result = this._product;
+
+            this.Reset();
+
+            return result;
+        }
+    }
+    
+    // It makes sense to use the Builder pattern only when your products are
+    // quite complex and require extensive configuration.
+    //
+    // Unlike in other creational patterns, different concrete builders can
+    // produce unrelated products. In other words, results of various builders
+    // may not always follow the same interface.
+    public class Product
+    {
+        private List&lt;object&gt; _parts = new List&lt;object&gt;();
+        
+        public void Add(string part)
+        {
+            this._parts.Add(part);
+        }
+        
+        public string ListParts()
+        {
+            string str = string.Empty;
+
+            for (int i = 0; i &lt; this._parts.Count; i++)
+            {
+                str += this._parts[i] + &quot;, &quot;;
+            }
+
+            str = str.Remove(str.Length - 2); // removing last &quot;,c&quot;
+
+            return &quot;Product parts: &quot; + str + &quot;\n&quot;;
+        }
+    }
+    
+    // The Director is only responsible for executing the building steps in a
+    // particular sequence. It is helpful when producing products according to a
+    // specific order or configuration. Strictly speaking, the Director class is
+    // optional, since the client can control builders directly.
+    public class Director
+    {
+        private IBuilder _builder;
+        
+        public IBuilder Builder
+        {
+            set { _builder = value; } 
+        }
+        
+        // The Director can construct several product variations using the same
+        // building steps.
+        public void BuildMinimalViableProduct()
+        {
+            this._builder.BuildPartA();
+        }
+        
+        public void BuildFullFeaturedProduct()
+        {
+            this._builder.BuildPartA();
+            this._builder.BuildPartB();
+            this._builder.BuildPartC();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // The client code creates a builder object, passes it to the
+            // director and then initiates the construction process. The end
+            // result is retrieved from the builder object.
+            var director = new Director();
+            var builder = new ConcreteBuilder();
+            director.Builder = builder;
+            
+            Console.WriteLine(&quot;Standard basic product:&quot;);
+            director.BuildMinimalViableProduct();
+            Console.WriteLine(builder.GetProduct().ListParts());
+
+            Console.WriteLine(&quot;Standard full featured product:&quot;);
+            director.BuildFullFeaturedProduct();
+            Console.WriteLine(builder.GetProduct().ListParts());
+
+            // Remember, the Builder pattern can be used without a Director
+            // class.
+            Console.WriteLine(&quot;Custom product:&quot;);
+            builder.BuildPartA();
+            builder.BuildPartC();
+            Console.Write(builder.GetProduct().ListParts());
+        }
+    }
+}</code></pre>
+</figure>
+
+#### []{#example-0--Output-txt .anchor} **Output.txt:** Résultat de l'exécution
+
+<figure class="code">
+<pre class="code" lang="output"><code>Standard basic product:
+Product parts: PartA1
+
+Standard full featured product:
+Product parts: PartA1, PartB1, PartC1
+
+Custom product:
+Product parts: PartA1, PartC1</code></pre>
+</figure>
+
+::: next
+#### Suivant
+
+[Fabrique en C# []{.fa
+.fa-arrow-right}](../../factory-method/csharp/example.html){.btn
+.btn-primary rel="next"}
+:::
+
+::: prev
+#### Retour
+
+[[]{.fa .fa-arrow-left} Fabrique abstraite en
+C#](../../abstract-factory/csharp/example.html){.btn .btn-default
+rel="prev"}
+:::
+
+## **Monteur** dans les autres langues
+
+[![Monteur en
+C++](../../../../images/patterns/icons/cpp9770.svg?id=f7782ed8b8666246bfcc3f8fefc3b858){width="53"
+height="53"
+loading="lazy"}](../cpp/example.html "Monteur en C++"){.prog-lang-link}
+[![Monteur en
+Go](../../../../images/patterns/icons/go3287.svg?id=1a89927eb99b1ea3fde7701d97970aca){width="53"
+height="53"
+loading="lazy"}](../go/example.html "Monteur en Go"){.prog-lang-link}
+[![Monteur en
+Java](../../../../images/patterns/icons/java9ca9.svg?id=e6d87e2dca08c953fe3acd1275ed4f4e){width="53"
+height="53"
+loading="lazy"}](../java/example.html "Monteur en Java"){.prog-lang-link}
+[![Monteur en
+PHP](../../../../images/patterns/icons/phpb8be.svg?id=be1906eb26b71ec1d3b93720d6156618){width="53"
+height="53"
+loading="lazy"}](../php/example.html "Monteur en PHP"){.prog-lang-link}
+[![Monteur en
+Python](../../../../images/patterns/icons/python25f6.svg?id=6d815d43c0f7050a1151b43e51569c9f){width="53"
+height="53"
+loading="lazy"}](../python/example.html "Monteur en Python"){.prog-lang-link}
+[![Monteur en
+Ruby](../../../../images/patterns/icons/ruby3275.svg?id=b065b718c914bf8e960ef731600be1eb){width="53"
+height="53"
+loading="lazy"}](../ruby/example.html "Monteur en Ruby"){.prog-lang-link}
+[![Monteur en
+Rust](../../../../images/patterns/icons/rusta244.svg?id=1f5698a4b5ae23fe79413511747e4a87){width="53"
+height="53"
+loading="lazy"}](../rust/example.html "Monteur en Rust"){.prog-lang-link}
+[![Monteur en
+Swift](../../../../images/patterns/icons/swift68dd.svg?id=0b716c2d52ec3a48fbe91ac031070c1d){width="53"
+height="53"
+loading="lazy"}](../swift/example.html "Monteur en Swift"){.prog-lang-link}
+[![Monteur en
+TypeScript](../../../../images/patterns/icons/typescript325e.svg?id=2239d0f16cb703540c205dd8cb0c0cb7){width="53"
+height="53"
+loading="lazy"}](../typescript/example.html "Monteur en TypeScript"){.prog-lang-link}
+:::::::::::::::::
+
+::::::: {.prom .banner-sidebar .banner .banner-striped .banner-examples .banner-removable .banner-removable-patterns data-id="DP: Examples-IDE" creative-id="examples-sidebar-fr" position="sidebar"}
+:::::: {.banner-inner style="font-size: 14px; line-height: 21px;"}
+::: banner-examples-img
+[![](../../../../images/patterns/banners/examples-ide91ca.png?id=3115b4b548fb96b75974e2de8f4f49bc){width="215"
+height="158" loading="lazy"
+srcset="/images/patterns/banners/examples-ide-2x.png?id=93c007a6d157b97c28eb213f59d716ae 2x"}](../../book.html)
+:::
+
+::: banner-examples-fade
+[ Archive avec exemples](../../book.html){.btn .btn-secondary
+.btn-block}
+:::
+
+::: {.banner-examples-text style="margin-top: 1rem;"}
+Achetez l'ebook **Plongée au cœur des patrons de conception** et obtenez
+l'accès à une archive comprenant des dizaines d'exemples détaillés qui
+peuvent être ouverts dans votre environnement de développement.
+
+[ En savoir plus...](../../book.html){.btn .btn-secondary .btn-block}
+:::
+::::::
+:::::::
+:::::::::::::::::::::::
+::::::::::::::::::::::::

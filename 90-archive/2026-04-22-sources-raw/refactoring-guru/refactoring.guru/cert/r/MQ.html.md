@@ -1,0 +1,47 @@
+:::::::::::::: certificate
+::::::::::::: certificate-inner
+![](../../images/content-public/logos/logo-plain0ce3.png?id=5bc49c5c8f22b9538b0b570800d68083){.cert-bg}
+
+::: cert-title
+[Certificate of Completion]{.small}
+:::
+
+::: cert-name
+Alexander Shvets (neochief)
+:::
+
+::: cert-caption
+on January 26th, 2018 successfully completed the\
+course "*Dive Into Refactoring*"
+:::
+
+::: cert-signature-words
+Author & Instructor
+:::
+
+::: cert-signature-words2
+Alexander Shvets
+:::
+
+::: cert-signature-img
+![](../../images/content-public/cert-signature2c02.png?id=8851b6208824a2e57316ef6b2fd2dd9c)
+:::
+
+::: cert-date
+2018-01-26
+:::
+
+::: cert-number
+#000000001
+:::
+
+::: cert-qr
+[![](data:image/png;base64,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)](MQ.html)
+:::
+
+::: cert-url
+Certificate URL:\
+[refactoring.guru/cert/r/MQ](MQ.html)
+:::
+:::::::::::::
+::::::::::::::

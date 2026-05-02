@@ -1,0 +1,140 @@
+---
+title: Fernando — conteúdo extraído de 0om5pg-iw3c7f
+type: source
+tags: [source, fernando, next-js, js-extracted]
+source: fernandofrancovalle.com/fernandofrancovalle.com/_next/static/chunks/0om5pg-iw3c7f.js
+extracted: 2026-04-22
+---
+
+# Conteúdo pt-BR extraído de `0om5pg-iw3c7f.js`
+
+Strings com 50+ chars filtradas do bundle (remove código Next.js, imports, URLs, identificadores). Uma linha = uma string única.
+
+- })]}),(0,r.jsx)($,{totalArticles:e})]})]})}function z(){return(0,r.jsxs)(
+- 1px solid color-mix(in srgb, var(--ffv-blue) 22%, transparent)
+- 1px solid color-mix(in srgb, var(--ffv-blue) 30%, transparent)
+- 1px solid color-mix(in srgb, var(--ffv-green) 25%, transparent)
+- 1px solid color-mix(in srgb, var(--ffv-yellow) 30%, transparent)
+- 1px solid color-mix(in srgb, var(--ffv-yellow) 40%, transparent)
+- A IA não substitui quem sabe usá-la. Ela multiplica.
+- block mb-4 p-4 rounded-xl transition-all hover:scale-[1.01]
+- block p-5 rounded-xl transition-all hover:scale-[1.01]
+- block rounded-2xl overflow-hidden transition-all hover:scale-[1.005]
+- ,border:`1px solid ${e.color}22`,borderRadius:20,padding:
+- ,border:`1px solid ${e.color}25`},children:[(0,r.jsx)(
+- ,border:`1px solid ${e.color}40`},children:[(0,r.jsxs)(
+- ,border:`1px solid ${e.trail.color}20`,borderRadius:24,padding:0,transition:
+- ,border:`1px solid color-mix(in srgb, ${e.color} 22%, transparent)`,borderRadius:20,padding:
+- ,border:`1px solid color-mix(in srgb, ${l.accent} 35%, transparent)`,borderRadius:18,transition:
+- ,borderRadius:6,background:`color-mix(in srgb, ${e.color} 12%, transparent)`},children:
+- ,borderRadius:999,background:`color-mix(in srgb, ${e.color} 10%, transparent)`,border:`1px solid color-mix(in srgb, ${e.color} 28%, transparent)`,color:e.color,fontSize:a?10:11,fontWeight:700,letterSpacing:
+- ,borderRadius:999,color:o.color,background:`color-mix(in srgb, ${o.color} 12%, transparent)`,border:`1px solid color-mix(in srgb, ${o.color} 30%, transparent)`,letterSpacing:
+- ,boxShadow:`0 0 24px color-mix(in srgb, ${t} 25%, transparent)`},onMouseOver:e=>{e.currentTarget.style.transform=
+- Cada artigo é um checkpoint. Cada quiz respondido é XP ganho. Cada dia de leitura mantém seu streak. Você não só aprende — você evolui.
+- Cada hub reúne trilhas relacionadas. Você pode estudar em qualquer ordem.
+- Cada pergunta vira um card que volta no dia exato em que você está prestes a esquecer. Técnica com mais evidência empírica de retenção de longo prazo.
+- Cada post é um checkpoint. Cada clique, uma trilha.
+- Cada semana, um novo artigo técnico — IA, engenharia, AWS, sistemas distribuídos. Direto no seu email. Grátis para sempre.
+- Cada trilha é uma sequência pensada — você pode abrir do primeiro ao último ou pegar apenas o post que te interessa. O progresso é seu, salvo localmente no navegador.
+- }`},children:a},a))})]})}function x(e,r){if(0===e)return
+- ,{children:'Cansei de ver esse assunto dominado pelo medo. Cansei de clickbait, de 
+- },children:e})}function G({trail:e,compact:a=!1}){let s={display:
+- },children:e.label})]},e.label))})}function A({post:e}){let s=k(e.xp);return(0,r.jsx)(
+- ,children:e.map((e,a)=>{let t=0===s?0:Math.min(4,Math.ceil(e.xp/s*4)),l=e.inFuture?
+- ,children:[e.modules.slice(0,4).map(a=>{let s=o.includes(a.slug);return(0,r.jsxs)(
+- },children:l})]})}function c({icon:e,title:a,text:s}){return(0,r.jsxs)(
+- },children:s.CURRICULUM.map((a,s)=>{let t=a.modules.filter(r=>e.includes(r.slug)).length;return(0,r.jsx)(P,{trail:a,number:s+1,done:t,completedSlugs:e},a.id)})})]})})}function P({trail:e,number:t,done:l,completedSlugs:o}){let n=Math.round(l/e.modules.length*100),i=(0,s.getTrailHref)(e.id);return(0,r.jsx)(a.default,{href:i,className:
+- },children:s})}function J(){let e=N.PLAYLISTS.slice(0,4);return(0,r.jsxs)(
+- },children:s})]})}function m({studyDays:e}){let{weeks:a,maxXP:s,totalXP:t,totalDays:n}=(0,l.useMemo)(()=>{let r=new Date;r.setHours(0,0,0,0);let a=new Date(r),s=r.getDay();a.setDate(r.getDate()-s-77);let t=new Map(e.map(e=>[e.date,e])),l=[],n=0,i=0,d=0;for(let e=0;e<12;e++){let s=[];for(let l=0;l<7;l++){let c=new Date(a);c.setDate(a.getDate()+7*e+l);let m=(0,o.isoDate)(c),f=t.get(m),x=f?.xpEarned??0,p=f?.cardsReviewed??0,u=f?.minutes??0,g=f?.modulesCompleted??0;x>n&&(n=x),x>0&&(i+=x,d+=1),s.push({date:m,xp:x,cards:p,minutes:u,modules:g,inFuture:c>r})}l.push(s)}return{weeks:l,maxXP:n,totalXP:i,totalDays:d}},[e]);return(0,r.jsxs)(
+- },children:s.HUBS.map(a=>(0,r.jsx)(E,{hub:a,completedSlugs:e},a.id))})]})})}function E({hub:e,completedSlugs:t}){let l=(0,s.getHubStats)(e,t),o=(0,s.getHubTrails)(e);return(0,r.jsx)(a.default,{href:e.href,className:
+- },children:s.map(e=>(0,r.jsx)(M,{post:e},e.slug))})]})})}function M({post:e}){let s=k(e.xp);return(0,r.jsx)(a.default,{href:`/aprenda/${e.slug}`,className:
+- Claude Code, Cursor, Codex — qual usar e quando. Comparação técnica real.
+- color-mix(in srgb, var(--ffv-blue) 8%, transparent)
+- color-mix(in srgb, var(--ffv-green) 20%, var(--ffv-bg3))
+- color-mix(in srgb, var(--ffv-green) 40%, var(--ffv-bg3))
+- color-mix(in srgb, var(--ffv-green) 70%, var(--ffv-bg3))
+- color-mix(in srgb, var(--ffv-green) 8%, var(--ffv-bg))
+- color-mix(in srgb, var(--ffv-yellow) 15%, transparent)
+- Comece pela Trilha 1 — do conceito de IA até Transformers. Base sólida, sem pré-requisitos.
+- Consistência é o único segredo real. Agora com recompensa visível.
+- Conteúdo técnico real. Arquitetura, dados, decisões testadas em produção.
+- Curioso → Aprendiz → Praticante → ... → Mestre. Cada post te aproxima do topo.
+- , de complexidade desnecessária. Vim fazer o oposto.'}),(0,r.jsxs)(
+- , depois desbloqueie o simulado completo com tutor que explica cada questão por dentro.
+- DevOps, distribuídos, observabilidade, arquitetura — sair do coder e virar engenheiro de sistemas.
+- Devs que querem dominar IA. Curiosos que ouvem falar e querem entender. Profissionais que querem ser mais valorizados.
+- Discuta projetos, tire dúvidas e veja o que outros devs estão construindo com IA.
+- Do Cloud Practitioner ao Solutions Architect — conteúdo alinhado ao exame oficial.
+- ,e.currentTarget.style.boxShadow=`0 0 24px color-mix(in srgb, ${t} 25%, transparent)`},children:s})}function K({href:e,children:s}){return(0,r.jsx)(a.default,{href:e,style:{display:
+- ,e.currentTarget.style.boxShadow=`0 0 32px color-mix(in srgb, ${t} 40%, transparent)`},onMouseOut:e=>{e.currentTarget.style.transform=
+- ]})]},e.href))})]})})}function q(){let e=s.LEVELS.map(e=>({icon:e.icon,name:e.name,color:e.color}));return(0,r.jsx)(
+- Escolha o tema. Cada hub agrupa trilhas completas.
+- flex flex-wrap items-center justify-center gap-3 py-4
+- flex items-center gap-2 text-[10px] tracking-wider uppercase
+- flex items-center gap-2 text-[10px] tracking-wider uppercase mb-1
+- flex items-center justify-between flex-wrap gap-4 mb-8
+- flex items-center justify-between mb-4 flex-wrap gap-2
+- flex items-end justify-between flex-wrap gap-4 mb-10
+- flex items-end justify-between gap-4 mb-5 flex-wrap
+- flex-shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-full font-semibold
+- })]})}function $({totalArticles:e}){let a=[{n:String(e),label:
+- }];function D({completedSlugs:e}){return e.length>5?null:(0,r.jsx)(
+- })]})]})})}function j({title:e,desc:a,icon:s,href:t,cta:l,color:o,disabled:n}){let i=!!n,d=i?({children:e})=>(0,r.jsx)(
+- }function p(){let{state:e}=(0,t.useGameState)();if(!e||!(e.completedModules.length>0||e.lastArticle))return null;let l=function(e){if(!e)return null;let r=e.completedModules,a=s.CURRICULUM.flatMap(e=>e.modules.map(r=>({mod:r,trail:e})));if(e.lastArticle&&!r.includes(e.lastArticle.slug)){let r=e.lastArticle,a=Math.round(100*r.progress);return{kind:
+- ]})]})]})})})}function y({href:e,label:a,icon:s,disabled:t}){return t?(0,r.jsxs)(
+- grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10
+- grid md:grid-cols-[1fr_auto] gap-6 md:gap-8 relative
+- inline-block px-3 py-1 rounded-full text-xs font-semibold
+- inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold
+- inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full opacity-50
+- inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full transition-colors hover:opacity-80
+- inline-flex items-center gap-2 px-4 py-2 rounded-full font-semibold text-sm
+- inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-opacity hover:opacity-80
+- Jornadas pré-montadas atravessando trilhas — para objetivos específicos.
+- ,label:`COMECE POR ${a.name.toUpperCase()}`,title:s.title,icon:s.icon,accent:a.color,href:`/aprenda/${s.slug}`,meta:`${s.readTime} min \xb7 +${s.xp} XP`,trailName:e.name}}}let t=a.find(({mod:e})=>!r.includes(e.slug));return t?{kind:
+- })]})})})}let w=s.CURRICULUM.flatMap(e=>e.modules.map((r,a)=>({...r,trail:e,index:a})));function k(e){return e<=40?{label:
+- ,level:3}}function T(){let e=s.HUBS.slice(0,3);return(0,r.jsxs)(
+- linear-gradient(135deg, color-mix(in srgb, #f78166 18%, var(--ffv-bg2)), color-mix(in srgb, #d29922 10%, var(--ffv-bg2)))
+- linear-gradient(135deg, color-mix(in srgb, var(--ffv-yellow) 12%, var(--ffv-bg)), color-mix(in srgb, var(--ffv-orange) 8%, var(--ffv-bg)))
+- mb-4 p-3 rounded-xl text-center text-xs font-medium
+- — no formato que sempre quis encontrar: técnico, honesto, gamificado.
+- },onMouseOut:e=>{e.currentTarget.style.borderColor=`color-mix(in srgb, ${l.accent} 35%, transparent)`,e.currentTarget.style.transform=
+- },onMouseOut:r=>{r.currentTarget.style.borderColor=`color-mix(in srgb, ${e.color} 22%, transparent)`,r.currentTarget.style.transform=
+- },onMouseOver:e=>{e.currentTarget.style.borderColor=`color-mix(in srgb, ${l.accent} 70%, transparent)`,e.currentTarget.style.transform=
+- },onMouseOver:r=>{r.currentTarget.style.borderColor=`color-mix(in srgb, ${e.color} 60%, transparent)`,r.currentTarget.style.transform=
+- O que ciência aplicada ao aprendizado faz por você.
+- p-6 md:p-8 grid md:grid-cols-[1fr_auto] gap-6 items-center
+-  para buscar qualquer artigo, trilha ou hub em qualquer página.
+- Prepare-se para certificações com simulados + tutor IA
+- Programo desde os 13 anos. Vi a web nascer, o mobile explodir, a cloud virar padrão. E agora estou vendo a IA mudar tudo — de novo.
+- Pule direto para KV Cache, MoE e Tool Calling — como modelos funcionam em produção.
+- px-4 py-1.5 rounded-full text-xs font-bold transition-all
+- px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:opacity-90
+- Quatro áreas editoriais, cada uma com uma ou mais trilhas do começo ao avançado. Pressione 
+- relative flex flex-col sm:flex-row items-start sm:items-center gap-5 p-5 sm:p-6
+- relative px-6 pt-20 pb-28 md:pt-28 md:pb-32 overflow-hidden
+- Servidor com canais por hub: IA, AWS, Claude Code, Engenharia. Live coding sessions.
+- ,style:{background:l,border:o}},a)})},a))})})]})}function f({goal:e,cardsToday:a,goalPct:s,onGoalChange:t}){return(0,r.jsxs)(
+- ,style:{background:`linear-gradient(135deg, color-mix(in srgb, ${e.trailColor} 14%, var(--ffv-bg2)), var(--ffv-bg2))`,border:`1px solid ${e.trailColor}40`},children:(0,r.jsxs)(
+- ,style:{background:`radial-gradient(ellipse 50% 80% at 0% 50%, color-mix(in srgb, ${l.accent} 18%, transparent), transparent 65%)`}}),(0,r.jsxs)(
+- ,style:{width:140,height:140,borderRadius:28,background:`color-mix(in srgb, ${e.trail.color} 10%, transparent)`,border:`1px solid ${e.trail.color}30`,fontSize:56,flexShrink:0},children:e.icon})]})]})})]})})}function R({posts:e,featuredSlug:a}){let s=e.filter(e=>e.slug!==a);return(0,r.jsx)(
+- ,{style:{width:36,height:36,borderRadius:10,background:`color-mix(in srgb, ${e.color} 14%, transparent)`,border:`1px solid color-mix(in srgb, ${e.color} 30%, transparent)`,display:
+- ,style:{width:40,height:40,borderRadius:10,background:`color-mix(in srgb, ${e.trail.color} 12%, transparent)`,border:`1px solid ${e.trail.color}30`,fontSize:18,flexShrink:0},children:e.icon}),(0,r.jsx)(G,{trail:e.trail,compact:!0})]}),(0,r.jsx)(
+- ,style:{width:44,height:44,borderRadius:12,background:`color-mix(in srgb, ${e.color} 12%, transparent)`,border:`1px solid ${e.color}30`,fontSize:20},children:e.icon})]}),(0,r.jsx)(
+- ,style:{width:48,height:48,borderRadius:14,background:`color-mix(in srgb, ${e.color} 14%, transparent)`,border:`1px solid color-mix(in srgb, ${e.color} 32%, transparent)`,fontSize:22},children:e.icon}),(0,r.jsx)(
+- ,style:{width:56,height:56,borderRadius:14,background:`color-mix(in srgb, ${l.accent} 14%, transparent)`,border:`1px solid color-mix(in srgb, ${l.accent} 34%, transparent)`,fontSize:26},children:l.icon}),(0,r.jsxs)(
+- text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full
+- text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full
+- text-[10px] px-2 py-0.5 rounded-full font-semibold transition-all
+- text-[10px] tracking-[0.2em] uppercase font-semibold mb-2
+- ,title:e.title,icon:e.icon,accent:t.color,href:`/aprenda/${e.slug}`,meta:`${e.readTime} min \xb7 +${e.xp} XP`,trailName:t.name}}}if(e.preferredHub){let a=(0,s.getHubBySlug)(e.preferredHub);if(a)for(let e of(0,s.getHubTrails)(a)){let s=e.modules.find(e=>!r.includes(e.slug));if(s)return{kind:
+- ,title:r.title,icon:r.icon,accent:r.trailColor,href:r.href,meta:a>0?`${a}% lido \xb7 ${r.readTime} min restantes`:`${r.readTime} min de leitura`,progressPct:a,trailName:r.trailName}}if(e.lastArticle){let a=e.lastArticle,t=s.CURRICULUM.find(e=>e.modules.some(e=>e.slug===a.slug));if(t){let e=t.modules.find(e=>!r.includes(e.slug));if(e)return{kind:
+- ,title:t.mod.title,icon:t.mod.icon,accent:t.trail.color,href:`/aprenda/${t.mod.slug}`,meta:`${t.mod.readTime} min \xb7 +${t.mod.xp} XP`,trailName:t.trail.name}:null}(e);if(!l)return null;let o=s.HUBS.find(r=>e.preferredHub===r.slug);return(0,r.jsx)(
+- Toda sexta: melhores artigos da semana, novidades do ecossistema, dica prática.
+- Três perguntas ao final. Acertou tudo? Badge de Gabarito.
+- ==typeof document?document.currentScript:void 0,254909,e=>{
+- ==typeof l.progressPct&&l.progressPct>0&&(0,r.jsx)(
+- ;var r=e.i(843476),a=e.i(522016),s=e.i(308066),t=e.i(682436),l=e.i(271645),o=e.i(729851);let n=[1,3,5,7,10];function i(){let{state:e,dueCards:s,dailyChallenge:l,updateDailyGoal:n}=(0,t.useGameState)();if(!e||!((e.completedModules?.length??0)>0||(e.reviewCards?.length??0)>0))return null;let i=e.studyDays?.find(e=>e.date===(0,o.todayISO)()),x=i?.xpEarned??0,p=i?.cardsReviewed??0,u=s.length,g=e.dailyGoal??3,v=Math.min(100,Math.round(p/g*100));return(0,r.jsx)(
+- })]})]})]})})})})}var u=e.i(159461);function g(){let[e,s]=(0,l.useState)(null),{state:o}=(0,t.useGameState)();return((0,l.useEffect)(()=>{s((0,u.getDailyModule)({onlyBeginnerOrIntermediate:!0}))},[]),!e||e.completed||o?.completedModules.includes(e.slug))?null:(0,r.jsx)(
+- Você já começou — aqui estão outros caminhos que podem te interessar.
+- Voltar todo dia é o vício bom. A cada 7 dias você ganha 1 freeze (máx 2) que te salva se der furo. Perdeu tudo? Começa de novo, sem drama.

@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "07a4911bc7beccfd",
+    "type": "split",
+    "children": [
+      {
+        "id": "9934ec257023f76a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "82359a4335072c0e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_index"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "97b5ab47cbc6e4d7",
+    "type": "split",
+    "children": [
+      {
+        "id": "455f932f2deb9e19",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6d5e5bdea1baf665",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "12ab58068bc19971",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "7c87a43bb646e8bb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "feaaaf75d5394326",
+    "type": "split",
+    "children": [
+      {
+        "id": "305f83ec80fb0e05",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e0de7a0f3c3ad374",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "603b0d933c7cf9c2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Welcome"
+            }
+          },
+          {
+            "id": "43fd4f9b46bad5ba",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a5164c68db2f0cda",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "2722a3e1f0d66463",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_index.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of _index"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 229.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "workspaces:Manage workspace layouts": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "82359a4335072c0e",
+  "lastOpenFiles": [
+    "50-projects/master-sindico/03-subprojects/web/REVIEW-2026-04-27-AGENTE-1.md",
+    "50-projects/master-sindico/11-audit/audit-log/2026-04-27-agente-2-systematic-pass.md",
+    "50-projects/master-sindico/03-subprojects/web/AUDIT-2026-04-27.md",
+    "_index.md",
+    "50-projects/websocket-chat/02-architecture/system-design-referencias.md",
+    "50-projects/websocket-chat/04-requirements/fase1-requisitos.md",
+    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-consolidado.md",
+    "00-meta/AUDIT.md",
+    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-dominio.md.tmp.2738606.1777008288788",
+    "30-agents/gsd-library/family-audit.md",
+    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-produto-processos.md",
+    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-produto-processos.md.tmp.2738606.1777008139940",
+    "30-agents/gsd-library/card-gsd-ui-researcher.md",
+    "30-agents/gsd-library/card-gsd-ui-checker.md",
+    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-dominio.md.tmp.2738606.1777008109424",
+    "30-agents/gsd-library/card-gsd-ui-auditor.md",
+    "30-agents/gsd-library/card-gsd-security-auditor.md",
+    "30-agents/gsd-library/card-gsd-nyquist-auditor.md",
+    "30-agents/gsd-library/card-gsd-eval-planner.md",
+    "30-agents/gsd-library/card-gsd-eval-auditor.md",
+    "30-agents/gsd-library/card-gsd-verifier.md",
+    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-dominio.md",
+    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-dominio.md.tmp.2738606.1777008005710",
+    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-design-system.md.tmp.2738606.1777007951855",
+    "30-agents/gsd-library/family-executor.md",
+    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-design-system.md.tmp.2738606.1777007928922",
+    "30-agents/gsd-library/card-gsd-integration-checker.md",
+    "30-agents/gsd-library/card-gsd-code-reviewer.md",
+    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-design-system.md.tmp.2738606.1777007908752",
+    "30-agents/gsd-library/card-gsd-code-fixer.md",
+    "30-agents/gsd-library/card-gsd-executor.md",
+    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-design-system.md",
+    "30-agents/gsd-library/family-planning.md",
+    "30-agents/gsd-library",
+    "50-projects/master-sindico/03-subprojects/backend/requirements/institutional.md.tmp.2738606.1777006352672",
+    "50-projects/master-sindico/03-subprojects/backend/requirements/_moc.md.tmp.2738606.1777005888766"
+  ]
+}
