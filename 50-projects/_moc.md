@@ -5,7 +5,7 @@ tags:
   - moc
   - projects
 created: 2026-04-22T00:00:00.000Z
-updated: '2026-04-24'
+updated: '2026-05-27'
 ---
 
 # 50-projects
@@ -21,6 +21,8 @@ Projetos vivos neste vault. Cada projeto tem scaffold 00-12 canônico (ver [[../
   - Material ingerido em [[../90-archive/from-master-sindico-v2-ingested/INDEX]] *(se existir)*
 - [[websocket-chat/CLAUDE]] — Sistema de mensagens diretas via WebSocket em Go (CLI, inspirado WhatsApp/Signal). Fase 1 em andamento (UUIDv7 + SQLite + entrega offline). Criado 2026-04-24.
   - Governança viva: [[websocket-chat/STATE]] · [[websocket-chat/AUDIT]] · [[websocket-chat/SESSION_CHARTER]] · [[websocket-chat/ROADMAP]]
+- [[rustcraft/CLAUDE]] — Projeto de estudo Rust/Bevy para jogo sandbox/voxel 3D. Fase 0 em estruturação didática: Cargo workspace, bin targets, ações de input e protótipo original. Criado 2026-05-27.
+  - Governança viva: [[rustcraft/STATE]] · [[rustcraft/11-audit/AUDIT]] · [[rustcraft/SESSION_CHARTER]] · [[rustcraft/STEERING]] · [[rustcraft/ROADMAP]] · [[rustcraft/_moc]]
 
 ## Como adicionar novo projeto
 

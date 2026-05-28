@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9934ec257023f76a",
+        "id": "5c7b6be1ac05009e",
         "type": "tabs",
         "children": [
           {
-            "id": "82359a4335072c0e",
+            "id": "2d0d3a1329f63505",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_index.md",
+                "file": "50-projects/rustcraft/00-product/_moc.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_index"
+              "title": "_moc"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de arquivos"
             }
           },
           {
@@ -132,7 +132,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "Etiquetas"
             }
           },
           {
@@ -146,7 +146,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "All properties"
+              "title": "Todas as propriedades"
             }
           },
           {
@@ -155,17 +155,36 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of _index"
+              "title": "Sumário"
+            }
+          },
+          {
+            "id": "71714217755bd561",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_nodes",
+              "state": {},
+              "icon": "ag-node-list",
+              "title": "Juggl nodes"
+            }
+          },
+          {
+            "id": "2b183d0da8091a13",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_style",
+              "state": {},
+              "icon": "ag-style",
+              "title": "Juggl style"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -173,53 +192,55 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "workspaces:Manage workspace layouts": false,
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "workspaces:Gerenciar leiautes da área de trabalho": false,
+      "bases:Criar nova base": false,
+      "3d-graph-new:Global 3D Graph": false,
+      "juggl:Juggl global graph": false
     }
   },
-  "active": "82359a4335072c0e",
+  "active": "2d0d3a1329f63505",
   "lastOpenFiles": [
-    "50-projects/master-sindico/03-subprojects/web/REVIEW-2026-04-27-AGENTE-1.md",
-    "50-projects/master-sindico/11-audit/audit-log/2026-04-27-agente-2-systematic-pass.md",
-    "50-projects/master-sindico/03-subprojects/web/AUDIT-2026-04-27.md",
-    "_index.md",
-    "50-projects/websocket-chat/02-architecture/system-design-referencias.md",
-    "50-projects/websocket-chat/04-requirements/fase1-requisitos.md",
-    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-consolidado.md",
-    "00-meta/AUDIT.md",
-    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-dominio.md.tmp.2738606.1777008288788",
-    "30-agents/gsd-library/family-audit.md",
-    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-produto-processos.md",
-    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-produto-processos.md.tmp.2738606.1777008139940",
-    "30-agents/gsd-library/card-gsd-ui-researcher.md",
-    "30-agents/gsd-library/card-gsd-ui-checker.md",
-    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-dominio.md.tmp.2738606.1777008109424",
-    "30-agents/gsd-library/card-gsd-ui-auditor.md",
-    "30-agents/gsd-library/card-gsd-security-auditor.md",
-    "30-agents/gsd-library/card-gsd-nyquist-auditor.md",
-    "30-agents/gsd-library/card-gsd-eval-planner.md",
-    "30-agents/gsd-library/card-gsd-eval-auditor.md",
-    "30-agents/gsd-library/card-gsd-verifier.md",
-    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-dominio.md",
-    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-dominio.md.tmp.2738606.1777008005710",
-    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-design-system.md.tmp.2738606.1777007951855",
-    "30-agents/gsd-library/family-executor.md",
-    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-design-system.md.tmp.2738606.1777007928922",
-    "30-agents/gsd-library/card-gsd-integration-checker.md",
-    "30-agents/gsd-library/card-gsd-code-reviewer.md",
-    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-design-system.md.tmp.2738606.1777007908752",
-    "30-agents/gsd-library/card-gsd-code-fixer.md",
-    "30-agents/gsd-library/card-gsd-executor.md",
-    "50-projects/master-sindico/11-audit/audit-log/2026-04-24-gap-analysis-design-system.md",
-    "30-agents/gsd-library/family-planning.md",
-    "30-agents/gsd-library",
-    "50-projects/master-sindico/03-subprojects/backend/requirements/institutional.md.tmp.2738606.1777006352672",
-    "50-projects/master-sindico/03-subprojects/backend/requirements/_moc.md.tmp.2738606.1777005888766"
+    "50-projects/rustcraft/05-tasks/_moc.md",
+    "50-projects/rustcraft/04-requirements/_moc.md",
+    "50-projects/rustcraft/02-architecture/adr/_moc.md",
+    "50-projects/rustcraft/02-architecture/_moc.md",
+    "50-projects/rustcraft/DoR-DoD.md",
+    "50-projects/rustcraft/overview.md",
+    "50-projects/rustcraft/12-docs/_moc.md",
+    "50-projects/rustcraft/12-docs",
+    "50-projects/rustcraft/10-schedule/_moc.md",
+    "50-projects/rustcraft/10-schedule",
+    "50-projects/rustcraft/09-testing/_moc.md",
+    "50-projects/rustcraft/09-testing",
+    "50-projects/rustcraft/08-security/_moc.md",
+    "50-projects/rustcraft/08-security",
+    "50-projects/rustcraft/07-quality/_moc.md",
+    "50-projects/rustcraft/07-quality",
+    "50-projects/rustcraft/06-execution/_moc.md",
+    "50-projects/rustcraft/06-execution",
+    "50-projects/rustcraft/03-subprojects/_moc.md",
+    "50-projects/rustcraft/03-subprojects",
+    "50-projects/rustcraft/01-domain/_moc.md",
+    "50-projects/rustcraft/01-domain",
+    "50-projects/rustcraft/00-product/_moc.md",
+    "50-projects/rustcraft/00-product",
+    "50-projects/rustcraft/11-audit/audit-log/2026-05-27-vault-usage-audit.md",
+    "50-projects/rustcraft/11-audit/AUDIT.md",
+    "50-projects/rustcraft/11-audit/postmortems/_moc.md",
+    "50-projects/rustcraft/11-audit/postmortems",
+    "50-projects/rustcraft/11-audit/dual-check-log/_moc.md",
+    "50-projects/rustcraft/11-audit/audit-log/_moc.md",
+    "50-projects/rustcraft/11-audit/_moc.md",
+    "50-projects/rustcraft/STEERING.md",
+    "50-projects/rustcraft/SESSION_CHARTER.md",
+    "50-projects/rustcraft/06-reviews/context-audit-2026-05-27.md",
+    "50-projects/rustcraft/02-architecture/adr/0003-multi-crate-workspace-for-learning.md",
+    "_index.md"
   ]
 }
